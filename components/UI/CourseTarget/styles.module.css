@@ -1,0 +1,31 @@
+.courseInfo {
+  max-width: 25rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.courseInfoTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.courseInfoList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.courseInfoItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.courseInfoItem:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}

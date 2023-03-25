@@ -1,0 +1,29 @@
+/* Abstract shape component */
+.abstract_shape {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 5%;
+  width: 250px;
+  height: 250px;
+  margin: 0 -15px;
+  margin-bottom: 30px;
+  mix-blend-mode: multiply;
+}
+
+.orange_bubble {
+  background: #f92;
+  border-radius: 80% 30% 50% 50%/50%;
+}
+
+.red_bubble {
+  background: #f66;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+}
+
+.yellow_bubble {
+  background: #fc2;
+  border-radius: 40% 40% 50% 40%/30% 50% 50%;
+}

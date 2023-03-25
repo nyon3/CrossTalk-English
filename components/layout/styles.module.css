@@ -1,0 +1,11 @@
+.MobileOptimized {
+  display: block;
+  position: relative;
+}
+@media (min-width: 769px) {
+  .MobileOptimized {
+    position: absolute;
+    width: 30rem;
+    right: 30rem;
+  }
+}
