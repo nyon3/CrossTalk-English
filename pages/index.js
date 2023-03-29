@@ -9,7 +9,8 @@ import Layout from "@/components/layout/layout";
 import OurAdvantages from "@/components/UI/OurAdvantages/index";
 import Card from "@/components/UI/LessonDetailsCard/index";
 import BackgroundPage from "@/components/UI/ImageComponent/index";
-const inter = Inter({ subsets: ["latin"] });
+import Hero from "@/components/UI/Hero";
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -37,13 +38,34 @@ export default function Home() {
         <p className={styles.intro}>
           クロストークは岡山市北区にある英会話教室です。テキストで基本を学ぶことはもちろん、生きた英語で、楽しくしっかりと上達できます！思い立った今が、チャレンジのときです。英語を学んで、あなたの夢を叶えましょう！
         </p>
-        <a href="/courses" className={styles.cta}>
-          Explore Courses
-        </a>
+        <span>RESON</span>
+        <p>
+          CrossTalkで英語が
+          <br />
+          話せるようになる理由
+        </p>
+        <div>
+          <OurAdvantages color="red">
+            少人数制で
+            <br />
+            会話量が多い
+          </OurAdvantages>
+          <OurAdvantages color="orange">
+            経験豊富な
+            <br />
+            外国人講師
+          </OurAdvantages>
+          <OurAdvantages>
+            アットホーム
+            <br />
+            な空間
+          </OurAdvantages>
+        </div>
+        <span>LESSONS</span>
+        <p>初心者から上級者まで、それぞれのレベルに合わせたレッスンプラン</p>
+        <Card />
+        <BackgroundPage />
       </main>
-      <OurAdvantages />
-      <Card />
-      <BackgroundPage />
     </Layout>
   );
 }

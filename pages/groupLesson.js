@@ -9,14 +9,10 @@ import sampleImage from "../public/images/study-textbook.jpg";
 import Layout from "@/components/layout/layout";
 import CourseTarget from "@/components/UI/CourseTarget";
 import CardComponent from "@/components/UI/CardComponent";
-
+import OurAdvantages from "@/components/UI/OurAdvantages";
+import ImageComponent from "@/components/UI/ImageComponent";
 export default function GroupLesson() {
   const contents = [
-    {
-      title: "楽しく学べる英会話グループレッスン",
-      content:
-        "初心者から中級者まで幅広く対象に、テキストブックを使いながら実践的な英会話力を身につけることができます。他の生徒とのグループレッスンでリアルなコミュニケーション機会も提供し、自然な英語力を身につけることができます。",
-    },
     {
       title: "実践力を身につける日常英会話レッスン",
       content:
@@ -42,8 +38,22 @@ export default function GroupLesson() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.container}>
-        <h1>日常会話グループレッスン</h1>
-
+        <ImageComponent
+          title={"日常会話グループレッスン"}
+          description={
+            "日常的な英会話に必要なスキルを身につけることができます。ネイティブスピーカーの英語を聞き取り、質問をする力を身につけることができます。基本的な文法を学ぶことができ、英語でのコミュニケーションに必要な発音にも焦点を当てています。"
+          }
+          image={sampleImage}
+          alt={"sample"}
+        />
+        <h2>このレッスンで学べること</h2>
+        <OurAdvantages color="red">
+          単語やフレーズを正しく発音する
+        </OurAdvantages>
+        <OurAdvantages color="orange">
+          聞き取って、理解することができる
+        </OurAdvantages>
+        <OurAdvantages>基本的な文法を正しく使うことができる</OurAdvantages>
         <div>
           {contents.map((content) => (
             <CardComponent
