@@ -12,6 +12,7 @@ import CardComponent from "@/components/UI/CardComponent";
 import OurAdvantages from "@/components/UI/OurAdvantages";
 import ImageComponent from "@/components/UI/ImageComponent";
 import PricingCard from "@/components/UI/PriceComponent";
+import ImageButton from "@/components/UI/ImageButton";
 
 export default function GroupLesson() {
   const contents = [
@@ -86,6 +87,7 @@ export default function GroupLesson() {
           />
         </div>
         <PricingCard />
+        <ImageButton />
       </main>
 
       <footer>
