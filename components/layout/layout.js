@@ -1,18 +1,16 @@
 import Head from "next/head";
-// import Header from './Header.jsx'
+import Navbar from "@/components/Navbar/index";
 // import Footer from './Footer.jsx'
 import styles from "./styles.module.css";
+import Footer from "../Footer";
 const Layout = ({ children }) => (
   <div className={styles.MobileOptimized}>
-        
     <Head>
-       <title>My App</title>
-          
+      <title>My App</title>
     </Head>
-    {/*     <Header /> */}
-          {children}
-    {/* <Footer /> */}
-      
+    <Navbar />
+    {children}
+    <Footer />
   </div>
 );
 export default Layout;

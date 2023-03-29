@@ -11,6 +11,8 @@ import CourseTarget from "@/components/UI/CourseTarget";
 import CardComponent from "@/components/UI/CardComponent";
 import OurAdvantages from "@/components/UI/OurAdvantages";
 import ImageComponent from "@/components/UI/ImageComponent";
+import PricingCard from "@/components/UI/PriceComponent";
+
 export default function GroupLesson() {
   const contents = [
     {
@@ -83,6 +85,7 @@ export default function GroupLesson() {
             ]}
           />
         </div>
+        <PricingCard />
       </main>
 
       <footer>
