@@ -89,11 +89,6 @@ export default function GroupLesson() {
         <PricingCard />
         <ImageButton />
       </main>
-
-      <footer>
-        <p>Footer content goes here</p>
-        <Link href="/">Back to Home</Link>
-      </footer>
     </Layout>
   );
 }

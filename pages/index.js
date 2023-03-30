@@ -8,6 +8,7 @@ import Layout from "@/components/layout/layout";
 // Importing UI Components
 import OurAdvantages from "@/components/UI/OurAdvantages/index";
 import Card from "@/components/UI/LessonDetailsCard/index";
+import TestComponent from "@/components/UI/testComponent";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -62,6 +63,7 @@ export default function Home() {
         <span>LESSONS</span>
         <p>初心者から上級者まで、それぞれのレベルに合わせたレッスンプラン</p>
         <Card />
+        <TestComponent>Abstract bubble </TestComponent>
       </main>
     </Layout>
   );
