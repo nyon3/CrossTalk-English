@@ -298,6 +298,12 @@
   margin-bottom: 2rem;
   border-radius: 0.3rem;
 }
+.jumbotron h1 {
+  line-height: 1.25;
+}
+.jumbotron p {
+  margin-bottom: 1rem;
+}
 
 /* section tag is for span tags that including title and description */
 .section_heading span {

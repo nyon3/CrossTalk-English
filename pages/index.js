@@ -37,10 +37,10 @@ export default function Home() {
           <Image
             src={heroPic}
             alt="tes"
-            width={1000}
-            height={1000}
+            width={800}
+            height={800}
             style={{
-              maxWidth: "30rem",
+              maxWidth: "25rem",
               height: "auto",
             }}
           />
