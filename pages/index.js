@@ -3,12 +3,15 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-import testPic from "../public/images/study-textbook.jpg";
 import Layout from "@/components/layout/layout";
 // Importing UI Components
 import OurAdvantages from "@/components/UI/OurAdvantages/index";
 import Card from "@/components/UI/LessonDetailsCard/index";
-import TestComponent from "@/components/UI/testComponent";
+import StuffComponent from "@/components/UI/stuffComponent";
+import Banner from "@/components/UI/Banner/index";
+// Importing Images
+import testPic from "../public/images/study-textbook.jpg";
+import heroPic from "../public/images/andrea_teaching_1920.jpg";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -21,28 +24,35 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.container}>
-        <Image
-          src={testPic}
-          alt="tes"
-          width={1000}
-          height={1000}
-          style={{
-            maxWidth: "30rem",
-            height: "auto",
-          }}
-        />
-        <h2 className={styles.heading}>
-          CrossTalkのレッスンは英語を楽しく話すことが モットーです！
-        </h2>
-        <p className={styles.intro}>
-          クロストークは岡山市北区にある英会話教室です。テキストで基本を学ぶことはもちろん、生きた英語で、楽しくしっかりと上達できます！思い立った今が、チャレンジのときです。英語を学んで、あなたの夢を叶えましょう！
-        </p>
-        <span>RESON</span>
-        <p>
-          CrossTalkで英語が
-          <br />
-          話せるようになる理由
-        </p>
+        <Banner />
+        <div className={styles.jumbotron}>
+          <h1>
+            英語ができると、
+            <br />
+            人生がもっと楽しくなる
+          </h1>
+          <p>
+            クロストークは岡山市北区にある英会話教室です。テキストで基本を学ぶことはもちろん、生きた英語で、楽しくしっかりと上達できます！思い立った今が、チャレンジのときです。英語を学んで、あなたの夢を叶えましょう！
+          </p>
+          <Image
+            src={heroPic}
+            alt="tes"
+            width={1000}
+            height={1000}
+            style={{
+              maxWidth: "30rem",
+              height: "auto",
+            }}
+          />
+        </div>
+        <div className={styles.section_heading}>
+          <span>RESON</span>
+          <p>
+            CrossTalkで英語が
+            <br />
+            話せるようになる理由
+          </p>
+        </div>
         <div>
           <OurAdvantages color="red">
             少人数制で
@@ -60,10 +70,16 @@ export default function Home() {
             な空間
           </OurAdvantages>
         </div>
-        <span>LESSONS</span>
-        <p>初心者から上級者まで、それぞれのレベルに合わせたレッスンプラン</p>
+        <div className={styles.section_heading}>
+          <span>LESSONS</span>
+          <p>
+            初心者から上級者まで、それぞれのレベルに
+            <br />
+            合わせたレッスンプラン
+          </p>
+        </div>
         <Card />
-        <TestComponent>Abstract bubble </TestComponent>
+        <StuffComponent />
       </main>
     </Layout>
   );

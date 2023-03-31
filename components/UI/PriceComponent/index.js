@@ -22,7 +22,7 @@ const PricingCard = () => {
           <span>¥3,500</span>
         </div>
         <div className={styles.lesson}>
-          <span>90分のレッスン x 4回</span>
+          <span>50分のレッスン x 4回</span>
         </div>
       </>
     );
@@ -44,7 +44,7 @@ const PricingCard = () => {
           <span>¥3,500</span>
         </div>
         <div className={styles.lesson}>
-          <span>60分のレッスン x 4回</span>
+          <span>50分のレッスン x 4回</span>
         </div>
       </>
     );
@@ -53,7 +53,7 @@ const PricingCard = () => {
       <>
         <div className={styles.price}>
           <span>月額料金:</span>
-          <span>¥7,700</span>
+          <span>¥13,200</span>
         </div>
         <div className={styles.fee}>
           <span>入会費:</span>
@@ -64,7 +64,7 @@ const PricingCard = () => {
           <span>¥3,500</span>
         </div>
         <div className={styles.lesson}>
-          <span>75分のレッスン x 4回</span>
+          <span>50分のレッスン x 4回</span>
         </div>
       </>
     );

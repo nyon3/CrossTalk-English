@@ -44,7 +44,7 @@ const Card = () => {
             <h3 className={styles.title}>{image.title}</h3>
             <p className={styles.description}>{image.description}</p>
             <button className={styles.button}>
-              <Link href={image.link}>Lesson page</Link>
+              <Link href={image.link}>もっと詳しく</Link>
             </button>
           </div>
         </div>

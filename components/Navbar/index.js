@@ -5,15 +5,12 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link href="/">Logo</Link>
+        <Link href="/">CrossTalk</Link>
       </div>
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <Link href="/groupLesson">Lesson</Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/">Price</Link>
+            <Link href="/groupLesson">体験レッスン申込</Link>
           </li>
         </ul>
       </nav>

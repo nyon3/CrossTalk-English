@@ -287,15 +287,24 @@
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.intro {
-  font-size: 1.2rem;
-  text-align: center;
-  max-width: 800px;
+/* Jumbotron for home page with red-ish color background*/
+.jumbotron {
+  padding: 2rem 1rem;
   margin-bottom: 2rem;
+  border-radius: 0.3rem;
 }
-/* Group lesson page */
+
+/* section tag is for span tags that including title and description */
+.section_heading span {
+  font-size: 3rem;
+}
+.section_heading p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
