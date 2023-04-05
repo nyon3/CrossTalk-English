@@ -10,7 +10,9 @@ const Navbar = () => {
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <Link href="/groupLesson">体験レッスン申込</Link>
+            <Link href="https://forms.gle/wRLWN8WiLdQLZdLQ9">
+              体験レッスン申込
+            </Link>
           </li>
         </ul>
       </nav>
