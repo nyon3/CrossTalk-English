@@ -30,6 +30,6 @@
   font-size: 1.5rem;
 }
 
-.courseInfoItem:hover::before {
+/* .courseInfoItem:hover::before {
   content: "🤯";
-}
+} */
