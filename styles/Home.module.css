@@ -293,10 +293,13 @@
 }
 
 /* Jumbotron for home page with red-ish color background*/
+/* FIX: contents inside of jumbotron is overflowing on smaller screen size, smaller than 375px*/
 .jumbotron {
+  width: 100%;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   border-radius: 0.3rem;
+  overflow: hidden;
 }
 .jumbotron h1 {
   line-height: 1.25;
