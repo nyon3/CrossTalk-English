@@ -5,7 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-} 
+}
 
 .description {
   display: inherit;
@@ -296,10 +296,19 @@
 /* FIX: contents inside of jumbotron is overflowing on smaller screen size, smaller than 375px*/
 .jumbotron {
   width: 100%;
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  border-radius: 0.3rem;
+  height: auto;
+  position: relative;
   overflow: hidden;
+  z-index: 0;
+}
+.jumbotron_content {
+  position: absolute;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: #fff;
 }
 .jumbotron h1 {
   line-height: 1.25;
