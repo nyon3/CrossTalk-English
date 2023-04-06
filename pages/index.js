@@ -11,7 +11,7 @@ import StuffComponent from "@/components/UI/stuffComponent";
 import Banner from "@/components/UI/Banner/index";
 // Importing Images
 import testPic from "../public/images/study-textbook.jpg";
-import heroPic from "../public/images/andrea_teaching_1920.jpg";
+import heroPic from "../public/images/lady_practicing_her_English_pronounciation.png";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -26,25 +26,31 @@ export default function Home() {
       <main className={styles.container}>
         <Banner />
         <div className={styles.jumbotron}>
-          <h1>
-            英語ができると、
-            <br />
-            人生がもっと楽しくなる
-          </h1>
-          <p>
-            クロストークは岡山市北区にある英会話スクールです。テキストで基本を学ぶことはもちろん、生きた英語で、楽しくしっかりと上達できます！思い立った今が、チャレンジのときです。英語を学んで、あなたの夢を叶えましょう！
-          </p>
           <Image
             src={heroPic}
             alt="tes"
             width={800}
             height={800}
+            sizes="(max-width: 768px) 100vw,(max-width: 1024px)70vw"
             style={{
               maxWidth: "25rem",
               height: "auto",
               backgroundPosition: "center",
             }}
           />
+          <div className={styles.jumbotron_content}>
+            <h1>
+              英語ができると
+              <br />
+              もっと人生が <br />
+              楽しくなる
+            </h1>
+          </div>
+          <div>
+            <p>
+              クロストークは岡山市北区にある英会話スクールです。テキストで基本を学ぶことはもちろん、生きた英語で、楽しくしっかりと上達できます！思い立った今が、チャレンジのときです。英語を学んで、あなたの夢を叶えましょう！
+            </p>
+          </div>
         </div>
         <div className={styles.section_heading}>
           <span>RESON</span>
