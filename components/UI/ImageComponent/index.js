@@ -1,10 +1,9 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
-import testImage from "../../../public/images/study-textbook.jpg";
 
-const BackgroundPage = ({ title, description }) => (
+const BackgroundPage = ({ title, description, image }) => (
   <div className={styles.bgWrap}>
-    <Image alt="Mountains" src={testImage} placeholder="blur" sizes="100vh" />
+    <Image alt="Mountains" src={image} placeholder="blur" sizes="100vh" />
     {/* <div className={styles.gradient_dark} /> */}
     <div className={styles.content}>
       <h1>{title}</h1>

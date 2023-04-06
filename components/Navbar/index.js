@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link href="/">CrossTalk</Link>
+        <Link href="/">CrossTalk英会話</Link>
       </div>
       <nav className={styles.nav}>
         <ul className={styles.navList}>

@@ -3,7 +3,10 @@ import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 
 // Images
-import sampleImage from "../public/images/study-textbook.jpg";
+import heroImage from "../public/images/andrea_teaching_640.jpg";
+import sampleImage from "../public/images/dice_letters_teach.jpg";
+import sampleImage2 from "../public/images/friendly.jpg";
+import sampleImage3 from "../public/images/sign_board_destination.jpg";
 
 // import UI components
 import Layout from "@/components/layout/layout";
@@ -20,16 +23,19 @@ export default function GroupLesson() {
       title: "実践力を身につける日常英会話レッスン",
       content:
         "日常的な英会話に必要なスキルを身につけることができます。ネイティブスピーカーの英語を聞き取り、質問をする力を身につけることができます。基本的な文法を学ぶことができ、英語でのコミュニケーションに必要な発音にも焦点を当てています。",
+      image: sampleImage,
     },
     {
       title: "グループレッスンならではの魅力的な特徴",
       content:
         "他の生徒とのコミュニケーションを通じて自然なコミュニケーションスキルやソーシャルスキルを向上させることができます。より多様な文化的な背景や視点を持つ人々と交流し、英語力を向上させることができます。",
+      image: sampleImage2,
     },
     {
       title: "異なるレベルの生徒と出会う多彩なグループレッスン",
       content:
         "同じレベルの生徒と一緒に学ぶことができますが、時には異なるレベルの生徒とも出会うことができます。これによって、英語力を向上させるだけでなく、より多様な文化的な背景や視点を持つ人々と交流することができます。",
+      image: sampleImage3,
     },
   ];
 
@@ -46,8 +52,8 @@ export default function GroupLesson() {
           description={
             "日常的な英会話に必要なスキルを身につけることができます。ネイティブスピーカーの英語を聞き取り、質問をする力を身につけることができます。基本的な文法を学ぶことができ、英語でのコミュニケーションに必要な発音にも焦点を当てています。"
           }
-          image={sampleImage}
-          alt={"sample"}
+          image={heroImage}
+          alt={"英会話スクールでグループレッスンをしている英会話講師の写真"}
         />
         <h2>このレッスンで学べること</h2>
         <OurAdvantages color="red">
@@ -63,7 +69,7 @@ export default function GroupLesson() {
               key={content.title}
               title={content.title}
               content={content.content}
-              image={sampleImage}
+              image={content.image}
             />
           ))}
         </div>
