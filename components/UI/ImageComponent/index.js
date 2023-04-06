@@ -3,7 +3,13 @@ import styles from "./styles.module.css";
 
 const BackgroundPage = ({ title, description, image }) => (
   <div className={styles.bgWrap}>
-    <Image alt="Mountains" src={image} placeholder="blur" sizes="100vh" />
+    <Image
+      alt="Mountains"
+      width={500}
+      height={500}
+      src={image}
+      placeholder="blur"
+    />
     {/* <div className={styles.gradient_dark} /> */}
     <div className={styles.content}>
       <h1>{title}</h1>

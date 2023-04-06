@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 
 // Images
+import heroImage from "../public/images/concept_orange_scrabble_P.png";
 import sampleImage from "../public/images/dice_letters_teach.jpg";
 import ImageConceptBeginner from "../public/images/image_concept_beginner.jpg";
 import imageConceptCustomLesson from "../public/images/image_concept_custom_lesson.jpg";
@@ -40,19 +41,14 @@ export default function PrivateLesson() {
 
   return (
     <Layout>
-      <Head>
-        <title>Page Title</title>
-        <meta name="description" content="Page description" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main className={styles.container}>
         <ImageComponent
           title={"プライベートレッスン"}
           description={
             "プライベートレッスンは、生徒さんのニーズに合わせて、スキルアップが可能です。また、1対1の授業形式であるため、生徒さんの課題や疑問点をすぐに解決することができます。"
           }
-          image={sampleImage}
-          alt={"sample"}
+          image={heroImage}
+          alt={"プライベートレッスン"}
         />
         <h2>このレッスンで学べること</h2>
         <OurAdvantages color="red">会話力の向上</OurAdvantages>

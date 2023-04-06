@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 
 // Images
+import heroImage from "../public/images/concept_blueback_scrabble_G.png";
 import sampleImage from "../public/images/dice_letters_teach.jpg";
 import sampleImage2 from "../public/images/friendly.jpg";
 import sampleImage3 from "../public/images/sign_board_destination.jpg";
@@ -22,37 +23,32 @@ export default function DiscussionLesson() {
       title: "実践力を身につけるディスカッション・クラス",
       content:
         "フリートークレッスンでは、参加者同士が意見交換しながら、英語でのコミュニケーションを練習することができます。話題は、最新のニュースやイベント、または日常生活での出来事など幅広く取り扱います。",
-        image: sampleImage,
+      image: sampleImage,
     },
     {
       title: "異なるレベルの生徒と出会う多彩なグループレッスン",
       content:
         "フリートークレッスンは、グループでのレッスン形式であるため、他の参加者とのコミュニケーションを通じて、より多くのアウトプットを得ることができます。",
-        image: sampleImage2,
+      image: sampleImage2,
     },
     {
       title: "ディスカッションならではの魅力的な特徴",
       content:
         "話題によっては、多様な文化や考え方に触れることができるため、英語力だけでなく国際感覚も身につけることができます。",
-        image: sampleImage3,
+      image: sampleImage3,
     },
   ];
 
   return (
     <Layout>
-      <Head>
-        <title>Page Title</title>
-        <meta name="description" content="Page description" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main className={styles.container}>
         <ImageComponent
           title={"ディスカッションレッスン"}
           description={
             "フリートークレッスンは、グループで行う英会話のレッスンです。ニュースや話題となっているイベントについて話をしながら、英語でのコミュニケーションを練習していきます。"
           }
-          image={sampleImage}
-          alt={"sample"}
+          image={heroImage}
+          alt={"ディスカッションレッスン"}
         />
         <h2>このレッスンで学べること</h2>
         <OurAdvantages color="red">自然な英語表現が学べる</OurAdvantages>

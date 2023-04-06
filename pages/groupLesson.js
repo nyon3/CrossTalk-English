@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 
 // Images
-import heroImage from "../public/images/andrea_teaching_640.jpg";
+import heroImage from "../public/images/concept_redback_scrabble_C.png";
 import sampleImage from "../public/images/dice_letters_teach.jpg";
 import sampleImage2 from "../public/images/friendly.jpg";
 import sampleImage3 from "../public/images/sign_board_destination.jpg";
@@ -41,16 +41,11 @@ export default function GroupLesson() {
 
   return (
     <Layout>
-      <Head>
-        <title>Page Title</title>
-        <meta name="description" content="Page description" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main className={styles.container}>
         <ImageComponent
-          title={"日常会話グループレッスン"}
+          title={"英会話グループレッスン"}
           description={
-            "日常的な英会話に必要なスキルを身につけることができます。ネイティブスピーカーの英語を聞き取り、質問をする力を身につけることができます。基本的な文法を学ぶことができ、英語でのコミュニケーションに必要な発音にも焦点を当てています。"
+            "CrossTalk英会話で楽しく日常英会話スキルを習得！岡山のグループレッスンで、ネイティブの英語聞き取り、質問力向上、基本文法と発音を学び、英語コミュニケーションを身につけよう。"
           }
           image={heroImage}
           alt={"英会話スクールでグループレッスンをしている英会話講師の写真"}
