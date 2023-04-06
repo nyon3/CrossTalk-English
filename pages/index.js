@@ -28,14 +28,14 @@ export default function Home() {
         <div className={styles.jumbotron}>
           <Image
             src={heroPic}
-            alt="tes"
+            alt="英会話スクールで発音の練習をしている女性"
             width={800}
             height={800}
             sizes="(max-width: 768px) 100vw,(max-width: 1024px)70vw"
             style={{
-              maxWidth: "25rem",
               height: "auto",
-              backgroundPosition: "center",
+              width: "100%",
+              maxHeight: "100vh",
             }}
           />
           <div className={styles.jumbotron_content}>
