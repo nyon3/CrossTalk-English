@@ -6,11 +6,10 @@ import styles from "@/styles/Home.module.css";
 import Layout from "@/components/layout/layout";
 // Importing UI Components
 import OurAdvantages from "@/components/UI/OurAdvantages/index";
-import Card from "@/components/UI/LessonDetailsCard/index";
+import Card from "@/components/UI/LessonCoursesCard/index";
 import StuffComponent from "@/components/UI/stuffComponent";
 import Banner from "@/components/UI/Banner/index";
 // Importing Images
-import testPic from "../public/images/study-textbook.jpg";
 import heroPic from "../public/images/lady_practicing_her_English_pronounciation.png";
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +29,7 @@ export default function Home() {
               height: "auto",
               width: "100%",
               maxHeight: "100vh",
+              marginBottom: "2rem",
             }}
           />
           <div className={styles.jumbotron_content}>

@@ -10,19 +10,70 @@ import sampleImage3 from "../public/images/sign_board_destination.jpg";
 
 // import UI components
 import Layout from "@/components/layout/layout";
-import CourseTarget from "@/components/UI/CourseTarget";
+import CourseTarget from "@/components/UI/LessonCandidates";
 import CardComponent from "@/components/UI/CardComponent";
 import OurAdvantages from "@/components/UI/OurAdvantages";
-import ImageComponent from "@/components/UI/ImageComponent";
+import ImageComponent from "@/components/UI/FeaturedHeader";
 import PricingCard from "@/components/UI/PriceComponent";
-import ImageButton from "@/components/UI/ImageButton";
+import ImageButton from "@/components/UI/TrialSignUp";
+import WeeklyCalendar from "@/components/UI/WeeklyCalendar";
+import FAQAccordion from "@/components/FaqAcordion";
+const faqs = [
+  {
+    question: "初心者でも英会話スクールに参加できますか？",
+    answer:
+      "はい、もちろんです。当スクールでは、初心者から上級者まで幅広いレベルの方が参加できるグループレッスンを提供しています。初めて英語を学ぶ方にも安心してご参加いただける環境を整えております。",
+  },
+  // Add more FAQ objects here as needed
+  {
+    question: "グループレッスンの人数はどれくらいですか？",
+    answer:
+      "当スクールでは、グループレッスンの人数を少人数制にしています。通常は、最大6名までの生徒さんで構成されることが多いです。これにより、各生徒さんに十分な指導とサポートが提供され、効果的な学習ができる環境を作っています。",
+  },
+  {
+    question: "英語が全く話せないのですが、大丈夫ですか？",
+    answer:
+      "ご心配無用です。初心者の方には特別にカリキュラムを組んでおり、基本的な英語の文法や単語から学ぶことができます。また、講師が丁寧に指導するため、英語が話せない状態からでも少しずつ上達していくことができます。",
+  },
+];
+
+const lessonData = {
+  月: {
+    "15:30-16:30": "初心者",
+    "18:00-19:00": "上級者",
+    "19:30-20:30": "初心者",
+  },
+  火: {
+    "14:00-15:00": "初心者",
+    "18:00-19:00": "初心者",
+    "19:30-20:30": "上級者",
+  },
+  水: {
+    "15:30-16:20": "初心者",
+  },
+  木: {
+    "15:00-15:50": "プライベート",
+    "16:30-17:20": "上級者",
+    "18:00-18:50": "初心者",
+  },
+  金: {
+    "13:30-14:20": "上級者",
+    "15:00-15:50": "初心者",
+    "16:30-17:20": "プライベート",
+    "18:30-19:20": "プライベート",
+  },
+  土: {
+    "11:00-11:50": "プライベート",
+    "12:30-13:20": "初心者",
+  },
+};
 
 export default function GroupLesson() {
   const contents = [
     {
-      title: "実践力を身につける日常英会話レッスン",
+      title: "コミュニケーションを重視したレッスン",
       content:
-        "日常的な英会話に必要なスキルを身につけることができます。ネイティブスピーカーの英語を聞き取り、質問をする力を身につけることができます。基本的な文法を学ぶことができ、英語でのコミュニケーションに必要な発音にも焦点を当てています。",
+        "インタラクティブなアクティビティやディスカッションを通じて、コミュニケーション力を鍛えることを重視した英会話レッスンで、実際の状況で英語を活用する自信を育てます。",
       image: sampleImage,
     },
     {
@@ -88,6 +139,16 @@ export default function GroupLesson() {
           />
         </div>
         <PricingCard />
+
+        {/* <WeeklyCalendar lessonData={lessonData} /> */}
+        <h2>よくある質問</h2>
+        {faqs.map((faq, index) => (
+          <FAQAccordion
+            key={index}
+            question={faq.question}
+            answer={faq.answer}
+          />
+        ))}
         <ImageButton />
       </main>
     </Layout>

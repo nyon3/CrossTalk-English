@@ -13,9 +13,9 @@ import Layout from "@/components/layout/layout";
 import CourseTarget from "@/components/UI/CourseTarget";
 import CardComponent from "@/components/UI/CardComponent";
 import OurAdvantages from "@/components/UI/OurAdvantages";
-import ImageComponent from "@/components/UI/ImageComponent";
+import ImageComponent from "@/components/UI/FeaturedHeader";
 import PricingCard from "@/components/UI/PriceComponent";
-import ImageButton from "@/components/UI/ImageButton";
+import ImageButton from "@/components/UI/TrialSignUp";
 
 export default function DiscussionLesson() {
   const contents = [
