@@ -10,7 +10,7 @@ import imageConceptCustomLesson from "../public/images/image_concept_custom_less
 
 // import UI components
 import Layout from "@/components/layout/layout";
-import CourseTarget from "@/components/UI/CourseTarget";
+import CourseTarget from "@/components/UI/LessonCandidates";
 import CardComponent from "@/components/UI/CardComponent";
 import OurAdvantages from "@/components/UI/OurAdvantages";
 import ImageComponent from "@/components/UI/FeaturedHeader";
