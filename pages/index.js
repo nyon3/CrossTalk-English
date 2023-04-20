@@ -9,6 +9,7 @@ import OurAdvantages from "@/components/UI/OurAdvantages/index";
 import Card from "@/components/UI/LessonCoursesCard/index";
 import StuffComponent from "@/components/UI/stuffComponent";
 import Banner from "@/components/UI/Banner/index";
+import CustomerReview from "@/components/UI/CustomerReview";
 // Importing Images
 import heroPic from "../public/images/lady_practicing_her_English_pronounciation.png";
 // const inter = Inter({ subsets: ["latin"] });
@@ -70,6 +71,12 @@ export default function Home() {
             <br />
             な空間
           </OurAdvantages>
+        </div>
+        {/* TODO: Center the header text */}
+        <div className={styles.section_heading}>
+          <span>REVIEW</span>
+          <p>生徒さんの評价</p>
+          <CustomerReview />
         </div>
         <div className={styles.section_heading}>
           <span>LESSONS</span>
