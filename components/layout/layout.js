@@ -2,7 +2,7 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar/index";
 import styles from "./styles.module.css";
 import Footer from "../Footer";
-
+import { GoogleAnalytics } from "nextjs-google-analytics";
 const Layout = ({ children, page }) => {
   let title, description;
 
@@ -30,7 +30,8 @@ const Layout = ({ children, page }) => {
   }
 
   return (
-    <div className={styles.MobileOptimized}>
+    <> <GoogleAnalytics trackPageViews />
+      <div className={styles.MobileOptimized}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -41,6 +42,7 @@ const Layout = ({ children, page }) => {
       {children}
       <Footer />
     </div>
+    </>
   );
 };
 

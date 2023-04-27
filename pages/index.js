@@ -2,8 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 import Layout from "@/components/layout/layout";
+
 // Importing UI Components
 import OurAdvantages from "@/components/UI/OurAdvantages/index";
 import Card from "@/components/UI/LessonCoursesCard/index";
@@ -47,6 +49,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+        {/* <Link href="/news">NEWS</Link> */}
         <div className={styles.section_heading}>
           <span>RESON</span>
           <p>
