@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { getSortedPostsData } from "../lib/content";
+import styles from "@/styles/Home.module.css";
+import Layout from "@/components/layout/layout";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -12,8 +14,10 @@ export async function getStaticProps() {
 
 export default function Blog({ allPostsData }) {
   return (
+    <Layout>
+     <main >
     <div>
-      <h1>Blog</h1>
+      <h1>お知らせ</h1>
       <ul>
         {allPostsData.map(({ slug, date, title }) => (
           <li key={slug}>
@@ -25,5 +29,7 @@ export default function Blog({ allPostsData }) {
       </ul>
       <Link href="/">Go to home</Link>
     </div>
+    </main>
+    </Layout>
   );
 }

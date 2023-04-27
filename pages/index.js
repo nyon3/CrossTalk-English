@@ -5,7 +5,8 @@ import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
 import Layout from "@/components/layout/layout";
-
+// Importing Data structure
+import { getSortedPostsData } from "../lib/content";
 // Importing UI Components
 import OurAdvantages from "@/components/UI/OurAdvantages/index";
 import Card from "@/components/UI/LessonCoursesCard/index";
@@ -16,7 +17,17 @@ import CustomerReview from "@/components/UI/CustomerReview";
 import heroPic from "../public/images/lady_practicing_her_English_pronounciation.png";
 // const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+
+export default function Home({allPostsData}) {
   return (
     <Layout>
       <main className={styles.container}>
@@ -49,7 +60,25 @@ export default function Home() {
             </p>
           </div>
         </div>
-        {/* <Link href="/news">NEWS</Link> */}
+        <div className={styles.section_heading} style={{
+          padding: "2rem",
+          backgroundColor: "#f5f5f5"
+        }}>
+          <span>NEWS</span>
+         <ul>
+        {allPostsData.map(({ slug, date, title }) => (
+          <li style={{
+            listStyle: "none"
+          }} key={slug}>
+            <Link href={`/news/${slug}`} style={{
+              fontSize: "1.5rem"
+            }}>{title}</Link>
+            <br />
+            <small>{new Date(date).toLocaleDateString()}</small>
+          </li>
+        ))}
+      </ul>
+        </div>
         <div className={styles.section_heading}>
           <span>RESON</span>
           <p>

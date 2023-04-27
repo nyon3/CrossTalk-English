@@ -1,6 +1,7 @@
 import styles from "./Card.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../Button";
 const images = [
   {
     name: "andrea_teaching_640.jpg",

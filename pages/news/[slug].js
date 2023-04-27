@@ -1,7 +1,10 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { getPostData, getSortedPostsData } from "../../lib/content";
-import Link from "next/link";
+
+import Layout from "@/components/layout/layout";
+import Button from "@/components/UI/Button";
+
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.slug);
   return {
@@ -29,18 +32,23 @@ export default function BlogPost({ postData }) {
   }
 
   return (
-    <div>
+    <Layout>
+    <main style={{
+      margin: "3rem"
+    }}>
       <Head>
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1>{postData.title}</h1>
         <p>
           By {postData.author} on {new Date(postData.date).toLocaleDateString()}
         </p>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-      <Link href="/">Go to home</Link>
-    </div>
+      <Button link={"/"}>
+      Go to home
+      </Button>
+    </main>
+    </Layout>
   );
 }

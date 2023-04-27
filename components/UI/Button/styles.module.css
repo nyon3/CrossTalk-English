@@ -1,0 +1,36 @@
+/* ボタンの基本スタイル */
+.gradient_button {
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  /* グラデーションの色設定 */
+  .gradient_button {
+    background-color: #d23e64;
+    /* background-image: linear-gradient(30deg, #f92 , #f66 ); */
+  }
+  
+  /* ホバー時のエフェクト */
+  .gradient_button:hover {
+    background-color: #b53455;
+    /* background-image: linear-gradient(30deg, rgb(222, 134, 33) , rgb(213, 84, 84) ); */
+  }
+  
+  /* アクティブ時のエフェクト */
+  .gradient_button:active {
+    transform: scale(0.98);
+  }
+  
+  /* フォーカス時のアウトライン削除 */
+  .gradient_button:focus {
+    outline: none;
+  }
+  
