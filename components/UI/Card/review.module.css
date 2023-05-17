@@ -4,31 +4,16 @@
   margin-bottom: 5rem;
 }
 /* TODO: adjust max-width for fitting the mobile screen size.  */
-.carousel {
-  display: flex;
-  gap: 20px;
-  max-width: 350px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
-  -webkit-overflow-scrolling: touch;
-  scroll-padding: 1rem;
-  padding: 1rem;
-  margin: 3rem auto 0;
-  border-radius: 5px;
-}
 
 .items {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 0 0 300px;
-  width: 300px;
+  flex: 0 0 230px;
   height: auto;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  background-color: #f6f6f6;
   font-size: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 1rem;

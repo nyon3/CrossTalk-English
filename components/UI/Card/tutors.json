@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "アンドリア",
+    "image": "andrea.jpg",
+    "subject": "English",
+    "description": "英会話講師として20年以上の豊富な経験を持ち、日本人が英語を上達させるためのポイントを熟知しています。アンドリア先生の経験豊富な指導のもと、確実に英語力を向上させましょう！",
+    "link": "/tutor/john_doe"
+  },
+  {
+    "id": 2,
+    "name": "トモヤ",
+    "image": "tomoya.jpg",
+    "subject": "Mathematics",
+    "description": "オーストラリアでの1年間の生活と仕事を通して、英語力を身につけました。CrossTalkでは、初心者の方々にやさしく丁寧な指導を行っております。一緒に、英語の基礎をしっかりと身につけましょう！",
+    "link": "/tutor/jane_smith"
+  }
+]

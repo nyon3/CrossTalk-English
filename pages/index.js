@@ -9,12 +9,11 @@ import Layout from "@/components/layout/layout";
 import { getSortedPostsData } from "../lib/content";
 // Importing UI Components
 import OurAdvantages from "@/components/UI/OurAdvantages/index";
-import Card from "@/components/UI/LessonCoursesCard/index";
-import StuffComponent from "@/components/UI/stuffComponent";
+import Card from "@/components/UI/Card";
 import Banner from "@/components/UI/Banner/index";
-import CustomerReview from "@/components/UI/CustomerReview";
 // Importing Images
 import heroPic from "../public/images/lady_practicing_her_English_pronounciation.png";
+
 // const inter = Inter({ subsets: ["latin"] });
 
 export async function getStaticProps() {
@@ -26,8 +25,7 @@ export async function getStaticProps() {
   };
 }
 
-
-export default function Home({allPostsData}) {
+export default function Home({ allPostsData }) {
   return (
     <Layout>
       <main className={styles.container}>
@@ -60,25 +58,7 @@ export default function Home({allPostsData}) {
             </p>
           </div>
         </div>
-        <div className={styles.section_heading} style={{
-          padding: "2rem",
-          backgroundColor: "#f5f5f5"
-        }}>
-          <span>NEWS</span>
-         <ul>
-        {allPostsData.map(({ slug, date, title }) => (
-          <li style={{
-            listStyle: "none"
-          }} key={slug}>
-            <Link href={`/news/${slug}`} style={{
-              fontSize: "1.5rem"
-            }}>{title}</Link>
-            <br />
-            <small>{new Date(date).toLocaleDateString()}</small>
-          </li>
-        ))}
-      </ul>
-        </div>
+
         <div className={styles.section_heading}>
           <span>RESON</span>
           <p>
@@ -104,22 +84,70 @@ export default function Home({allPostsData}) {
             な空間
           </OurAdvantages>
         </div>
+
+        {/* <div
+          className={styles.section_heading}
+          style={{
+            marginBottom: "2rem",
+          }}
+        >
+          <span>LESSONS</span>
+          <p>レッスンを目的から選ぶ</p>
+
+          <Card type="ImageFeatured" data="type1" />
+        </div> */}
+
+        <div
+          className={styles.section_heading}
+          style={{
+            marginBottom: "2rem",
+          }}
+        >
+          <span>LESSONS</span>
+          <p>レッスンのスタイルから選ぶ</p>
+          <Card type="ImageFeatured" data="type2" />
+        </div>
+
         {/* TODO: Center the header text */}
         <div className={styles.section_heading}>
           <span>REVIEW</span>
-          <p>生徒さんの評价</p>
-          <CustomerReview />
+          <p>生徒さんの声</p>
         </div>
-        <div className={styles.section_heading}>
-          <span>LESSONS</span>
-          <p>
-            初心者から上級者まで、それぞれのレベルに
-            <br />
-            合わせたレッスンプラン
-          </p>
+        <Card type="review" />
+
+        {/* Changed background color */}
+        <div
+          className={styles.section_heading}
+          style={{
+            marginBottom: "2rem",
+            padding: "2rem",
+            backgroundColor: "#f5f5f5",
+          }}
+        >
+          <span>NEWS</span>
+          <ul>
+            {allPostsData.map(({ slug, date, title }) => (
+              <li
+                style={{
+                  listStyle: "none",
+                }}
+                key={slug}
+              >
+                <Link
+                  href={`/news/${slug}`}
+                  style={{
+                    fontSize: "1.5rem",
+                  }}
+                >
+                  {title}
+                </Link>
+                <br />
+                <small>{new Date(date).toLocaleDateString()}</small>
+              </li>
+            ))}
+          </ul>
         </div>
-        <Card />
-        <StuffComponent />
+        <Card type="base" />
       </main>
     </Layout>
   );

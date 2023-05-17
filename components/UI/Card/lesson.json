@@ -1,0 +1,50 @@
+[
+  {
+    "type": "type1",
+    "image": "work_office.jpg",
+    "alt": "Image 1",
+    "link": "/work_office",
+    "title": "仕事で英語を使う",
+    "content": "観光地でのガイド、英語教師、フリーランサーなど、日常の仕事でカジュアルに英語を使う必要がある方向けのレッスンを提供します。"
+  },
+  {
+    "type": "type1",
+    "image": "concept_workingHoliday.png",
+    "alt": "Image 3",
+    "link": "/privateLesson",
+    "title": "ワーキングホリデー準備",
+    "content": "ワーキングホリデーで必要となる英語スキルを磨きます。日常生活でのコミュニケーションから、求職活動、仕事場での英語使用まで、ワーキングホリデーで成功するための全てをカバーします。"
+  },
+  {
+    "type": "type1",
+    "image": "concept_talk.png",
+    "alt": "Image 2",
+    "link": "/discussionLesson",
+    "title": "コミュニケーション強化",
+    "content": "日常会話からビジネス英語まで、実践的なコミュニケーション能力を向上させるレッスンを提供します。"
+  },
+  {
+    "type": "type2",
+    "image": "andrea_teaching_640.jpg",
+    "alt": "Image 1",
+    "link": "/groupLesson",
+    "title": "グループレッスン",
+    "content": "このクラスでは、会話力を向上させたい生徒のためのクラスです。講師との会話を通して英語で話すための全体的なスキルアップを目指します"
+  },
+  {
+    "type": "type2",
+    "image": "private_lesson_high_five_1000.JPG",
+    "alt": "Image 3",
+    "link": "/privateLesson",
+    "title": "プライベート",
+    "content": "プライベートクラスは、マンツーマンで英語力を向上させたい生徒のためのクラスです。教師は、生徒が必要とする特定の分野に取り組むことで、英語スキルの向上を実現するお手伝いをします"
+  },
+  {
+    "type": "type2",
+    "image": "discussion_class.jpg",
+    "alt": "Image 2",
+    "link": "/discussionLesson",
+    "title": "ディスカッション",
+    "content": "ディスカッションクラスは、リスニングとスピーキングのスキルを向上させたい生徒のためのクラスです。講師が様々なトピックについてディスカッションをリードすることで、ディスカッションスキルの練習をすることができます。"
+  }
+]

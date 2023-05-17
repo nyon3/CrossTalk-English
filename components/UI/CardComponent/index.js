@@ -2,6 +2,9 @@ import React from "react";
 import Image from "next/image";
 import styles from "./styles.module.css";
 
+// This component were used by child components for lesson courses.
+// Delete this component after I created the template for these child components.
+
 const CardComponent = ({ title, content, image, alt }) => {
   return (
     <div className={styles.card}>
