@@ -33,22 +33,23 @@ export default function BlogPost({ postData }) {
 
   return (
     <Layout>
-    <main style={{
-      margin: "3rem"
-    }}>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <article>
-        <p>
-          By {postData.author} on {new Date(postData.date).toLocaleDateString()}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-      <Button link={"/"}>
-      Go to home
-      </Button>
-    </main>
+      <main
+        style={{
+          margin: "3rem",
+        }}
+      >
+        <Head>
+          <title>{postData.title}</title>
+        </Head>
+        <article>
+          <p>
+            By {postData.author} on{" "}
+            {new Date(postData.date).toLocaleDateString()}
+          </p>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </article>
+        <Button link={"/"}>Go to home</Button>
+      </main>
     </Layout>
   );
 }

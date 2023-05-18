@@ -1,12 +1,13 @@
 import { useRouter } from "next/router";
 import styles from "./styles.module.css";
 
-const PricingCard = () => {
+const PricingCard = ({ courseType }) => {
   const router = useRouter();
+  console.log("PricingCard is rendering, router pathname:", router.pathname);
 
   let Price;
 
-  if (router.pathname === "/groupLesson") {
+  if (courseType === "group_lesson") {
     Price = (
       <>
         <div className={styles.price}>
@@ -26,7 +27,7 @@ const PricingCard = () => {
         </div>
       </>
     );
-  } else if (router.pathname === "/privateLesson") {
+  } else if (courseType === "private_lesson") {
     Price = (
       <>
         <div className={styles.price}>
@@ -48,7 +49,7 @@ const PricingCard = () => {
         </div>
       </>
     );
-  } else if (router.pathname === "/discussionLesson") {
+  } else if (courseType === "free_talk") {
     Price = (
       <>
         <div className={styles.price}>

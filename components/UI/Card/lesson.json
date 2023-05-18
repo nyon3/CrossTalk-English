@@ -27,7 +27,7 @@
     "type": "type2",
     "image": "andrea_teaching_640.jpg",
     "alt": "Image 1",
-    "link": "/groupLesson",
+    "link": "/lesson/group_lesson",
     "title": "グループレッスン",
     "content": "このクラスでは、会話力を向上させたい生徒のためのクラスです。講師との会話を通して英語で話すための全体的なスキルアップを目指します"
   },
@@ -35,7 +35,7 @@
     "type": "type2",
     "image": "private_lesson_high_five_1000.JPG",
     "alt": "Image 3",
-    "link": "/privateLesson",
+    "link": "/lesson/private_lesson",
     "title": "プライベート",
     "content": "プライベートクラスは、マンツーマンで英語力を向上させたい生徒のためのクラスです。教師は、生徒が必要とする特定の分野に取り組むことで、英語スキルの向上を実現するお手伝いをします"
   },
@@ -43,8 +43,8 @@
     "type": "type2",
     "image": "discussion_class.jpg",
     "alt": "Image 2",
-    "link": "/discussionLesson",
-    "title": "ディスカッション",
+    "link": "/lesson/freetalk_lesson",
+    "title": "フリートーク",
     "content": "ディスカッションクラスは、リスニングとスピーキングのスキルを向上させたい生徒のためのクラスです。講師が様々なトピックについてディスカッションをリードすることで、ディスカッションスキルの練習をすることができます。"
   }
 ]
