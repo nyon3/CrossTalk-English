@@ -4,7 +4,6 @@
   padding: var(--spacing-4);
   background-color: rgb(var(--background-end-rgb));
   line-height: var(--lineHeight-normal);
-  text-align: center;
 }
 
 .course h1 {
