@@ -291,39 +291,3 @@
   font-weight: bold;
   margin-bottom: 1rem;
 }
-
-/* Jumbotron for home page with red-ish color background*/
-/* FIX: contents inside of jumbotron is overflowing on smaller screen size, smaller than 375px*/
-.jumbotron {
-  width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-}
-.jumbotron_content {
-  position: absolute;
-  width: 95%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-  color: #fff;
-}
-.jumbotron h1 {
-  line-height: 1.25;
-}
-.jumbotron p {
-  margin-bottom: 1rem;
-}
-
-/* section tag is for span tags that including title and description */
-.section_heading span {
-  font-size: 3rem;
-}
-.section_heading p {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}

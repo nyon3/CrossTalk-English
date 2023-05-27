@@ -1,3 +1,14 @@
+/**
+ * PricingCard
+ *
+ * This component represents a card used to display the pricing details for different types of courses.
+ * It takes a courseType prop and displays different pricing details based on it.
+ * This component utilizes Next.js's useRouter hook for routing functionalities.
+ *
+ * @component
+ * @prop {string} courseType - The type of course for which the pricing details are to be displayed. Possible values are: 'group_lesson', 'private_lesson', 'free_talk'.
+ */
+
 import { useRouter } from "next/router";
 import styles from "./styles.module.css";
 
@@ -7,7 +18,10 @@ const PricingCard = ({ courseType }) => {
 
   let Price;
 
+  // Define the content of the card based on the course type
+  // Here you can further customize the pricing details for each type of course
   if (courseType === "group_lesson") {
+    // Pricing for group lessons
     Price = (
       <>
         <div className={styles.price}>
@@ -28,6 +42,7 @@ const PricingCard = ({ courseType }) => {
       </>
     );
   } else if (courseType === "private_lesson") {
+    // Pricing for private lessons
     Price = (
       <>
         <div className={styles.price}>
@@ -50,6 +65,7 @@ const PricingCard = ({ courseType }) => {
       </>
     );
   } else if (courseType === "free_talk") {
+    // Pricing for free talk sessions
     Price = (
       <>
         <div className={styles.price}>

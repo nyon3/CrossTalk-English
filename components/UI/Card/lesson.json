@@ -3,7 +3,7 @@
     "type": "type1",
     "image": "work_office.jpg",
     "alt": "Image 1",
-    "link": "/work_office",
+    "link": "/lesson/work_english",
     "title": "仕事で英語を使う",
     "content": "観光地でのガイド、英語教師、フリーランサーなど、日常の仕事でカジュアルに英語を使う必要がある方向けのレッスンを提供します。"
   },
@@ -11,7 +11,7 @@
     "type": "type1",
     "image": "concept_workingHoliday.png",
     "alt": "Image 3",
-    "link": "/privateLesson",
+    "link": "/lesson/working_holiday",
     "title": "ワーキングホリデー準備",
     "content": "ワーキングホリデーで必要となる英語スキルを磨きます。日常生活でのコミュニケーションから、求職活動、仕事場での英語使用まで、ワーキングホリデーで成功するための全てをカバーします。"
   },
@@ -19,7 +19,7 @@
     "type": "type1",
     "image": "concept_talk.png",
     "alt": "Image 2",
-    "link": "/discussionLesson",
+    "link": "/lesson/talk_english",
     "title": "コミュニケーション強化",
     "content": "日常会話からビジネス英語まで、実践的なコミュニケーション能力を向上させるレッスンを提供します。"
   },

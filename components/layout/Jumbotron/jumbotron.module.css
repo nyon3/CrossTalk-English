@@ -1,0 +1,24 @@
+/* Jumbotron for home page with red-ish color background*/
+/* FIX: contents inside of jumbotron is overflowing on smaller screen size, smaller than 375px*/
+.jumbotron {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.jumbotron_content {
+  position: absolute;
+  width: 90%;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: #fff;
+}
+
+.jumbotron p {
+  font-size: 2rem;
+  line-height: 1.5;
+}
