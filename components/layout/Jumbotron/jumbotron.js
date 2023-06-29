@@ -12,10 +12,32 @@ import HeadlineComponent from "./headline";
  * @prop {string} imgSrc - The source URL of the image to be displayed.
  * @prop {string} imgAlt - The alt text for the image, important for SEO and accessibility.
  */
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  weight: "700",
+  subsets: ["latin"],
+});
 
 const Jumbotron = ({ imgSrc, imgAlt }) => (
   <>
-    <div className={styles.jumbotron}>
+    <div className={styles.hero_section}>
+      <div
+        className={roboto.className}
+        style={{
+          fontSize: "4rem",
+          lineHeight: "0.8`",
+          color: "#333",
+          textAlign: "center",
+          marginBottom: "0",
+        }}
+      >
+        Let&apos;s Talk!
+      </div>
+      <HeadlineComponent
+        headline={["英語ができるともっと", "人生が楽しくなる"]}
+      />
+
       <Image
         src={imgSrc}
         alt={imgAlt}
@@ -25,18 +47,17 @@ const Jumbotron = ({ imgSrc, imgAlt }) => (
         style={{
           height: "auto",
           width: "100%",
-          maxHeight: "100vh",
+          maxHeight: "30vh",
         }}
       />
-      <div className={styles.jumbotron_content}>
-        <HeadlineComponent
-          headline={["英語ができると", "もっと人生が", "楽しくなる"]}
-        />
+      <div>
+        {`
+        クロストークは岡山市北区にある英会話スクールです。テキストで基本を学ぶことはもちろん、
+        生きた英語で、楽しくしっかりと上達できます！思い立った今が、チャレンジのときです。
+        英語を学んで、あなたの夢を叶えましょう！
+    `}
       </div>
     </div>
-    <p>
-      クロストークは岡山市北区にある英会話スクールです。テキストで基本を学ぶことはもちろん、生きた英語で、楽しくしっかりと上達できます！思い立った今が、チャレンジのときです。英語を学んで、あなたの夢を叶えましょう！
-    </p>
   </>
 );
 

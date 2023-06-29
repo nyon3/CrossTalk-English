@@ -27,7 +27,7 @@ import Card from "@/components/UI/Card";
 import { getSortedPostsData } from "../lib/content";
 
 // Importing images
-import heroPic from "../public/images/lady_practicing_her_English_pronounciation.png";
+import heroPic from "../public/images/andrea_teaching_640x360.jpg";
 
 // Fetching data during build time
 export async function getStaticProps() {
@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
   return (
     <Layout>
       <main className={styles.container}>
-        <Banner />
+        {/* <Banner /> */}
         <Jumbotron
           imgSrc={heroPic}
           imgAlt="英会話スクールで発音の練習をしている女性"
@@ -59,14 +59,14 @@ export default function Home({ allPostsData }) {
           mainHeader="レッスンを目的から選ぶ"
           subHeader={"LESSONS"}
         />
-        <Card type="ImageFeatured" data="type2" />
+        <Card type="base" data="params" dataType="type2" />
         <SectionHeader mainHeader="生徒さんの声" subHeader={"REVIEW"} />
-        <Card type="review" />
+        <Card type="review" data="reviews" />
         <SectionHeader mainHeader="よくある質問" subHeader={"FAQ"} />
         <FAQAccordion />
         <SectionHeader mainHeader="最新情報" subHeader={"NEWS"} />
         <NewsSection allPostsData={allPostsData} />
-        <Card type="base" />
+        <Card type="base" data="tutors" showButton={false} />
       </main>
     </Layout>
   );

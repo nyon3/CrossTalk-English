@@ -1,6 +1,6 @@
 /* Jumbotron for home page with red-ish color background*/
-/* FIX: contents inside of jumbotron is overflowing on smaller screen size, smaller than 375px*/
-.jumbotron {
+
+/* .jumbotron {
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
@@ -21,4 +21,20 @@
 .jumbotron p {
   font-size: 2rem;
   line-height: 1.5;
+} */
+
+.hero_section {
+  display: flex;
+  width: 375px;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 10px;
+}
+
+.hero_section p {
+  font-size: 24px;
+  font-weight: 700;
 }

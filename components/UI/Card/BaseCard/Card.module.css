@@ -1,13 +1,11 @@
 .card {
   max-width: 20rem;
-  padding: 1rem;
-  border: 1px solid #ccc;
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .image_container {
-  width: 20rem;
+  width: 100%;
   height: 200px;
   overflow: hidden;
 }
@@ -19,13 +17,13 @@
 }
 
 .content {
-  padding: 1rem;
+  padding: 15px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-
+f
 .title {
   margin-top: 0;
   font-size: 1.5rem;
