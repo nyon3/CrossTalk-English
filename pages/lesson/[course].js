@@ -9,10 +9,22 @@ import PricingCard from "@/components/UI/PriceComponent";
 
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
+  const { title, headline, subheadline } = courseData;
+
   return (
     <Layout>
       <main>
         <div className={styles.course}>
+          <div>{title}</div>
+          <h4>
+            {headline.split("\n").map((line, i) => (
+              <React.Fragment key={i}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
+          </h4>
+          <p>{subheadline}</p>
           <Image
             src={`/images/${courseData.image}`}
             alt={courseData.title}
@@ -20,7 +32,7 @@ const CoursePage = ({ courseData }) => {
             height={700}
           />
           <h1>{courseData.title}</h1>
-          <p>{courseData.summary}</p>
+
           {/* <span>Instructor: {courseData.instructor}</span> */}
           <div dangerouslySetInnerHTML={{ __html: courseData.contentHtml }} />
           <div
