@@ -6,6 +6,7 @@ import { getCourseData, getSortedCoursesData } from "@/lib/courses";
 import styles from "@/styles/lesson.module.css";
 import TrialSignUp from "@/components/UI/TrialSignUp";
 import PricingCard from "@/components/UI/PriceComponent";
+import ImageWrapper from "@/components/UI/ImageWrapper";
 
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
@@ -25,14 +26,11 @@ const CoursePage = ({ courseData }) => {
             ))}
           </h4>
           <p>{subheadline}</p>
-          <Image
+          <ImageWrapper
             src={`/images/${courseData.image}`}
             alt={courseData.title}
-            width={700}
-            height={700}
           />
           <h1>{courseData.title}</h1>
-
           {/* <span>Instructor: {courseData.instructor}</span> */}
           <div dangerouslySetInnerHTML={{ __html: courseData.contentHtml }} />
           <div

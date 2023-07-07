@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./jumbotron.module.css";
+import ImageWrapper from "@/components/UI/ImageWrapper";
 import HeadlineComponent from "./headline";
 
 /**
@@ -38,7 +39,7 @@ const Jumbotron = ({ imgSrc, imgAlt }) => (
         headline={["英語ができるともっと", "人生が楽しくなる"]}
       />
 
-      <Image
+      {/* <Image
         src={imgSrc}
         alt={imgAlt}
         width={800}
@@ -49,7 +50,7 @@ const Jumbotron = ({ imgSrc, imgAlt }) => (
           width: "100%",
           maxHeight: "30vh",
         }}
-      />
+      /> */}
       <div>
         {`
         クロストークは岡山市北区にある英会話スクールです。テキストで基本を学ぶことはもちろん、
@@ -58,6 +59,7 @@ const Jumbotron = ({ imgSrc, imgAlt }) => (
     `}
       </div>
     </div>
+    <ImageWrapper src={imgSrc} alt={imgAlt} />
   </>
 );
 
