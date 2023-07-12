@@ -27,3 +27,10 @@
   background: #fc2;
   border-radius: 40% 40% 50% 40%/30% 50% 50%;
 }
+
+.featuresList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}

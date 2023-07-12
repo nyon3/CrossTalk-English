@@ -8,6 +8,8 @@ const HighlightedFeature = ({ color, children }) => {
         return styles.red_bubble;
       case "orange":
         return styles.orange_bubble;
+      case "yellow":
+        return styles.yellow_bubble;
       default:
         return styles.yellow_bubble;
     }

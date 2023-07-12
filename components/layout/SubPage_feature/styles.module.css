@@ -1,0 +1,14 @@
+.section {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+.title {
+  color: #f25c54;
+  font-weight: 700;
+}
+
+.headline {
+  margin-top: 10px;
+}

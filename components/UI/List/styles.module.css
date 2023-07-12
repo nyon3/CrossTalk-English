@@ -1,0 +1,22 @@
+.flexWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.para {
+  width: 70%; /* Adjust to your preference */
+  color: 333;
+}
+
+.para p {
+  line-height: 1.5;
+}
+
+.icon {
+  width: 2rem; /* Adjust to your preference */
+  height: 2rem;
+}

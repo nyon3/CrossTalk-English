@@ -1,38 +1,39 @@
 // pages/[course].js
 import React from "react";
-import Image from "next/image";
 import Layout from "@/components/layout/layout";
 import { getCourseData, getSortedCoursesData } from "@/lib/courses";
-import styles from "@/styles/lesson.module.css";
+import styles from "./lesson.module.css";
 import TrialSignUp from "@/components/UI/TrialSignUp";
 import PricingCard from "@/components/UI/PriceComponent";
 import ImageWrapper from "@/components/UI/ImageWrapper";
+import FeatureSection from "@/components/layout/SubPage_feature/feature";
+import HighlightedFeatureList from "@/components/layout/HighlightedFeature/index";
 
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
-  const { title, headline, subheadline } = courseData;
+  const { title, headline, image, features, RecommendedFor } = courseData;
 
   return (
     <Layout>
       <main>
-        <div className={styles.course}>
+        <div className={styles.wrapper}>
           <div>{title}</div>
-          <h4>
+          <h2>
             {headline.split("\n").map((line, i) => (
               <React.Fragment key={i}>
                 {line}
                 <br />
               </React.Fragment>
             ))}
-          </h4>
-          <p>{subheadline}</p>
-          <ImageWrapper
-            src={`/images/${courseData.image}`}
-            alt={courseData.title}
-          />
-          <h1>{courseData.title}</h1>
+          </h2>
+          <ImageWrapper src={`/images/${image}`} alt={courseData.title} />
+          <FeatureSection title="Features" data={features} background="#fff" />
+          {/* Markdown */}
           {/* <span>Instructor: {courseData.instructor}</span> */}
-          <div dangerouslySetInnerHTML={{ __html: courseData.contentHtml }} />
+          <div className={styles.title}>Recommended For</div>
+          <h3 className={styles.headline}>こんな方におすすめ</h3>
+
+          <HighlightedFeatureList config={RecommendedFor} />
           <div
             style={{
               marginTop: "3rem",

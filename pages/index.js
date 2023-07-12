@@ -39,10 +39,24 @@ export async function getStaticProps() {
   };
 }
 
+const features = [
+  {
+    color: "red",
+    text: "少人数制で会話量が多い",
+  },
+  {
+    color: "orange",
+    text: "経験豊富な外国人講師",
+  },
+  {
+    text: "アットホームな空間",
+  },
+];
+
 export default function Home({ allPostsData }) {
   return (
     <Layout>
-      <main className={styles.container}>
+      <main className={styles.wrapper}>
         {/* <Banner /> */}
         <Jumbotron
           imgSrc={heroPic}
@@ -54,7 +68,7 @@ export default function Home({ allPostsData }) {
           mainHeader="CrossTalkで英語が話せるようになる理由"
           subHeader={"RESON"}
         />
-        <HighlightedFeature />
+        <HighlightedFeature config={features} />
         <SectionHeader
           mainHeader="レッスンを目的から選ぶ"
           subHeader={"LESSONS"}
