@@ -1,5 +1,5 @@
 .card {
-  max-width: 600px;
+  max-width: 40rem;
   border: 1px solid #e2e2e2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -29,6 +29,33 @@
   color: #1a1a1a;
 }
 
+.fee_label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 300px;
+  background-color: #ffffff;
+}
+.fee_label span {
+  font-size: 1.2rem;
+}
+.fee_title {
+  background-color: #d23e64;
+  color: white;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+}
+
+.monthly_fee {
+  font-weight: 700;
+  background-color: #edecec;
+  border-radius: 0px 5px 5px 0px;
+  padding: 5px;
+  flex-grow: 1; /* This will make this span take the remaining space */
+}
 .fee {
   display: flex;
   justify-content: space-between;
@@ -37,7 +64,7 @@
   color: #757575;
 }
 
-.lesson {
+.courseDescription {
   font-size: 1rem;
   color: #757575;
 }
