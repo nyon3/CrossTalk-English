@@ -15,6 +15,13 @@ features:
     description: "英語の基礎を固め、自信をもって英語を話せるようになることを目指します。"
   - title: "英語の表現力を獲得する"
     description: "バイリンガル講師と日本人講師からの丁寧な指導を通じて、英語本来の表現力を獲得します。"
+RecommendedFor:
+  - text: カジュアルな英会話を楽しみたい
+    color: red
+  - text: 英語での日常会話力をアップしたい
+    color: orange
+  - text: リラックスした環境で英語を話したい
+    color: yellow
 students:
   - category: "基礎英語力を上げたい方"
     points:
