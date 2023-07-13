@@ -13,13 +13,14 @@ const NewsSection = ({ allPostsData }) => (
         <li
           style={{
             listStyle: "none",
+            marginBottom: "1.3rem",
           }}
           key={slug}
         >
           <Link
             href={`/news/${slug}`}
             style={{
-              fontSize: "1.5rem",
+              fontSize: "1rem",
             }}
           >
             {title}
