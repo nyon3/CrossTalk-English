@@ -1,0 +1,68 @@
+/* styles.module.css */
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  flex-grow: 1;
+  margin-bottom: 5px;
+  color: #d23e64;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.notice {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.stepWrapper {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.container li {
+  list-style: none;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: small;
+}
+.stepTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stepSubtitle {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.stepDescription {
+  text-align: center;
+}

@@ -8,6 +8,7 @@ import PricingCard from "@/components/UI/PriceComponent";
 import ImageWrapper from "@/components/UI/ImageWrapper";
 import FeatureSection from "@/components/layout/SubPage_feature/feature";
 import HighlightedFeatureList from "@/components/layout/HighlightedFeature/index";
+import TrialFlow from "@/components/layout/TrialFlow/index";
 
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
@@ -17,8 +18,8 @@ const CoursePage = ({ courseData }) => {
     <Layout>
       <main>
         <div className={styles.wrapper}>
-          <div>{title}</div>
-          <h2>
+          <div className={styles.title}>{title}</div>
+          <h2 className={styles.headline}>
             {headline.split("\n").map((line, i) => (
               <React.Fragment key={i}>
                 {line}
@@ -43,6 +44,7 @@ const CoursePage = ({ courseData }) => {
           >
             <PricingCard courseType={courseData.type} />
           </div>
+          <TrialFlow />
           <div
             style={{
               marginTop: "3rem",

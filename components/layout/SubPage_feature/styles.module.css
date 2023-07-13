@@ -5,10 +5,12 @@
 }
 
 .title {
+  text-align: center;
   color: #f25c54;
   font-weight: 700;
 }
 
 .headline {
+  text-align: center;
   margin-top: 10px;
 }
