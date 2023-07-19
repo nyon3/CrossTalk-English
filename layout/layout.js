@@ -6,8 +6,12 @@ import { GoogleAnalytics } from "nextjs-google-analytics";
 
 const Layout = ({
   children,
-  title = "岡山市の英会話スクール | CrossTalkで楽しく英語を学ぶ",
-  description = "岡山市にあるCrossTalk英会話スクールでは、楽しく英語を話すことをモットーにしています。",
+  title = "CROSSTALK 英会話スクール",
+  description = `
+  岡山市北区のCrossTalk英会話スクールへようこそ！
+  テキストで基本を学ぶことはもちろん
+  実際の状況で使える「生きた英語」を学んで、
+  あなたの夢を叶えましょう！`,
 }) => {
   let structuredData = {
     "@context": "https://schema.org",
