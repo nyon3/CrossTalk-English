@@ -12,16 +12,16 @@
 import styles from "@/styles/Home.module.css";
 
 // Layout Components
-import Layout from "@/components/layout/layout";
-import Jumbotron from "@/components/layout/Jumbotron/jumbotron";
-import HighlightedFeature from "@/components/layout/HighlightedFeature/index";
-import FAQAccordion from "@/components/UI/FaqAcordion";
-import SectionHeader from "@/components/UI/SectionHeader";
-import NewsSection from "@/components/UI/News";
-import Banner from "@/components/UI/Banner/index";
+import Layout from "@/layout/layout";
+import Jumbotron from "@/layout/Jumbotron/jumbotron";
+import HighlightedFeature from "@/layout/HighlightedFeature/index";
+import FAQAccordion from "@/UI/FaqAcordion";
+import SectionHeader from "@/components/SectionHeader";
+import NewsSection from "@/UI/News";
+import Banner from "@/UI/Banner/index";
 
 // Card component for various card-based layouts
-import Card from "@/components/UI/Card";
+import Card from "@/UI/Card";
 
 // Importing data fetching function
 import { getSortedPostsData } from "../lib/content";

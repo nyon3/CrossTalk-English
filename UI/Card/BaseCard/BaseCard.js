@@ -1,7 +1,7 @@
 // BaseCard.js
 import Image from "next/image";
 import styles from "./Card.module.css";
-import Button from "../../Button";
+import Button from "../../../components/Button";
 
 const BaseCard = ({ data, showButton = true, dataType }) => {
   if (dataType && data.type !== dataType) {

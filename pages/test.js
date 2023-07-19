@@ -1,4 +1,4 @@
-import PlanCard from "@/components/UI/PriceComponent/pricing";
+import PlanCard from "@/UI/PriceComponent/pricing";
 
 const Pricing = () => {
   // 支払方法をついか、例えばコンビネーションプランなら、引き落とし制ではなくて、単発課金にするとか。

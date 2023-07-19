@@ -1,8 +1,7 @@
 import Link from "next/link";
 import styles from "./styles.module.css";
-import Image from "next/image";
-import testPic from "../../../public/images/study-textbook.jpg";
-import ImageWrapper from "../ImageWrapper";
+import testPic from "@/public/images/study-textbook.jpg";
+import ImageWrapper from "../../components/ImageWrapper";
 
 const Button = () => (
   <Link href="https://forms.gle/wRLWN8WiLdQLZdLQ9">
@@ -16,3 +15,4 @@ const Button = () => (
 );
 
 export default Button;
+

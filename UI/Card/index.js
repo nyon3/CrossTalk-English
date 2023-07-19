@@ -9,7 +9,7 @@ import ImageFeaturedCard from "./ImageFeaturedCard/ImageFeaturedCard";
 import ReviewCard from "./ReviewCard/ReviewCard";
 
 // Import Carousel
-import Carousel from "@/components/UI/Carousel";
+import Carousel from "@/UI/Card/Carousel";
 
 // Card component takes in 4 props:
 // 1. 'type': This decides the layout of the card. You can pass 'base', 'ImageFeatured', or 'review'.

@@ -1,4 +1,4 @@
-import Icon from "../../../public/language.svg";
+import Icon from "@/public/language.svg";
 import styles from "./styles.module.css";
 
 const List = ({ data }) => (

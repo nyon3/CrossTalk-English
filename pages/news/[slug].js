@@ -2,8 +2,8 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { getPostData, getSortedPostsData } from "../../lib/content";
 
-import Layout from "@/components/layout/layout";
-import Button from "@/components/UI/Button";
+import Layout from "@/layout/layout";
+import Button from "@/components/Button";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.slug);

@@ -1,5 +1,5 @@
 // HighlightedFeatureList.js
-import HighlightedFeature from "@/components/UI/Feature/index";
+import HighlightedFeature from "@/components/Feature/index";
 
 const HighlightedFeatureList = ({ config }) => {
   return (

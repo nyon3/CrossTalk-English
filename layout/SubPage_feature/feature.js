@@ -1,4 +1,4 @@
-import List from "@/components/UI/List";
+import List from "@/components/List";
 import styles from "./styles.module.css";
 
 const FeatureSection = ({ title, data, background }) => {

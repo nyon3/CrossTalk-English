@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./jumbotron.module.css";
-import ImageWrapper from "@/components/UI/ImageWrapper";
+import ImageWrapper from "@/components/ImageWrapper";
 import HeadlineComponent from "./headline";
 
 /**

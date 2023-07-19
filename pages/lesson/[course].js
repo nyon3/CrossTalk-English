@@ -1,14 +1,14 @@
 // pages/[course].js
 import React from "react";
-import Layout from "@/components/layout/layout";
+import Layout from "@/layout/layout";
 import { getCourseData, getSortedCoursesData } from "@/lib/courses";
 import styles from "./lesson.module.css";
-import TrialSignUp from "@/components/UI/TrialSignUp";
-import PricingCard from "@/components/UI/PriceComponent";
-import ImageWrapper from "@/components/UI/ImageWrapper";
-import FeatureSection from "@/components/layout/SubPage_feature/feature";
-import HighlightedFeatureList from "@/components/layout/HighlightedFeature/index";
-import TrialFlow from "@/components/layout/TrialFlow/index";
+import TrialSignUp from "@/UI/TrialSignUp";
+import PricingCard from "@/UI/PriceComponent";
+import ImageWrapper from "@/components/ImageWrapper";
+import FeatureSection from "@/layout/SubPage_feature/feature";
+import HighlightedFeatureList from "@/layout/HighlightedFeature/index";
+import TrialFlow from "@/layout/TrialFlow/index";
 
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
