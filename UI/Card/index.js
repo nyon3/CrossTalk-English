@@ -1,7 +1,7 @@
 // Card/index.js
-import params from "./data/lesson.json";
-import tutors from "./data/tutors.json";
-import reviews from "./data/review.json";
+import params from "@/content/pages/lesson.json";
+import tutors from "@/content/pages/tutors.json";
+import reviews from "@/content/pages/review.json";
 
 // Import the individual card components
 import BaseCard from "./BaseCard/BaseCard";
