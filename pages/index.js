@@ -65,7 +65,7 @@ export default function Home({ allPostsData }) {
         />
         <SectionHeader
           mainHeader="CrossTalkで英語が話せるようになる理由"
-          subHeader={"RESON"}
+          subHeader={"REASON"}
         />
         <HighlightedFeature config={features} />
         <SectionHeader
