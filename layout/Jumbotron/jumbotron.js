@@ -1,7 +1,5 @@
-import Image from "next/image";
 import styles from "./jumbotron.module.css";
 import ImageWrapper from "@/components/ImageWrapper";
-import HeadlineComponent from "./headline";
 
 /**
  * Jumbotron Component
@@ -13,9 +11,9 @@ import HeadlineComponent from "./headline";
  * @prop {string} imgSrc - The source URL of the image to be displayed.
  * @prop {string} imgAlt - The alt text for the image, important for SEO and accessibility.
  */
-import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const roboto = Roboto({
+const inter = Inter({
   weight: "700",
   subsets: ["latin"],
 });
@@ -24,38 +22,30 @@ const Jumbotron = ({ imgSrc, imgAlt }) => (
   <>
     <div className={styles.hero_section}>
       <div
-        className={roboto.className}
+        className={inter.className}
         style={{
-          fontSize: "4rem",
+          fontSize: "56px",
           lineHeight: "0.8`",
-          color: "#333",
-          textAlign: "center",
-          marginBottom: "0",
         }}
       >
-        Let&apos;s Talk!
+        Let&apos;s speak English
       </div>
-      <HeadlineComponent
-        headline={["英語ができるともっと", "人生が楽しくなる"]}
-      />
-
-      {/* <Image
-        src={imgSrc}
-        alt={imgAlt}
-        width={800}
-        height={800}
-        sizes="(max-width: 768px) 100vw,(max-width: 1024px)70vw"
+      <p>
+        英語ができるともっと
+        <br />
+        人生が楽しくなる
+      </p>
+      <div
         style={{
-          height: "auto",
-          width: "100%",
-          maxHeight: "30vh",
+          fontSize: "14px",
+          fontWeight: "700",
+          lineHeight: "1.8",
         }}
-      /> */}
-      <div>
+      >
         {`
-        クロストークは岡山市北区にある英会話スクールです。テキストで基本を学ぶことはもちろん、
-        生きた英語で、楽しくしっかりと上達できます！思い立った今が、チャレンジのときです。
-        英語を学んで、あなたの夢を叶えましょう！
+       こんにちは！ クロストークは岡山市北区にある英会話スクールです。
+       テキストで基礎から学ぶことはもちろん、生きた英語で楽しくしっかりと上達できます。 
+       思い立った今がチャレンジのときです。英語を学んであなたの夢を叶えましょう！
     `}
       </div>
     </div>

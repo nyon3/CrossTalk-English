@@ -18,6 +18,7 @@ import HighlightedFeature from "@/layout/HighlightedFeature/index";
 import FAQAccordion from "@/UI/FaqAcordion";
 import SectionHeader from "@/components/SectionHeader";
 import NewsSection from "@/UI/News";
+import InfoCard from "@/UI/Card/InfoCard";
 
 // Card component for various card-based layouts
 import Card from "@/UI/Card";

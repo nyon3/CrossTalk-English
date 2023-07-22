@@ -1,0 +1,22 @@
+.card {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.info_icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #d23e64;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.info_icon::after {
+  content: "1";
+  font-weight: 900;
+  color: white;
+}

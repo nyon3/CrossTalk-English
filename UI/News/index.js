@@ -9,7 +9,7 @@ const NewsSection = ({ allPostsData }) => (
     }}
   >
     <ul>
-      {allPostsData.map(({ slug, date, title }) => (
+      {allPostsData.slice(0, 3).map(({ slug, date, title }) => (
         <li
           style={{
             listStyle: "none",
