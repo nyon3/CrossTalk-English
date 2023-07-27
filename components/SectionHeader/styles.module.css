@@ -1,16 +1,16 @@
 /* section tag is for span tags that including title and description */
 .section_heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 3rem;
+  width: 100%;
+  margin-top: 2rem;
 }
 .section_heading span {
-  font-size: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f25c54;
+  margin-bottom: 0.4rem;
 }
 .section_heading p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }

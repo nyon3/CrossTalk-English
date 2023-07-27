@@ -1,6 +1,8 @@
 // /layout/TrialFlow/index.js
 
 import styles from "./styles.module.css";
+import SectionHeader from "@/components/SectionHeader";
+import Button from "@/components/Button";
 
 const steps = [
   {
@@ -32,17 +34,10 @@ const steps = [
 const TrialFlow = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}>Join our lesson</div>
-      <h3 className={styles.subtitle}>
-        お試し体験レッスンで自分にあうかチェックしてみませんか？
-      </h3>
-      <ul>
-        <li>
-          当スクールの体験レッスンは１回
-          1,000円（税込）の有料体験レッスンとなります。
-        </li>
-        <li>体験レッスンはお一人様１回限りとさせていただいております。</li>
-      </ul>
+      <SectionHeader
+        mainHeader={"体験レッスンで自分に合うかチェック！"}
+        subHeader={"Join us"}
+      />
       <div className={styles.wrapper}>
         {steps.map((step, index) => (
           <div key={index} className={styles.stepWrapper}>
@@ -52,6 +47,16 @@ const TrialFlow = () => {
           </div>
         ))}
       </div>
+      <ul>
+        <li>
+          当スクールの体験レッスンは１回
+          1,000円（税込）の有料体験レッスンとなります。
+        </li>
+        <li>体験レッスンはお一人様１回限りとさせていただいております。</li>
+      </ul>
+      <Button link="https://forms.gle/wRLWN8WiLdQLZdLQ9">
+        体験レッスンに申し込む
+      </Button>
     </div>
   );
 };

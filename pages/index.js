@@ -39,17 +39,18 @@ export async function getStaticProps() {
   };
 }
 
-const features = [
+const englishCourseContent = [
   {
-    color: "red",
-    text: "少人数制で会話量が多い",
+    title: "少人数制で会話量が多い",
+    description: "少人数制のクラスで、豊富な会話の機会を提供します。",
   },
   {
-    color: "orange",
-    text: "経験豊富な外国人講師",
+    title: "経験豊富な講師",
+    description: "経験豊富な講師があなたの学習をサポートします。",
   },
   {
-    text: "アットホームな空間",
+    title: "アットホームな雰囲気",
+    description: "楽しみながら学べるアットホームな雰囲気を提供します。",
   },
 ];
 
@@ -68,7 +69,7 @@ export default function Home({ allPostsData }) {
           mainHeader="CrossTalkで英語が話せるようになる理由"
           subHeader={"REASON"}
         />
-        <HighlightedFeature config={features} />
+        <InfoCard cardContent={englishCourseContent} />
         <SectionHeader
           mainHeader="レッスンを目的から選ぶ"
           subHeader={"LESSONS"}

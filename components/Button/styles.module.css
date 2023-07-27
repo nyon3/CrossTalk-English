@@ -5,8 +5,8 @@
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  border-radius: 4px;
-  padding: 7px 12px;
+  border-radius: 0.4rem;
+  padding: 0.5rem 1rem;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -15,7 +15,7 @@
 
 .button_container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-top: 2rem;
 }
 

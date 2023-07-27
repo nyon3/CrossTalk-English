@@ -1,6 +1,6 @@
 import styles from "./jumbotron.module.css";
 import ImageWrapper from "@/components/ImageWrapper";
-
+// import { inter } from "@/components/Fonts";
 /**
  * Jumbotron Component
  *
@@ -21,15 +21,15 @@ const inter = Inter({
 const Jumbotron = ({ imgSrc, imgAlt }) => (
   <>
     <div className={styles.hero_section}>
-      <div
+      <h1
         className={inter.className}
         style={{
-          fontSize: "56px",
+          fontSize: "3.4rem",
           lineHeight: "0.8`",
         }}
       >
         Let&apos;s speak English
-      </div>
+      </h1>
       <p>
         英語ができるともっと
         <br />

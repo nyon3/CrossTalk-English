@@ -8,11 +8,10 @@ const Button = () => (
     <div className={styles.wrapper}>
       <div className={styles.button}>
         <ImageWrapper src={testPic} alt="test" />
-        <p className={styles.text}>体験レッスンに申し込む</p>
+        <p className={styles.text}>体験レッスンで自分に合うかチェック！</p>
       </div>
     </div>
   </Link>
 );
 
 export default Button;
-

@@ -9,32 +9,30 @@ import ImageWrapper from "@/components/ImageWrapper";
 import FeatureSection from "@/layout/SubPage_feature/feature";
 import HighlightedFeatureList from "@/layout/HighlightedFeature/index";
 import TrialFlow from "@/layout/TrialFlow/index";
+import SectionHeader from "@/components/SectionHeader";
+import InfoCard from "@/UI/Card/InfoCard";
 
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
-  const { title, headline, image, features, RecommendedFor } = courseData;
+  const { title, headline, subheadline, image, RecommendedFor, features } =
+    courseData;
 
   return (
     <Layout>
       <main>
         <div className={styles.wrapper}>
-          <div className={styles.title}>{title}</div>
-          <h2 className={styles.headline}>
-            {headline.split("\n").map((line, i) => (
-              <React.Fragment key={i}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
-          </h2>
+          <SectionHeader mainHeader={headline} subHeader={title} />
+          <p className={styles.description}>{subheadline}</p>
           <ImageWrapper src={`/images/${image}`} alt={courseData.title} />
-          <FeatureSection title="Features" data={features} background="#fff" />
-          {/* Markdown */}
-          {/* <span>Instructor: {courseData.instructor}</span> */}
-          <div className={styles.title}>Recommended For</div>
+          {/* <FeatureSection title="Features" data={features} background="#fff" /> */}
+          <SectionHeader
+            mainHeader={"このレッスンで学べること"}
+            subHeader={"Features"}
+          />
+          <InfoCard cardContent={features} />
+          {/* <div className={styles.title}>Recommended For</div>
           <h3 className={styles.headline}>こんな方におすすめ</h3>
-
-          <HighlightedFeatureList config={RecommendedFor} />
+          <HighlightedFeatureList config={RecommendedFor} /> */}
           <div
             style={{
               marginTop: "3rem",
@@ -52,7 +50,7 @@ const CoursePage = ({ courseData }) => {
               justifyContent: "center",
             }}
           >
-            <TrialSignUp />
+            {/* <TrialSignUp /> */}
           </div>
         </div>
       </main>
