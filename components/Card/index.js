@@ -1,7 +1,7 @@
 // Card/index.js
-import params from "@/content/pages/lesson.json";
-import tutors from "@/content/pages/tutors.json";
-import reviews from "@/content/pages/review.json";
+import params from "@/content/mainPageContents/lesson.json";
+import tutors from "@/content/mainPageContents/tutors.json";
+import reviews from "@/content/mainPageContents/review.json";
 
 // Import the individual card components
 import BaseCard from "./BaseCard/BaseCard";
@@ -9,7 +9,7 @@ import ImageFeaturedCard from "./ImageFeaturedCard/ImageFeaturedCard";
 import ReviewCard from "./ReviewCard/ReviewCard";
 
 // Import Carousel
-import Carousel from "@/UI/Card/Carousel";
+import Carousel from "@/components/Card/Carousel";
 
 // Card component takes in 4 props:
 // 1. 'type': This decides the layout of the card. You can pass 'base', 'ImageFeatured', or 'review'.

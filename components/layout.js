@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Navbar from "@/UI/Navbar/index";
+import Navbar from "@/components/Navbar/index";
 import styles from "./styles.module.css";
-import Footer from "../UI/Footer";
+import Footer from "./Footer";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 
 const Layout = ({

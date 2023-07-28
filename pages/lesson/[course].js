@@ -1,16 +1,13 @@
 // pages/[course].js
 import React from "react";
-import Layout from "@/layout/layout";
+import Layout from "@/components/layout";
 import { getCourseData, getSortedCoursesData } from "@/lib/courses";
 import styles from "./lesson.module.css";
-import TrialSignUp from "@/UI/TrialSignUp";
-import PricingCard from "@/UI/PriceComponent";
+import PricingCard from "@/components/PriceComponent";
 import ImageWrapper from "@/components/ImageWrapper";
-import FeatureSection from "@/layout/SubPage_feature/feature";
-import HighlightedFeatureList from "@/layout/HighlightedFeature/index";
-import TrialFlow from "@/layout/TrialFlow/index";
+import TrialFlow from "@/components/TrialFlow/index";
 import SectionHeader from "@/components/SectionHeader";
-import InfoCard from "@/UI/Card/InfoCard";
+import InfoCard from "@/components/Card/InfoCard";
 
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
@@ -30,9 +27,6 @@ const CoursePage = ({ courseData }) => {
             subHeader={"Features"}
           />
           <InfoCard cardContent={features} />
-          {/* <div className={styles.title}>Recommended For</div>
-          <h3 className={styles.headline}>こんな方におすすめ</h3>
-          <HighlightedFeatureList config={RecommendedFor} /> */}
           <div
             style={{
               marginTop: "3rem",
@@ -49,9 +43,7 @@ const CoursePage = ({ courseData }) => {
               display: "flex",
               justifyContent: "center",
             }}
-          >
-            {/* <TrialSignUp /> */}
-          </div>
+          ></div>
         </div>
       </main>
     </Layout>

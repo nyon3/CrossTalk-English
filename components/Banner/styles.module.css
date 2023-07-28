@@ -1,6 +1,8 @@
 .banner {
-  background-color: #d23e64;
-  width: 100%;
+  background-color: #f9fafc;
+  width: 45vh;
+  margin-top: 2rem;
+  border-radius: 5px;
 }
 
 .container {
@@ -14,7 +16,7 @@
 }
 
 .message {
-  color: #fff;
+  color: #333;
   font-size: 0.8rem;
   margin: 0;
   padding: 0 1rem;

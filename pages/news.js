@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getSortedPostsData } from "../lib/content";
 import styles from "@/styles/Home.module.css";
-import Layout from "@/layout/layout";
+import Layout from "@/components/layout";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
