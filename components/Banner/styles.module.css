@@ -1,8 +1,9 @@
 .banner {
   background-color: #f9fafc;
-  width: 45vh;
+  width: 50vh;
   margin-top: 2rem;
   border-radius: 5px;
+  padding: 0.8rem;
 }
 
 .container {
@@ -16,7 +17,7 @@
 }
 
 .message {
-  color: #333;
+  color: gray;
   font-size: 0.8rem;
   margin: 0;
   padding: 0 1rem;

@@ -17,6 +17,8 @@ const NewsSection = ({ allPostsData }) => (
           }}
           key={slug}
         >
+          <small>{new Date(date).toLocaleDateString()}</small>
+          <br />
           <Link
             href={`/news/${slug}`}
             style={{
@@ -26,7 +28,6 @@ const NewsSection = ({ allPostsData }) => (
             {title}
           </Link>
           <br />
-          <small>{new Date(date).toLocaleDateString()}</small>
         </li>
       ))}
     </ul>

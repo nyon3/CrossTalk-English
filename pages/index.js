@@ -16,7 +16,7 @@ import Layout from "@/components/layout";
 import Jumbotron from "@/components/Jumbotron/jumbotron";
 import FAQAccordion from "@/components/FaqAcordion";
 import SectionHeader from "@/components/SectionHeader";
-import NewsSection from "@/components/News";
+import NewsSection from "@/components/NewsSection";
 import InfoCard from "@/components/Card/InfoCard";
 import Banner from "@/components/Banner";
 // Card component for various card-based layouts
@@ -57,7 +57,7 @@ export default function Home({ allPostsData }) {
   return (
     <Layout>
       <main className={styles.wrapper}>
-        {/* <Banner /> */}
+        <Banner newsData={allPostsData} />
         <Jumbotron
           imgSrc={heroPic}
           imgAlt="英会話スクールで発音の練習をしている女性"
