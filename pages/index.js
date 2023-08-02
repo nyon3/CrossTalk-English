@@ -58,12 +58,7 @@ export default function Home({ allPostsData }) {
     <Layout>
       <main className={styles.wrapper}>
         <Banner newsData={allPostsData} />
-        <Jumbotron
-          imgSrc={heroPic}
-          imgAlt="英会話スクールで発音の練習をしている女性"
-          headline="英語ができると\nもっと人生が\n楽しくなる"
-          content="クロストークは岡山市北区にある英会話スクールです。テキストで基本を学ぶことはもちろん、生きた英語で、楽しくしっかりと上達できます！思い立った今が、チャレンジのときです。英語を学んで、あなたの夢を叶えましょう！"
-        />
+        <Jumbotron imgSrc={heroPic} imgAlt="英会話スクールで教える講師" />
         <SectionHeader
           mainHeader="CrossTalkで英語が話せるようになる理由"
           subHeader={"REASON"}
