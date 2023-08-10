@@ -1,0 +1,8 @@
+/* Divider.module.css */
+
+.divider {
+  height: 1px;
+  background-color: #e4e4e4;
+  border: none;
+  margin: 10px 0;
+}

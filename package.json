@@ -18,7 +18,8 @@
     "react-dom": "18.2.0",
     "remark": "^14.0.2",
     "remark-html": "^15.0.2",
-    "remark-react": "^9.0.1"
+    "remark-react": "^9.0.1",
+    "rss-parser": "^3.13.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1"
