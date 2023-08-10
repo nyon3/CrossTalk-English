@@ -1,51 +1,70 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
+  /* Typography */
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  --fontFamily-sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui,
+  --font-family-sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", system-ui,
     -apple-system, "Helvetica Neue", BlinkMacSystemFont, "Segoe UI", Roboto,
     Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
+  --font-family-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
-  --font-body: var(--fontFamily-sans);
-  --font-heading: var(--fontFamily-sans);
+  --font-body: var(--font-family-sans);
+  --font-heading: var(--font-family-sans);
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --fontWeight-normal: 400;
-  --fontWeight-medium: 500;
-  --fontWeight-semibold: 600;
-  --fontWeight-bold: 700;
-  --fontWeight-extrabold: 800;
-  --fontWeight-black: 900;
-  --fontSize-root: 16px;
-  --lineHeight-none: 1;
-  --lineHeight-tight: 1.1;
-  --lineHeight-normal: 1.7;
-  --lineHeight-relaxed: 1.625;
-  /* spacer */
-  --spacing-0: 0;
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 0.75rem;
-  --spacing-4: 1rem;
-  --spacing-5: 1.25rem;
-  --spacing-6: 1.5rem;
-  --spacing-8: 2rem;
-  /* Font sizes */
-  --fontSize-0: 0.833rem;
-  --fontSize-1: 14px;
-  --fontSize-2: 1.2rem;
-  --fontSize-3: 1.44rem;
-  --fontSize-4: 1.728rem;
-  --fontSize-5: 2.074rem;
-  --fontSize-6: 2.488rem;
-  --fontSize-7: 2.986rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  --font-size-root: 16px;
 
+  --line-height-none: 1;
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.7;
+  --line-height-relaxed: 1.625;
+
+  /* Dimensions */
+  --size-xs: 4rem; /* 64px */
+  --size-sm: 8rem; /* 128px */
+  --size-md: 16rem; /* 256px */
+  --size-lg: 32rem; /* 512px */
+  --size-xl: 48rem; /* 768px */
+
+  /* Other lengths (like radius, border-width, etc.) */
+  --border-radius-sm: 0.25rem; /* 4px */
+  --border-radius-md: 0.5rem; /* 8px */
+  --border-radius-lg: 1rem; /* 16px */
+
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+
+  /* Spacing */
+  --spacing-0: 0; /* 0px */
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-5: 1.25rem; /* 20px */
+  --spacing-6: 1.5rem; /* 24px */
+  --spacing-8: 2rem; /* 32px */
+
+  /* Font Sizes */
+  --font-size-xs: 0.8125rem; /* 13px */
+  --font-size-sm: 1rem; /* 16px */
+  --font-size-md: 1.1875rem; /* 19px */
+  --font-size-lg: 1.4375rem; /* 23px */
+  --font-size-xl: 1.75rem; /* 28px */
+  --font-size-xxl: 2.0625rem; /* 33px */
+  --font-size-3xl: 2.5rem; /* 40px */
+  --font-size-4xl: 2.9375rem; /* 47px */
+
+  /* Gradients and Colors */
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,
@@ -70,46 +89,9 @@
     #00000010,
     #00000080
   );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-} */
-
+/* Global Styles */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -132,13 +114,6 @@ a {
   text-decoration: none;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */
-/* Heading */
-
 h1,
 h2,
 h3,
@@ -148,7 +123,7 @@ h6 {
   font-family: var(--font-heading);
   margin-top: var(--spacing-6);
   margin-bottom: var(--spacing-6);
-  line-height: var(--lineHeight-tight);
+  line-height: var(--line-height-tight);
   letter-spacing: -0.025em;
 }
 
@@ -157,40 +132,31 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
+  font-weight: var(--font-weight-bold);
 }
 
 h1 {
-  font-weight: var(--fontWeight-black);
-  font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  font-weight: var(--font-weight-black);
+  font-size: var(--font-size-3xl);
 }
 
 h2 {
-  font-size: var(--fontSize-5);
+  font-size: var(--font-size-xxl);
 }
-
 h3 {
-  font-size: var(--fontSize-4);
+  font-size: var(--font-size-xl);
 }
-
 h4 {
-  font-size: var(--fontSize-3);
+  font-size: var(--font-size-lg);
 }
-
 h5 {
-  font-size: var(--fontSize-2);
+  font-size: var(--font-size-md);
 }
-
 h6 {
-  font-size: var(--fontSize-1);
-}
-h1 > a {
-  color: inherit;
-  text-decoration: none;
+  font-size: var(--font-size-sm);
 }
 
+h1 > a,
 h2 > a,
 h3 > a,
 h4 > a,

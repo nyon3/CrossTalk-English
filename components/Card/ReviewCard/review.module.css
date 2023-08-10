@@ -1,10 +1,8 @@
-/* styles.module.css */
-.container {
-  width: 100%;
-  margin-bottom: 5rem;
-}
-/* TODO: adjust max-width for fitting the mobile screen size.  */
+/* review.module.css */
 
+@import url("/globals.css");
+
+/* Containers */
 .items {
   display: flex;
   flex-direction: column;
@@ -14,19 +12,19 @@
   height: auto;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  font-size: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  padding: 1rem;
+  box-shadow: rgba(var(--foreground-rgb), 0.16) 0px 1px 4px;
+  padding: var(--spacing-4); /* 1rem */
   border-radius: 5px;
 }
 
+/* Avatar Styles */
 .avatar {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: var(--size-sm);
+  height: var(--size-sm);
   overflow: hidden;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
+  -webkit-border-radius: 50%; /* Consider removing if targeting modern browsers */
 }
 
 .avatarInner {
@@ -35,14 +33,16 @@
   height: 200px;
   transform: translate(-50%, -50%);
 }
+
+/* Typography */
 .name {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 0.5rem;
+  font-size: var(--font-size-md); /* 1rem */
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--spacing-2); /* 0.5rem */
 }
 
 .review {
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm); /* 0.875rem */
   text-align: center;
-  margin-top: 1rem;
+  margin-top: var(--spacing-4); /* 1rem */
 }
