@@ -24,10 +24,10 @@ import ImageWrapper from "@/components/ImageWrapper";
 import Card from "@/components/Card";
 
 // Importing data fetching function
-import { getSortedPostsData } from "../lib/content";
+import { getSortedPostsData } from "../../lib/content";
 
 // Importing images
-import heroPic from "../public/images/podcasting.jpg";
+import heroPic from "../../public/images/podcasting.jpg";
 
 // RSS フィードの解析のためのパーサー
 const parser = new Parser();
