@@ -1,14 +1,3 @@
-/**
- * Home Page
- *
- * This is the main page component of the application. It includes several other reusable
- * components to create a structured and visually appealing layout. The data used in this
- * component is fetched during build time using Next.js's getStaticProps.
- *
- * @component
- * @prop {Array} allPostsData - An array of post data fetched from the getStaticProps function.
- */
-
 import styles from "@/styles/Home.module.css";
 
 // Layout Components
