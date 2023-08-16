@@ -1,8 +1,10 @@
+@import url("/globals.css");
+
 /* ボタンの基本スタイル */
 .gradient_button {
   display: inline-block;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
   text-align: center;
   text-decoration: none;
   border-radius: 0.4rem;
@@ -30,9 +32,9 @@
   display: inline-block;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
     "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
   margin: 0;
   outline: none;
   padding: 13px 23px;

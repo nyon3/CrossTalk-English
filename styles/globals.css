@@ -64,6 +64,34 @@
   --font-size-3xl: 2.5rem; /* 40px */
   --font-size-4xl: 2.9375rem; /* 47px */
 
+  /* Primary Colors - Represent the main brand colors */
+  --primary: #2c7be5; /* A vibrant blue */
+  --primary-dark: #1f3a93; /* A darker shade of the primary color for hover states or contrasts */
+  --primary-light: #68b9f0; /* A lighter shade for backgrounds or highlights */
+
+  /* Secondary Colors - Complementary to the primary color or represent secondary actions/elements */
+  --secondary: #e64980; /* A contrasted pinkish-red */
+  --secondary-dark: #b5174e; /* A darker shade of the secondary color */
+  --secondary-light: #ff6b9f; /* A lighter shade of the secondary color */
+
+  /* Tertiary Colors - Additional complementary colors */
+  --tertiary: #ffb833; /* A vibrant yellow-orange */
+  --tertiary-dark: #ff8f00; /* A darker shade of the tertiary color */
+  --tertiary-light: #ffd366; /* A lighter shade of the tertiary color */
+
+  /* Neutral Colors - For texts, backgrounds, and borders */
+  --neutral-1: #ffffff; /* Pure White for main backgrounds */
+  --neutral-2: #f7f8fa; /* Off-white for sections or backgrounds */
+  --neutral-3: #adb5bd; /* Light gray for secondary texts or dividers */
+  --neutral-4: #495057; /* Medium gray for primary texts */
+  --neutral-5: #212529; /* Dark gray for headings or emphasized text */
+
+  /* Feedback Colors - For notifications, alerts, and feedback messages */
+  --success: #38a169; /* Green, represents success or positive actions */
+  --warning: #dd6b20; /* Orange, represents warnings or neutral messages */
+  --danger: #e53e3e; /* Red, represents errors or negative actions */
+  --info: #3182ce; /* Blue, represents informative messages */
+
   /* Gradients and Colors */
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
