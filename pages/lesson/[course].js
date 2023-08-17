@@ -26,7 +26,7 @@ const CoursePage = ({ courseData }) => {
             mainHeader={"このレッスンで学べること"}
             subHeader={"Features"}
           />
-          <InfoCard cardContent={features} />
+          <InfoCard content={features} />
           <div
             style={{
               marginTop: "3rem",
