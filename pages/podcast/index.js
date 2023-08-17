@@ -9,8 +9,6 @@
  * @prop {Array} allPostsData - An array of post data fetched from the getStaticProps function.
  */
 
-import styles from "@/styles/Home.module.css";
-
 // Components
 import Layout from "@/components/layout";
 import Jumbotron from "@/components/Jumbotron/jumbotron";

@@ -24,7 +24,6 @@ const Layout = ({
   return (
     <>
       <GoogleAnalytics trackPageViews />
-      <div className={styles.MobileOptimized}>
         <Head>
           <title>{title}</title>
           <meta name="description" content={description} />
@@ -37,9 +36,8 @@ const Layout = ({
           />
         </Head>
         <Navbar />
-        {children}
+        <main className={styles.MobileOptimized}>{children}</main>
         <Footer />
-      </div>
     </>
   );
 };

@@ -1,8 +1,9 @@
 .MobileOptimized {
   display: flex; /* Change from block to flex */
   flex-direction: column; /* Stack children vertically */
-  gap: 2rem; /* Adjust the space between children */
   position: relative;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 @media (min-width: 769px) {

@@ -4,9 +4,6 @@ import yaml from 'js-yaml';
 import path from 'path';
 import { getSortedPostsData } from "../lib/content";
 
-// Styles
-import styles from "@/styles/Home.module.css";
-
 // Components
 import Layout from "@/components/layout";
 import Jumbotron from "@/components/Jumbotron/jumbotron";
@@ -38,7 +35,6 @@ export async function getStaticProps() {
 export default function Home({ allPostsData, jumbotronContent, englishCourseContent }) {
   return (
     <Layout>
-      <main className={styles.wrapper}>
         <Banner newsData={allPostsData} />
         <Jumbotron content={jumbotronContent} imgSrc={heroPic} imgAlt="英会話スクールで教える講師" />
         <SectionHeader mainHeader="CrossTalkで英語が話せるようになる理由" subHeader="REASON" />
@@ -52,7 +48,6 @@ export default function Home({ allPostsData, jumbotronContent, englishCourseCont
         <SectionHeader mainHeader="最新情報" subHeader="NEWS" />
         <NewsSection allPostsData={allPostsData} />
         <Card type="base" data="tutors" showButton={false} />
-      </main>
     </Layout>
   );
 }
