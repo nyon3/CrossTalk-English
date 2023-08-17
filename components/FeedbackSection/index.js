@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 
 function FeedbackSection() {
   return (
-    <Section gap={20}>
+    <Section>
       <h2>Feedback</h2>
       <p>
         We love to hear from you! Send us your questions, comments, or

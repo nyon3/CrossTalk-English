@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'; // Make sure to install 'prop-types' if not done already
 import styles from "./styles.module.css";
 
 const InfoCard = ({ content }) => {
@@ -13,15 +12,6 @@ const InfoCard = ({ content }) => {
       ))}
     </div>
   );
-};
-
-InfoCard.propTypes = {
-  content: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 
 export default InfoCard;

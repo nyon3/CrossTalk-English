@@ -1,7 +1,10 @@
 .MobileOptimized {
-  display: block;
+  display: flex; /* Change from block to flex */
+  flex-direction: column; /* Stack children vertically */
+  gap: 2rem; /* Adjust the space between children */
   position: relative;
 }
+
 @media (min-width: 769px) {
   .MobileOptimized {
     position: absolute;

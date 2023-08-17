@@ -3,7 +3,6 @@ import Link from "next/link";
 const NewsSection = ({ allPostsData }) => (
   <div
     style={{
-      marginBottom: "2rem",
       padding: "2rem",
       backgroundColor: "#f5f5f5",
     }}
