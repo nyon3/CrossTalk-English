@@ -16,7 +16,6 @@ import NewsSection from "@/components/NewsSection";
 import Banner from "@/components/Banner";
 import EpisodesList from "@/components/EpisodesList";
 import FeedbackSection from "@/components/FeedbackSection";
-import ImageWrapper from "@/components/ImageWrapper";
 import Card from "@/components/Card";
 import Parser from "rss-parser"; // 追加
 

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getSortedPostsData } from "../lib/content";
-import styles from "@/styles/Home.module.css";
 import Layout from "@/components/layout";
 
 export async function getStaticProps() {

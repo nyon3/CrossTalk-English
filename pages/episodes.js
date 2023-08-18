@@ -1,7 +1,6 @@
 // /pages/episodes.js
 import Parser from "rss-parser";
 import Layout from "@/components/layout";
-import styles from "@/styles/Home.module.css";
 import EpisodesList from "@/components/EpisodesList";
 // これはページコンポーネントの外に置くことで、サーバーサイドでのみ実行されます
 const parser = new Parser();
@@ -25,11 +24,9 @@ export async function getStaticProps() {
 export default function Episodes({ episodes }) {
   return (
     <Layout>
-      <main className={styles.wrapper}>
         <h1>Podcast Episodes</h1>
         {/* episodes のデータを使って各エピソードを表示します */}
         <EpisodesList episodes={episodes} /> {/* これを使用 */}
-      </main>
     </Layout>
   );
 }
