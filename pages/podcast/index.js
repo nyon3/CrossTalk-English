@@ -12,8 +12,6 @@
 // Components
 import Layout from "@/components/layout";
 import Jumbotron from "@/components/Jumbotron/jumbotron";
-import NewsSection from "@/components/NewsSection";
-import Banner from "@/components/Banner";
 import EpisodesList from "@/components/EpisodesList";
 import FeedbackSection from "@/components/FeedbackSection";
 import Card from "@/components/Card";
@@ -62,9 +60,7 @@ export async function getStaticProps() {
 export default function Home({ allPostsData, topEpisodes, jumbotronContent }) {
   return (
     <Layout>
-        <Banner newsData={allPostsData} />
         <Jumbotron content={jumbotronContent} imgSrc={heroPic} imgAlt="A person recording a podcast" />
-        <NewsSection allPostsData={allPostsData} />
         <FeedbackSection />
         <EpisodesList episodes={topEpisodes} />
         <Card type="base" data="tutors" showButton={false} />
