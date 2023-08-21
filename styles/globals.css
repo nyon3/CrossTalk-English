@@ -63,6 +63,12 @@
   --font-size-xxl: 2.0625rem; /* 33px */
   --font-size-3xl: 2.5rem; /* 40px */
   --font-size-4xl: 2.9375rem; /* 47px */
+  
+  /* Screen Sizes */
+  --screen-size-xs: 480px;
+  --screen-size-sm: 640px;
+  --screen-size-md: 768px;
+  --screen-size-lg: 1024px;
 
   /* Primary Colors - Represent the main brand colors */
   --primary: #2c7be5; /* A vibrant blue */

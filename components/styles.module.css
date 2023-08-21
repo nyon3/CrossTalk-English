@@ -1,9 +1,12 @@
+@import url("/globals.css");
+
 .MobileOptimized {
   display: flex; /* Change from block to flex */
   flex-direction: column; /* Stack children vertically */
+  margin: 0 auto;
   position: relative;
   gap: 2rem;
   box-sizing: border-box;
   padding: 0 15px;
-  max-width: 768px;
+  max-width: var(--screen-size-sm);
 }

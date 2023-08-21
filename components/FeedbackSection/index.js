@@ -6,8 +6,7 @@ function FeedbackSection() {
     <Section>
       <h2>Feedback</h2>
       <p>
-        We love to hear from you! Send us your questions, comments, or
-        suggestions for future episodes.
+      私たちのポッドキャストにあなたの声を！英語の悩み、旅行の体験、好きな英語作品など、何でもお気軽にお便りください！
       </p>
       <Button link={"/about"}>Send Us Your Question</Button>
     </Section>
