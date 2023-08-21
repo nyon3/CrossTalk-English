@@ -7,6 +7,6 @@
   position: relative;
   gap: 2rem;
   box-sizing: border-box;
-  padding: 0 15px;
+  padding: 15px;
   max-width: var(--screen-size-sm);
 }

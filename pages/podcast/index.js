@@ -15,7 +15,8 @@ import Jumbotron from "@/components/Jumbotron/jumbotron";
 import EpisodesList from "@/components/EpisodesList";
 import FeedbackSection from "@/components/FeedbackSection";
 import Card from "@/components/Card";
-import Parser from "rss-parser"; // 追加
+import Parser from "rss-parser"; 
+import ImageWrapper from "@/components/ImageWrapper";
 
 // Modules
 import fs from 'fs';
@@ -60,10 +61,12 @@ export async function getStaticProps() {
 export default function Home({ allPostsData, topEpisodes, jumbotronContent }) {
   return (
     <Layout>
+        <ImageWrapper src={heroPic} alt="A person recording a podcast" />
         <Jumbotron content={jumbotronContent} imgSrc={heroPic} imgAlt="A person recording a podcast" />
         <FeedbackSection />
-        <EpisodesList episodes={topEpisodes} />
         <Card type="base" data="tutors" showButton={false} />
+        <EpisodesList episodes={topEpisodes} />
+    
     </Layout>
   );
 }
