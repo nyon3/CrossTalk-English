@@ -12,7 +12,6 @@ import SectionHeader from "@/components/SectionHeader";
 import NewsSection from "@/components/NewsSection";
 import InfoCard from "@/components/Card/InfoCard";
 import Banner from "@/components/Banner";
-import ImageWrapper from "@/components/ImageWrapper";
 import Card from "@/components/Card/BaseCard"; // You might want to be explicit about which card type this is if you have multiple.
 import ReviewCard from '@/components/Card/ReviewCard/ReviewCard';
 import LessonCourseCard from '@/components/Card/LessonCourseCard';
@@ -42,7 +41,6 @@ export default function Home({ allPostsData, jumbotronContent, feature, englishC
     <Layout>
         {/* <Banner newsData={allPostsData} /> */}
         <Jumbotron content={jumbotronContent}/>
-        <ImageWrapper src={mainPic} alt="英会話スクールで教える講師" />
         <SectionHeader mainHeader="CrossTalkで英語が話せるようになる理由" subHeader="REASON" />
         <InfoCard data={feature} />
         <SectionHeader mainHeader="レッスンを目的から選ぶ" subHeader="LESSONS" />

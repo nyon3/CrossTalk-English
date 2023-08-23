@@ -1,7 +1,7 @@
 // BaseCard.js
 import Image from "next/image";
 import styles from "./Card.module.css";
-
+// TODO Use Tailwind CSS instead of CSS modules
 const BaseCard = ({ data }) => {
   return (
     <div className="flex flex-auto flex-col md:flex-row m-0 m-auto">

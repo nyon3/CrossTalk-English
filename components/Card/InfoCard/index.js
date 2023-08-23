@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-
+// TODO Give better name to this component and change the layout
 const InfoCard = ({ data }) => {
   return (
     <div className={styles.wrapper}>

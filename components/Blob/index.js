@@ -1,6 +1,6 @@
 // HighlightedFeature.js
 import styles from "./styles.module.css";
-
+// NOTE - This component is not used anywhere
 const HighlightedFeature = ({ color, children }) => {
   const colorClass = () => {
     switch (color) {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./styles.module.css";
 
+// TODO - Use Tailwind CSS instead of CSS modules, and fix width of navbar
 const Navbar = () => {
   return (
     <header className={styles.header}>

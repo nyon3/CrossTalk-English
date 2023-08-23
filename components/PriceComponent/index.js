@@ -12,6 +12,7 @@
 import { useRouter } from "next/router";
 import styles from "./styles.module.css";
 
+// TODO - Organize this code better and use Tailwind CSS instead of CSS modules
 const PricingCard = ({ courseType }) => {
   const router = useRouter();
   console.log("PricingCard is rendering, router pathname:", router.pathname);

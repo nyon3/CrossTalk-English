@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 import Footer from "./Footer";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 
+// TODO - Organize this code better and use Tailwind CSS instead of CSS modules
 const Layout = ({
   children,
   title = "CROSSTALK 英会話スクール",

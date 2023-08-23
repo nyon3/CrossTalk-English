@@ -1,4 +1,5 @@
-import styles from "./jumbotron.module.css";
+import Image from "next/image";
+
 // import { inter } from "@/components/Fonts";
 /**
  * Jumbotron Component
@@ -17,22 +18,27 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-
 const Jumbotron = ({ content }) => (
-  <>
-    <div className="pt-20">
-      <h1 className={inter.className} style={{ fontSize: "3.4rem", lineHeight: "1.2" }}>
+  <div className="flex flex-col md:flex-row pt-5 md:pt-20">
+    <div className="md:w-1/2 md:pr-10">
+      <h1 className={inter.className + " text-5xl font-bold leading-tight"}>
         {content.title}
       </h1>
-      <p>
-        {content.subtitle}
-      </p>
-      <div style={{ fontSize: "14px", fontWeight: "700", lineHeight: "1.8" }}>
+      <p className="text-2xl mb-3">{content.subtitle}</p>
+      <div className="text-md font-bold leading-relaxed">
         {content.description}
       </div>
     </div>
-  </>
+    <div className="md:w-1/2 overflow-hidden flex justify-center items-center">
+      <Image
+        src={`/images/${content.src}`}
+        alt="英会話スクールで教える講師"
+        width={1000}
+        height={1000}
+        className="md:ml-0 mt-5 md:mt-0 rounded-lg"
+      />
+    </div>
+  </div>
 );
-
 
 export default Jumbotron;

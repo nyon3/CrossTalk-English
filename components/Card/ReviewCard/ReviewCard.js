@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./review.module.css";
 import Carousel from "../Carousel";
-
+// TODO Use Tailwind CSS instead of CSS modules
 const ReviewCard = ({ data }) => {
   return (
     <Carousel>
