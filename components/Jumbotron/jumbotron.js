@@ -20,7 +20,7 @@ const inter = Inter({
 
 const Jumbotron = ({ content }) => (
   <>
-    <div className={styles.hero_section}>
+    <div className="pt-20">
       <h1 className={inter.className} style={{ fontSize: "3.4rem", lineHeight: "1.2" }}>
         {content.title}
       </h1>

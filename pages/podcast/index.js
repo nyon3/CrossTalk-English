@@ -14,7 +14,7 @@ import Layout from "@/components/layout";
 import Jumbotron from "@/components/Jumbotron/jumbotron";
 import EpisodesList from "@/components/EpisodesList";
 import FeedbackSection from "@/components/FeedbackSection";
-import Card from "@/components/Card";
+import Card from "@/components/Card/BaseCard";
 import Parser from "rss-parser"; 
 import ImageWrapper from "@/components/ImageWrapper";
 
@@ -34,7 +34,7 @@ export async function getStaticProps() {
   
   // Reading the YAML content
   const jumbotronContent = yaml.load(fs.readFileSync(path.resolve(process.cwd(), 'content', 'podcast', 'jumbotronContent.yaml'), 'utf8'));
-  
+  const ourTeam = yaml.load(fs.readFileSync(path.resolve(process.cwd(), 'content', 'podcast', 'ourTeam.yaml'), 'utf8'));
   // RSS Data Fetching
   const url = "https://anchor.fm/s/13a00fc4/podcast/rss";
   const feed = await parser.parseURL(url);
@@ -49,22 +49,21 @@ export async function getStaticProps() {
 
   return {
     props: {
-      
+      ourTeam,
       jumbotronContent,
       topEpisodes,
     },
   };
 }
 
-export default function Home({topEpisodes, jumbotronContent }) {
+export default function Home({topEpisodes, jumbotronContent, ourTeam }) {
   return (
     <Layout>
         <ImageWrapper src={heroPic} alt="A person recording a podcast" />
         <Jumbotron content={jumbotronContent} imgSrc={heroPic} imgAlt="A person recording a podcast" />
         <FeedbackSection />
-        <Card type="base" data="tutors" showButton={false} />
+        <Card data={ourTeam} />
         <EpisodesList episodes={topEpisodes} />
-    
     </Layout>
   );
 }

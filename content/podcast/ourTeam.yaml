@@ -1,0 +1,12 @@
+- id: 1
+  headline: アンドリア
+  image: andrea.jpg
+  subject: English
+  content: 日本で長年過ごしてしまい日本人よりも日本の文化を理解してしまったアメリカ人女性。犬と猫や動物たちをこよなく愛しやまない。実は日本人の血を引いている。
+  link: /tutor/john_doe
+- id: 2
+  headline: トモヤ
+  image: tomoya.jpg
+  subject: Mathematics
+  content: カンガルーと一緒にランチを食べるくらい、オーストラリアの荒野をカタコトの英語でヒッチハイクした怖いもの知らずの冒険家、そんな私の意外な一面？それは、ちいかわへの深い愛情です。
+  link: /tutor/jane_smith
