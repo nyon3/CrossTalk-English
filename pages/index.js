@@ -36,7 +36,7 @@ export async function getStaticProps() {
 export default function Home({ allPostsData, jumbotronContent, englishCourseContent }) {
   return (
     <Layout>
-        <Banner newsData={allPostsData} />
+        {/* <Banner newsData={allPostsData} /> */}
         <Jumbotron content={jumbotronContent}/>
         <ImageWrapper src={mainPic} alt="英会話スクールで教える講師" />
         <SectionHeader mainHeader="CrossTalkで英語が話せるようになる理由" subHeader="REASON" />

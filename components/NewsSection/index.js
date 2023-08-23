@@ -1,32 +1,17 @@
 import Link from "next/link";
 
 const NewsSection = ({ allPostsData }) => (
-  <div
-    style={{
-      padding: "2rem",
-      backgroundColor: "#f5f5f5",
-    }}
-  >
+  <div>
     <ul>
       {allPostsData.slice(0, 3).map(({ slug, date, title }) => (
-        <li
-          style={{
-            listStyle: "none",
-            marginBottom: "1.3rem",
-          }}
-          key={slug}
-        >
-          <small>{new Date(date).toLocaleDateString()}</small>
-          <br />
-          <Link
-            href={`/news/${slug}`}
-            style={{
-              fontSize: "1rem",
-            }}
-          >
-            {title}
-          </Link>
-          <br />
+        <li key={slug}>
+          <div class="text-xl m mb-2">
+            <small>{new Date(date).toLocaleDateString()}</small>
+          </div>
+          <div class="text-xl m mb-7 font-bold">
+            <Link href={`/news/${slug}`}>{title}</Link>
+          </div>
+          <div class="border-b my-4"></div>
         </li>
       ))}
     </ul>

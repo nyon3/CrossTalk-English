@@ -23,8 +23,6 @@ import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 
-// Data Fetching
-import { getSortedPostsData } from "../../lib/content";
 
 // Assets
 import heroPic from "../../public/images/podcasting.jpg";
@@ -32,7 +30,7 @@ import heroPic from "../../public/images/podcasting.jpg";
 const parser = new Parser();
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+
   
   // Reading the YAML content
   const jumbotronContent = yaml.load(fs.readFileSync(path.resolve(process.cwd(), 'content', 'podcast', 'jumbotronContent.yaml'), 'utf8'));
@@ -51,14 +49,14 @@ export async function getStaticProps() {
 
   return {
     props: {
-      allPostsData,
+      
       jumbotronContent,
       topEpisodes,
     },
   };
 }
 
-export default function Home({ allPostsData, topEpisodes, jumbotronContent }) {
+export default function Home({topEpisodes, jumbotronContent }) {
   return (
     <Layout>
         <ImageWrapper src={heroPic} alt="A person recording a podcast" />
