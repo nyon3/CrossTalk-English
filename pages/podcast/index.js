@@ -17,6 +17,7 @@ import Card from "@/components/Card/BaseCard";
 import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import Parser from "rss-parser"; 
 import Image from "next/image";
+import Jumbotron from "@/components/Podcast_components/Jumbotron"
 
 // Modules
 import fs from 'fs';
@@ -59,8 +60,7 @@ export async function getStaticProps() {
 export default function Home({topEpisodes, jumbotronContent, ourTeam }) {
   return (
     <Layout>
-{/* 
-        <Jumbotron content={jumbotronContent} imgSrc={heroPic} imgAlt="A person recording a podcast" /> */}
+        <Jumbotron data={jumbotronContent} />
         <FeedbackSection />
         <div className="flex flex-col md:flex-row">
         <ReviewCard data={ourTeam} />
