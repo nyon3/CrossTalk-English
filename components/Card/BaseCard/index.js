@@ -1,24 +1,24 @@
 // BaseCard.js
 import Image from "next/image";
-import styles from "./Card.module.css";
-// TODO Use Tailwind CSS instead of CSS modules
+
+// TODO Photo aspect ratio is not consistent
 const BaseCard = ({ data }) => {
   return (
     <div className="flex flex-auto flex-col md:flex-row m-0 m-auto">
       {data.map((item) => (
-        <div key={item.id} className={styles.card}>
-          <div className={styles.image_container}>
+        <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden m-4">
+          <div className="h-64 w-full">
             <Image
               src={`/images/${item.image}`}
               alt={item.alt}
-              width={500}
-              height={500}
-              className={styles.image}
+              width={1000}
+              height={1000}
+              className="object-cover w-full h-full"
             />
           </div>
-          <div className={styles.content}>
-            <h3 className={styles.title}>{item.headline}</h3>
-            <p className={styles.description}>{item.content}</p>
+          <div className="p-4">
+            <h3 className="text-xl font-medium mb-2">{item.headline}</h3>
+            <p className="text-gray-600 text-base">{item.content}</p>
           </div>
         </div>
       ))}

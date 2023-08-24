@@ -1,33 +1,30 @@
 import Image from "next/image";
-import styles from "./review.module.css";
 import Carousel from "../Carousel";
-// TODO Use Tailwind CSS instead of CSS modules
+
 const ReviewCard = ({ data }) => {
   return (
-    <Carousel>
+    <>
       {data.map((item) => (
-        <div className={styles.items}>
-          <div className={styles.avatar}>
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <div className="relative w-44 h-24 mx-auto mb-4">
             <div
-              className={styles.avatarInner}
-              style={{
-                top: `${item?.imagePosition?.top || 0}%`,
-                left: `${item?.imagePosition?.left || 0}%`,
-              }}
+              className="absolute top-[${item?.imagePosition?.top || 0}%] left-[${item?.imagePosition?.left || 0}%] rounded-full overflow-hidden"
             >
               <Image
                 src={`/images/${item?.avatar}`}
-                alt="avatar"  // TODO: Add alt text
-                width={200}
-                height={200}
+                alt={item.alt} 
+                width={100}
+                height={100}
               />
             </div>
           </div>
-          <h3 className={styles.name}>{item?.name}</h3>
-          <p className={styles.review}>{item?.review}</p>
+          <div className="md:max-w-sm">
+          <h3 className="text-lg font-medium text-gray-900">{item?.name}</h3>
+          <p className="text-gray-500 mt-2">{item?.content}</p>
+          </div>
         </div>
       ))}
-    </Carousel>
+    </>
   );
 };
 

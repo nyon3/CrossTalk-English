@@ -14,6 +14,7 @@ import Layout from "@/components/layout";
 import EpisodesList from "@/components/EpisodesList";
 import FeedbackSection from "@/components/FeedbackSection";
 import Card from "@/components/Card/BaseCard";
+import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import Parser from "rss-parser"; 
 import Image from "next/image";
 
@@ -61,7 +62,9 @@ export default function Home({topEpisodes, jumbotronContent, ourTeam }) {
 {/* 
         <Jumbotron content={jumbotronContent} imgSrc={heroPic} imgAlt="A person recording a podcast" /> */}
         <FeedbackSection />
-        <Card data={ourTeam} />
+        <div className="flex flex-col md:flex-row">
+        <ReviewCard data={ourTeam} />
+        </div>
         <EpisodesList episodes={topEpisodes} />
     </Layout>
   );

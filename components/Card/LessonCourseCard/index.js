@@ -20,8 +20,11 @@ const LessonCourseCard = ({ data }) => {
                     <div className="p-4">
                         <h3 className="text-gray-900 font-semibold text-lg">{item.headline}</h3>
                         <p className="text-gray-600 text-sm mt-2">{item.content}</p>
+                        <div className="flex justify-start mt-5">
+                        <Button className="" link={item.link}>もっと詳しく</Button>
                     </div>
-                   <Button link={item.link}>もっと詳しく</Button>
+                    </div>
+                
                 </div>
             ))}
         </div>

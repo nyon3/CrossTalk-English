@@ -17,6 +17,7 @@ import ReviewCard from '@/components/Card/ReviewCard/ReviewCard';
 import LessonCourseCard from '@/components/Card/LessonCourseCard';
 // Assets
 import mainPic from "@/public/images/andrea_teaching_640.jpg";
+import Carousel from '@/components/Card/Carousel';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -46,7 +47,9 @@ export default function Home({ allPostsData, jumbotronContent, feature, englishC
         <SectionHeader mainHeader="レッスンを目的から選ぶ" subHeader="LESSONS" />
         <LessonCourseCard  data={englishCourseContent}/>
         <SectionHeader mainHeader="生徒さんの声" subHeader="REVIEW" />
+        <Carousel>
         <ReviewCard data={reviews}/>
+        </Carousel>
         <SectionHeader mainHeader="よくある質問" subHeader="FAQ" />
         <FAQAccordion />
         <SectionHeader mainHeader="最新情報" subHeader="NEWS" />
