@@ -1,7 +1,6 @@
 // components/FAQAccordion.js
 
 import React, { useState } from "react";
-import styles from "./styles.module.css";
 
 const faqs = [
   {
@@ -36,18 +35,20 @@ const FAQAccordion = () => {
   return (
     <>
       {faqs.map((faq, index) => (
-        <div className={styles.accordion} key={index}>
+        <div className="border-b border-gray-200" key={index}>
           <div
-            className={styles.question}
+            className="flex justify-between items-center py-1 cursor-pointer"
             onClick={() => toggleAccordion(index)}
           >
-            {faq.question}
-            <span className={styles.icon}>
+            <h2 className="text-lg font-medium">{faq.question}</h2>
+            <span className="text-gray-500">
               {openIndexes[index] ? "-" : "+"}
             </span>
           </div>
           {openIndexes[index] && (
-            <div className={styles.answer}>{faq.answer}</div>
+            <div className="pb-4">
+              <p className="text-gray-500">{faq.answer}</p>
+            </div>
           )}
         </div>
       ))}

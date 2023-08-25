@@ -11,20 +11,19 @@
 
 // Components
 import Layout from "@/components/layout";
-import Jumbotron from "@/components/Jumbotron/jumbotron";
 import EpisodesList from "@/components/EpisodesList";
 import FeedbackSection from "@/components/FeedbackSection";
-import Card from "@/components/Card";
+import Card from "@/components/Card/BaseCard";
+import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import Parser from "rss-parser"; 
-import ImageWrapper from "@/components/ImageWrapper";
+import Image from "next/image";
+import Jumbotron from "@/components/Podcast_components/Jumbotron"
 
 // Modules
 import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 
-// Data Fetching
-import { getSortedPostsData } from "../../lib/content";
 
 // Assets
 import heroPic from "../../public/images/podcasting.jpg";
@@ -32,11 +31,11 @@ import heroPic from "../../public/images/podcasting.jpg";
 const parser = new Parser();
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+
   
   // Reading the YAML content
   const jumbotronContent = yaml.load(fs.readFileSync(path.resolve(process.cwd(), 'content', 'podcast', 'jumbotronContent.yaml'), 'utf8'));
-  
+  const ourTeam = yaml.load(fs.readFileSync(path.resolve(process.cwd(), 'content', 'podcast', 'ourTeam.yaml'), 'utf8'));
   // RSS Data Fetching
   const url = "https://anchor.fm/s/13a00fc4/podcast/rss";
   const feed = await parser.parseURL(url);
@@ -51,22 +50,22 @@ export async function getStaticProps() {
 
   return {
     props: {
-      allPostsData,
+      ourTeam,
       jumbotronContent,
       topEpisodes,
     },
   };
 }
 
-export default function Home({ allPostsData, topEpisodes, jumbotronContent }) {
+export default function Home({topEpisodes, jumbotronContent, ourTeam }) {
   return (
     <Layout>
-        <ImageWrapper src={heroPic} alt="A person recording a podcast" />
-        <Jumbotron content={jumbotronContent} imgSrc={heroPic} imgAlt="A person recording a podcast" />
+        <Jumbotron data={jumbotronContent} />
         <FeedbackSection />
-        <Card type="base" data="tutors" showButton={false} />
+        <div className="flex flex-col md:flex-row">
+        <ReviewCard data={ourTeam} />
+        </div>
         <EpisodesList episodes={topEpisodes} />
-    
     </Layout>
   );
 }

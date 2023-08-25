@@ -1,6 +1,5 @@
 // /layout/TrialFlow/index.js
 
-import styles from "./styles.module.css";
 import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 
@@ -33,28 +32,31 @@ const steps = [
 
 const TrialFlow = () => {
   return (
-    <div className={styles.container}>
+    <div className="bg-white rounded-lg shadow-lg p-6">
       <SectionHeader
         mainHeader={"体験レッスンで自分に合うかチェック！"}
         subHeader={"Join us"}
       />
-      <div className={styles.wrapper}>
+      {/* TODO Create timeline UI for steps */}
+      <div className="flex flex-col space-y-4">
         {steps.map((step, index) => (
-          <div key={index} className={styles.stepWrapper}>
-            <span className={styles.stepTitle}>{step.title}</span>
-            <h4 className={styles.stepSubtitle}>{step.subtitle}</h4>
-            <p className={styles.stepDescription}>{step.description}</p>
+          <div key={index} className="flex flex-col space-y-2">
+            <span className="text-lg font-bold">{step.title}</span>
+            <h4 className="text-md font-medium">{step.subtitle}</h4>
+            <p className="text-sm">{step.description}</p>
           </div>
         ))}
       </div>
-      <ul>
+      <ul className="list-disc list-inside my-10">
         <li>
           当スクールの体験レッスンは１回
           1,000円（税込）の有料体験レッスンとなります。
         </li>
         <li>体験レッスンはお一人様１回限りとさせていただいております。</li>
       </ul>
-      <Button link="https://forms.gle/wRLWN8WiLdQLZdLQ9">
+      <Button
+        link="https://forms.gle/wRLWN8WiLdQLZdLQ9"
+      >
         体験レッスンに申し込む
       </Button>
     </div>

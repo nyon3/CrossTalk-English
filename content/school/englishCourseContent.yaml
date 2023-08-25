@@ -1,10 +1,82 @@
 # englishCourseContent.yaml
 
-- title: "少人数制で会話量が多い"
-  description: "少人数制のクラスで、豊富な会話の機会を提供します。"
+- lesson_type: group_lesson
+  image: andrea_teaching_640.jpg
+  alt: "Image of Andrea teaching a group lesson"
+  link: /lesson/group_lesson
+  headline: グループレッスン
+  content: テキストブックを主体に、英語でのコミュニケーションに重点を楽しく学びたい方へ
+- lesson_type: private_lesson
+  image: private_lesson_high_five_1000.JPG
+  alt: "Image of a high-five during a private lesson"
+  link: /lesson/private_lesson
+  headline: プライベート
+  content: あなたの学習ニーズと目標に焦点を当て、一対一で英語スキルを強化します。
+- lesson_type: discussion
+  image: discussion_class.jpg
+  alt: "Image of a discussion class"
+  link: /lesson/freetalk_lesson
+  headline: ディスカッション
+  content: オープンなディスカッションで、自然にリスニングとスピーキングのスキルを磨きます。
 
-- title: "経験豊富な講師"
-  description: "経験豊富な講師があなたの学習をサポートします。"
-
-- title: "アットホームな雰囲気"
-  description: "楽しみながら学べるアットホームな雰囲気を提供します。"
+    
+# [
+#   {
+#     "data": "type1",
+#     "image": "work_office.jpg",
+#     "alt": "Image 1",
+#     "link": "/lesson/work_english",
+#     "headline": "仕事で英語を使う",
+#     "content": "観光地でのガイド、英語教師、フリーランサーなど、日常の仕事でカジュアルに英語を使う必要がある方向けのレッスンを提供します。"
+#   },
+#   {
+#     "type": "type1",
+#     "image": "concept_workingHoliday.png",
+#     "alt": "Image 3",
+#     "link": "/lesson/working_holiday",
+#     "headline": "ワーキングホリデー準備",
+#     "content": "ワーキングホリデーで必要となる英語スキルを磨きます。日常生活でのコミュニケーションから、求職活動、仕事場での英語使用まで、ワーキングホリデーで成功するための全てをカバーします。"
+#   },
+#   {
+#     "type": "type1",
+#     "image": "concept_talk.png",
+#     "alt": "Image 2",
+#     "link": "/lesson/talk_english",
+#     "headline": "コミュニケーション強化",
+#     "content": "日常会話からビジネス英語まで、実践的なコミュニケーション能力を向上させるレッスンを提供します。"
+#   },
+#   {
+#     "type": "type2",
+#     "image": "andrea_teaching_640.jpg",
+#     "alt": "Image 1",
+#     "link": "/lesson/group_lesson",
+#     "headline": "グループレッスン",
+#     "content": "テキストブックを主体に、英語でのコミュニケーションに重点を楽しく学びたい方へ"
+#   },
+#   {
+#     "type": "type2",
+#     "image": "private_lesson_high_five_1000.JPG",
+#     "alt": "Image 3",
+#     "link": "/lesson/private_lesson",
+#     "headline": "プライベート",
+#     "content": "あなたの学習ニーズと目標に焦点を当て、一対一で英語スキルを強化します。"
+#   },
+#   {
+#     "type": "type2",
+#     "image": "discussion_class.jpg",
+#     "alt": "Image 2",
+#     "link": "/lesson/freetalk_lesson",
+#     "headline": "ディスカッション",
+#     "content": "オープンなディスカッションで、自然にリスニングとスピーキングのスキルを磨きます。"
+#   },
+#   {
+#     "_commentedOut": {
+#       "type": "type2",
+#       "image": "andrea_teaching_640.jpg",
+#       "alt": "Image 1",
+#       "link": "/lesson/grammar_plus",
+#       "headline": "グラマープラス",
+#       "content": "文法＋クラスは、文法を学びたい生徒のためのクラスです。文法の基礎を学び、その文法を使って会話をすることで、文法の理解を深めることができます。"
+#     }
+#   }
+# ]

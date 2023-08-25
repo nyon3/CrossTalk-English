@@ -2,9 +2,9 @@
 import React from "react";
 import Layout from "@/components/layout";
 import { getCourseData, getSortedCoursesData } from "@/lib/courses";
+import Image from "next/image";
 import styles from "./lesson.module.css";
 import PricingCard from "@/components/PriceComponent";
-import ImageWrapper from "@/components/ImageWrapper";
 import TrialFlow from "@/components/TrialFlow/index";
 import SectionHeader from "@/components/SectionHeader";
 import InfoCard from "@/components/Card/InfoCard";
@@ -20,13 +20,13 @@ const CoursePage = ({ courseData }) => {
         <div className={styles.wrapper}>
           <SectionHeader mainHeader={headline} subHeader={title} />
           <p className={styles.description}>{subheadline}</p>
-          <ImageWrapper src={`/images/${image}`} alt={courseData.title} />
+          <Image src={`/images/${image}`} alt={courseData.title}  width={500} height={500}/>
           {/* <FeatureSection title="Features" data={features} background="#fff" /> */}
           <SectionHeader
             mainHeader={"このレッスンで学べること"}
             subHeader={"Features"}
           />
-          <InfoCard content={features} />
+          <InfoCard data={features} />
           <div
             style={{
               marginTop: "3rem",

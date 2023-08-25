@@ -1,12 +1,11 @@
 // components/Footer.js
 
 import React from "react";
-import styles from "./styles.module.css";
-
+// TODO Add social media links
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <p>© 2023, copyright CrossTalk</p>
+    <footer className="bg-gray-800 text-white py-4">
+      <p className="text-center">&copy; 2023, CrossTalk</p>
     </footer>
   );
 };
