@@ -24,7 +24,7 @@ const Jumbotron = ({ content }) => (
       <h1 className={inter.className + " text-5xl font-bold leading-tight"}>
         {content.title}
       </h1>
-      <p className="text-2xl mb-3">{content.subtitle}</p>
+      <p className="text-2xl font-bold my-3">{content.subtitle}</p>
       <div className="text-md font-bold leading-relaxed">
         {content.description}
       </div>
@@ -32,7 +32,7 @@ const Jumbotron = ({ content }) => (
     <div className="md:w-1/2 overflow-hidden flex justify-center items-center">
       <Image
         src={`/images/${content.src}`}
-        alt="英会話スクールで教える講師"
+        alt={content.alt}
         width={1000}
         height={1000}
         className="md:ml-0 mt-5 md:mt-0 rounded-lg"

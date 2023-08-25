@@ -23,7 +23,7 @@ const Jumbotron = ({ data }) => (
          <div className="w-44 md:w-1/2 md:pr-10 overflow-hidden flex justify-center items-center text-center">
             <Image
                 src={`/images/${data.src}`}
-                alt="英会話スクールで教える講師"
+                alt={data.alt}
                 width={1000}
                 height={1000}
                 className="md:ml-0 mt-5 md:mt-0 rounded-lg"
