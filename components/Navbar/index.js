@@ -14,10 +14,10 @@ const menuItems = {
     { label: "体験レッスン", href: "https://forms.gle/wRLWN8WiLdQLZdLQ9"},
   ],
   podcast: [
-    { label: "About", href: "podcast/about" },
-    { label: "Episodes", href: "/podcast/episodes" },
-    { label: "Subscribe", href: "/podcast/subscribe" },
-    { label: "Feedback", href: "/podcast/feedback" },
+    // { label: "About", href: "podcast/about" },
+    // { label: "Episodes", href: "/podcast/episodes" },
+    // { label: "Subscribe", href: "/podcast/subscribe" },
+    // { label: "Feedback", href: "/podcast/feedback" },
   ],
 };
 
