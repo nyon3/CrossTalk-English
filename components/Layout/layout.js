@@ -30,7 +30,7 @@ const Layout = ({
         />
       </Head>
       <Navbar />
-      <main className="px-5 max-w-screen-lg mx-auto ">{children}</main>
+      <main className="px-5 max-w-screen-lg mx-auto flex flex-col gap-8">{children}</main>
       <Footer />
     </>
   );

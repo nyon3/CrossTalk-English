@@ -9,6 +9,7 @@ import TrialFlow from "@/components/TrialFlow/index";
 import SectionHeader from "@/components/SectionHeader";
 import InfoCard from "@/components/Card/InfoCard";
 
+// Use Tailwind CSS to style this page
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
   const { title, headline, subheadline, image, RecommendedFor, features } =

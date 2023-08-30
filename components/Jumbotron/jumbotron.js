@@ -17,7 +17,7 @@ const inter = Inter({
   weight: "700",
   subsets: ["latin"],
 });
-
+// TODO: adujst pohto aspect ratio for desktop
 const Jumbotron = ({ content }) => (
   <div className="flex flex-col md:flex-row pt-5 md:pt-20">
     <div className="md:w-1/2 md:pr-10">

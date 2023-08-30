@@ -1,8 +1,9 @@
-// BaseCard.js
+// aLessonCourseCard.js
 import Image from "next/image";
 import Carousel from "../Carousel";
 import Button from "@/components/Button";
 
+// TODO: this comopnent might be causeing the warings in the console
 const LessonCourseCard = ({ data }) => {
     return (
         <Carousel>
