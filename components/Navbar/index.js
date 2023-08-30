@@ -29,7 +29,7 @@ const menuItems = {
 const Navbar = () => {
   const router = useRouter();
 
-  const isRoot = router.pathname === "/";
+  const isRoot = router.pathname === "/" || router.pathname.startsWith("/lesson/");
   const isPodcast = router.pathname === "/podcast";
 
   return (
