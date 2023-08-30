@@ -5,18 +5,15 @@ import path from 'path';
 import { getSortedPostsData } from "../lib/content";
 
 // Components
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout/layout";
 import Jumbotron from "@/components/Jumbotron/jumbotron";
 import FAQAccordion from "@/components/FaqAcordion";
 import SectionHeader from "@/components/SectionHeader";
 import NewsSection from "@/components/NewsSection";
 import InfoCard from "@/components/Card/InfoCard";
 import Banner from "@/components/Banner";
-import Card from "@/components/Card/BaseCard"; // You might want to be explicit about which card type this is if you have multiple.
 import ReviewCard from '@/components/Card/ReviewCard/ReviewCard';
 import LessonCourseCard from '@/components/Card/LessonCourseCard';
-// Assets
-import mainPic from "@/public/images/andrea_teaching_640.jpg";
 import Carousel from '@/components/Card/Carousel';
 
 export async function getStaticProps() {
@@ -39,7 +36,14 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData, jumbotronContent, feature, englishCourseContent, reviews }) {
   return (
-    <Layout>
+<Layout 
+  title="About - CROSSTALK 英会話スクール" 
+  description={`岡山市北区のCrossTalk英会話スクールへようこそ！
+  テキストで基本を学ぶことはもちろん
+  実際の状況で使える「生きた英語」を学んで、
+  あなたの夢を叶えましょう！`}
+>
+
         {/* <Banner newsData={allPostsData} /> */}
         <Jumbotron content={jumbotronContent}/>
         <SectionHeader mainHeader="CrossTalkで英語が話せるようになる理由" subHeader="REASON" />

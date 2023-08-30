@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { getPostData, getSortedPostsData } from "@/lib/content";
 
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout/layout";
 import Button from "@/components/Button";
 
 export async function getStaticProps({ params }) {

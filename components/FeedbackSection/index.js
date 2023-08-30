@@ -1,6 +1,6 @@
 
 import Button from "@/components/Button";
-
+// TODO - Take props and pass them to contents
 function FeedbackSection() {
   return (
     <section className="bg-gray-100 py-8">

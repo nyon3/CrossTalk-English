@@ -1,6 +1,6 @@
 // pages/[course].js
 import React from "react";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout/layout";
 import { getCourseData, getSortedCoursesData } from "@/lib/courses";
 import Image from "next/image";
 import styles from "./lesson.module.css";

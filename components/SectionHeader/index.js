@@ -1,13 +1,5 @@
-/**
- * SectionHeader
- *
- * This is a reusable component that provides a header and subheader styled consistently across the application.
- *
- * @component
- * @prop {string} subHeader - The subheader text displayed above the main header text.
- * @prop {string} mainHeader - The main header text displayed below the subheader text.
- */
 
+// TODO: Use tailwind css to index page, and remove this file.
 import styles from "./styles.module.css";
 
 const SectionHeader = ({ subHeader, mainHeader }) => (

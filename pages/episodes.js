@@ -1,6 +1,6 @@
 // /pages/episodes.js
 import Parser from "rss-parser";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout/layout";
 import EpisodesList from "@/components/EpisodesList";
 // これはページコンポーネントの外に置くことで、サーバーサイドでのみ実行されます
 const parser = new Parser();
