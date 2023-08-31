@@ -1,6 +1,6 @@
 // pages/[course].js
 import React from "react";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout/layout";
 import { getCourseData, getSortedCoursesData } from "@/lib/courses";
 import Image from "next/image";
 import styles from "./lesson.module.css";
@@ -9,9 +9,10 @@ import TrialFlow from "@/components/TrialFlow/index";
 import SectionHeader from "@/components/SectionHeader";
 import InfoCard from "@/components/Card/InfoCard";
 
+// Use Tailwind CSS to style this page
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
-  const { title, headline, subheadline, image, RecommendedFor, features } =
+  const { title, headline, subheadline, image, features } =
     courseData;
 
   return (

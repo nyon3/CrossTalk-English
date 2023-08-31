@@ -17,10 +17,12 @@ const inter = Inter({
   weight: "700",
   subsets: ["latin"],
 });
-
+// HACK: I need to figure out a bette way to code this hero component
+// For now the gap between the image and the text is cotoled by the flexbox and gap values
+// And it's kinda off set on desktop and tablet screen sizes
 const Jumbotron = ({ content }) => (
-  <div className="flex flex-col md:flex-row pt-5 md:pt-20">
-    <div className="md:w-1/2 md:pr-10">
+  <div className="flex flex-col items-center md:gap-32 md:flex-row pt-5 md:pt-20">
+    <div className="flex-1 md:max-w-md">
       <h1 className={inter.className + " text-5xl font-bold leading-tight"}>
         {content.title}
       </h1>
@@ -29,7 +31,7 @@ const Jumbotron = ({ content }) => (
         {content.description}
       </div>
     </div>
-    <div className="md:w-1/2 overflow-hidden flex justify-center items-center">
+    <div className="flex-1 md:max-w-xs overflow-hiddenjustify-center items-center">
       <Image
         src={`/images/${content.src}`}
         alt={content.alt}

@@ -29,12 +29,12 @@ const menuItems = {
 const Navbar = () => {
   const router = useRouter();
 
-  const isRoot = router.pathname === "/" || router.pathname.startsWith("/lesson/");
+  const isRoot = router.pathname.startsWith("/school");
   const isPodcast = router.pathname === "/podcast";
 
   return (
     <header className="bg-gray-800">
-      <div className="max-w-7xl md:max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl md:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             {isRoot &&
@@ -66,7 +66,7 @@ const Navbar = () => {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="text-gray-300 font-bold hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     {item.label}
                   </Link>
