@@ -11,7 +11,6 @@ import FAQAccordion from "@/components/FaqAcordion";
 import SectionHeader from "@/components/SectionHeader";
 import NewsSection from "@/components/NewsSection";
 import InfoCard from "@/components/Card/InfoCard";
-import Banner from "@/components/Banner";
 import ReviewCard from '@/components/Card/ReviewCard/ReviewCard';
 import LessonCourseCard from '@/components/Card/LessonCourseCard';
 import Carousel from '@/components/Card/Carousel';

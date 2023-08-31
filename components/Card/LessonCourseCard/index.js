@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 const LessonCourseCard = ({ data }) => {
     return (
         <Carousel>
-        <div className="flex flex-auto flex-col md:flex-row m-0 m-auto w-full">
+        <div className="flex flex-auto flex-col md:flex-row m-0 w-full">
             {data.map((item) => (
                 <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden m-4">
                     <div className="h-96 w-full relative">

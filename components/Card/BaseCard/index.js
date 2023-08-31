@@ -4,7 +4,7 @@ import Image from "next/image";
 // TODO Photo aspect ratio is not consistent
 const BaseCard = ({ data }) => {
   return (
-    <div className="flex flex-auto flex-col md:flex-row m-0 m-auto">
+    <div className="flex flex-auto flex-col md:flex-row m-0">
       {data.map((item) => (
         <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden m-4">
           <div className="h-64 w-full">
