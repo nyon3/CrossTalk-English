@@ -14,6 +14,7 @@ import InfoCard from "@/components/Card/InfoCard";
 import ReviewCard from '@/components/Card/ReviewCard/ReviewCard';
 import LessonCourseCard from '@/components/Card/LessonCourseCard';
 import Carousel from '@/components/Card/Carousel';
+import Banner from '@/components/Banner';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -43,7 +44,7 @@ export default function Home({ allPostsData, jumbotronContent, feature, englishC
   あなたの夢を叶えましょう！`}
 >
 
-        {/* <Banner newsData={allPostsData} /> */}
+        <Banner newsData={allPostsData} />
         <Jumbotron content={jumbotronContent}/>
         <SectionHeader mainHeader="CrossTalkで英語が話せるようになる理由" subHeader="REASON" />
         <InfoCard data={feature} />
