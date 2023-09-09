@@ -9,7 +9,7 @@ export default function TemporaryLanding() {
   
   useEffect(() => {
     router.replace('/school');
-  }, []);
+  }, [router]);
 
   return (
     <Layout 
