@@ -7,13 +7,13 @@ const BaseCard = ({ data }) => {
     <div className="flex flex-auto flex-col md:flex-row m-0">
       {data.map((item) => (
         <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden m-4">
-          <div className="h-64 w-full">
+          <div className="h-80 w-full">
             <Image
-              src={`/images/${item.image}`}
+              src={`/images/${item.avatar}`}
               alt={item.alt}
-              width={1000}
-              height={1000}
-              className="object-cover w-full h-full"
+              width={500}
+              height={500}
+              className="object-cover w-full h-full object-top"
             />
           </div>
           <div className="p-4">
