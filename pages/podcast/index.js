@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout/layout";
 import EpisodesList from "@/components/EpisodesList";
 import FeedbackSection from "@/components/FeedbackSection";
-import BaseCard from "@/components/Card/BaseCard";
+import ProfileCard from "@/components/Card/ProfileCard";
 import Parser from "rss-parser"; 
 import Jumbotron from "@/components/Jumbotron/jumbotron";
 import fs from 'fs';
@@ -39,7 +39,7 @@ export default function Home({topEpisodes, jumbotronContent, ourTeam }) {
         <Jumbotron content={jumbotronContent} />
         <FeedbackSection />
         <div className="flex flex-col md:flex-row md: ">
-        <BaseCard data={ourTeam} />
+        <ProfileCard data={ourTeam} />
         </div>
         <EpisodesList episodes={topEpisodes} />
     </Layout>
