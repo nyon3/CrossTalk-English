@@ -7,7 +7,7 @@ import styles from "./lesson.module.css";
 import PricingCard from "@/components/PriceComponent";
 import TrialFlow from "@/components/TrialFlow/index";
 import SectionHeader from "@/components/SectionHeader";
-import InfoCard from "@/components/Card/InfoCard";
+import InfoCard from "@/components/Card/IconicInfoBox";
 
 // Use Tailwind CSS to style this page
 const CoursePage = ({ courseData }) => {

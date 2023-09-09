@@ -10,10 +10,11 @@ import Jumbotron from "@/components/Jumbotron/jumbotron";
 import FAQAccordion from "@/components/FaqAcordion";
 import SectionHeader from "@/components/SectionHeader";
 import NewsSection from "@/components/NewsSection";
-import InfoCard from "@/components/Card/InfoCard";
+import InfoCard from "@/components/Card/IconicInfoBox";
 import ReviewCard from '@/components/Card/ReviewCard/ReviewCard';
 import LessonCourseCard from '@/components/Card/LessonCourseCard';
 import Carousel from '@/components/Card/Carousel';
+import Banner from '@/components/Banner';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -22,6 +23,7 @@ export async function getStaticProps() {
   const englishCourseContent = yaml.load(fs.readFileSync(path.resolve(process.cwd(), 'content', 'school', 'englishCourseContent.yaml'), 'utf8'));
   const feature = yaml.load(fs.readFileSync(path.resolve(process.cwd(), 'content', 'school', 'feature.yaml'), 'utf8'));
   const reviews = yaml.load(fs.readFileSync(path.resolve(process.cwd(), 'content', 'school', 'reviews.yaml'), 'utf8'));
+  const faq = yaml.load(fs.readFileSync(path.resolve(process.cwd(), 'content', 'school', 'faq.yaml'), 'utf8'));
   return {
     props: {
       feature,
@@ -29,11 +31,12 @@ export async function getStaticProps() {
       allPostsData,
       jumbotronContent,
       englishCourseContent,
+      faq,
     },
   };
 }
 
-export default function Home({ allPostsData, jumbotronContent, feature, englishCourseContent, reviews }) {
+export default function Home({ allPostsData, jumbotronContent, feature, englishCourseContent, reviews, faq }) {
   return (
 <Layout 
   title="About - CROSSTALK 英会話スクール" 
@@ -43,7 +46,7 @@ export default function Home({ allPostsData, jumbotronContent, feature, englishC
   あなたの夢を叶えましょう！`}
 >
 
-        {/* <Banner newsData={allPostsData} /> */}
+        <Banner newsData={allPostsData} />
         <Jumbotron content={jumbotronContent}/>
         <SectionHeader mainHeader="CrossTalkで英語が話せるようになる理由" subHeader="REASON" />
         <InfoCard data={feature} />
@@ -54,7 +57,7 @@ export default function Home({ allPostsData, jumbotronContent, feature, englishC
         <ReviewCard data={reviews}/>
         </Carousel>
         <SectionHeader mainHeader="よくある質問" subHeader="FAQ" />
-        <FAQAccordion />
+        <FAQAccordion data={faq} />
         <SectionHeader mainHeader="最新情報" subHeader="NEWS" />
         <NewsSection allPostsData={allPostsData} />
         {/* <Card type="base" data="tutors" showButton={false} /> */}
