@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout/layout";
 import EpisodesList from "@/components/EpisodesList";
 import FeedbackSection from "@/components/FeedbackSection";
-import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
+import ProfileCard from "@/components/Card/ProfileCard";
 import Parser from "rss-parser"; 
 import Jumbotron from "@/components/Jumbotron/jumbotron";
 import fs from 'fs';
@@ -38,8 +38,8 @@ export default function Home({topEpisodes, jumbotronContent, ourTeam }) {
     description="CrossTalk.FMは、海外のニュースや感動的なストーリーや日常の小さな驚きを、英語と日本語で自由に語るポッドキャストです">
         <Jumbotron content={jumbotronContent} />
         <FeedbackSection />
-        <div className="flex flex-col md:flex-row">
-        <ReviewCard data={ourTeam} />
+        <div className="flex flex-col md:flex-row md: ">
+        <ProfileCard data={ourTeam} />
         </div>
         <EpisodesList episodes={topEpisodes} />
     </Layout>
