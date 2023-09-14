@@ -48,7 +48,7 @@ export default function BlogPost({ postData }) {
           </p>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
-        <Button link={"/"}>Go to home</Button>
+        <Button link={"/eikaiwa-school"}>Go to home</Button>
       </main>
     </Layout>
   );

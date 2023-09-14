@@ -1,16 +1,7 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
 // Components
 import Layout from "@/components/Layout/layout";
 
 export default function TemporaryLanding() {
-  const router = useRouter();
-  
-  useEffect(() => {
-    router.replace('/school');
-  }, [router]);
-
   return (
     <Layout 
       title="Welcome to CrossTalk" 
@@ -20,11 +11,3 @@ export default function TemporaryLanding() {
     </Layout>
   );
 }
-
-
-// This code load /school in the server side, but it get warning in the console.
-// export async function getServerSideProps(context) {
-//   context.res.writeHead(301, { Location: '/school' });
-//   context.res.end();
-//   return { props: {} }; // needed to comply with Next.js data fetching requirements
-// }

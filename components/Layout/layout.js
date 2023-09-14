@@ -11,7 +11,7 @@ const Layout = ({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    url: "https://crosstalk.me/",
+    url: "https://crosstalk.me/eikaiwa-school",
     name: title,
   };
 

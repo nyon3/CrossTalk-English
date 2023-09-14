@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/school',
+        destination: '/eikaiwa-school',
         permanent: true,
       },
     ];

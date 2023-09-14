@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 // Sample data for logo
 const logo = {
-  root: [{ label: "CrossTalk英会話", href: "/"}],
+  root: [{ label: "CrossTalk英会話", href: "/eikaiwa-school"}],
   podcast: [{ label: "CrossTalk.fm", href: "/podcast"}],
 };
 
@@ -29,7 +29,7 @@ const menuItems = {
 const Navbar = () => {
   const router = useRouter();
 
-  const isRoot = router.pathname.startsWith("/school");
+  const isRoot = router.pathname.startsWith("/eikaiwa-school");
   const isPodcast = router.pathname === "/podcast";
 
   return (
