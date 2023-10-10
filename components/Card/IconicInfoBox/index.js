@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon1 from '@/public/language.svg';
 import Icon2 from '@/public/teacher.svg';
-import Icon3 from '@/public/thumbsUp.svg';
+import Icon3 from '@/public/home.svg';
 
 const icons = [ Icon1, Icon2, Icon3 ];
 
@@ -12,12 +12,12 @@ const InfoCard = ({ data }) => {
         const CurrentIcon = icons[index];  // Get the icon using the index
 
         return (
-          <div className="bg-white rounded-lg shadow-md p-4 w-72" key={card.title}>
-            <div className="bg-gray-200 rounded-full h-12 w-12 flex items-center justify-center">
-              <CurrentIcon className="h-6 w-6 text-gray-600" />
-            </div>
-            <h3 className="text-lg font-medium text-gray-700 mt-4">{card.title}</h3>
-            <p className="text-gray-500 mt-2">{card.description}</p>
+          <div className="bg-white rounded-lg px-6 py-8 shadow-md" key={index}>
+            <span className="inline-flex items-center justify-center p-2 bg-gray-100 rounded-md">
+              <CurrentIcon className="h-6 w-6 " />
+            </span>
+            {/* <h3 className="text-lg font-medium text-gray-700 mt-4">{card.title}</h3> */}
+            <p className=" mt-2 text-xl font-semibold pt-3">{card.description}</p>
           </div>
         );
       })}
