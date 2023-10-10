@@ -1,34 +1,35 @@
-// aLessonCourseCard.js
+// LessonCourseCard.js
 import Image from "next/image";
 import Carousel from "../Carousel";
-import Button from "@/components/Button";
+import Link from "next/link";
 
-// TODO: this comopnent might be causeing the warings in the console
 const LessonCourseCard = ({ data }) => {
     return (
         <Carousel>
-        <div className="flex flex-auto flex-col md:flex-row m-0 w-full">
-            {data.map((item) => (
-                <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden m-4">
-                    <div className="h-96 w-full relative">
-                        <Image
-                            src={`/images/${item.image}`}
-                            alt={item.alt}
-                            fill
-                            className="object-center object-cover"
-                        />
+            <div className="flex flex-auto flex-col m-0 w-full">
+                {data.map((item) => (
+                    <div key={item.id} className="relative bg-white rounded-lg shadow-sm overflow-hidden m-4 transition-opacity duration-300 ease-in-out hover:opacity-80">
+                        <Link href={item.link}>
+                        <div className="relative group">
+                            <div className="h-96 w-full overflow-hidden">
+                                <Image
+                                    src={`/images/${item.image}`}
+                                    alt={item.alt}
+                                    fill
+                                    className="transition-transform duration-500 ease-in-out group-hover:scale-110 object-cover"
+                                />
+                            </div>
+                            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-2 md:p-10">
+                  
+                                <h3 className="text-white font-bold text-3xl mb:text-5xl mb-2">{item.headline}</h3>
+                                <p className="text-white text-sm font-semibold mb-5">{item.content}</p>
+                 
+                            </div>
+                        </div>
+                        </Link>
                     </div>
-                    <div className="p-4">
-                        <h3 className="text-gray-900 font-semibold text-lg">{item.headline}</h3>
-                        <p className="text-gray-600 text-sm mt-2">{item.content}</p>
-                        <div className="flex justify-start mt-5">
-                        <Button className="" link={item.link}>もっと詳しく</Button>
-                    </div>
-                    </div>
-                
-                </div>
-            ))}
-        </div>
+                ))}
+            </div>
         </Carousel>
     );
 }

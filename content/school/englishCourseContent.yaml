@@ -1,23 +1,23 @@
 # englishCourseContent.yaml
 
 - lesson_type: group_lesson
-  image: andrea_teaching_640.jpg
+  image: discussion_class.jpg
   alt: "Image of Andrea teaching a group lesson"
   link: /eikaiwa-school/lesson/group_lesson
   headline: グループレッスン
-  content: テキストブックを主体に、英語でのコミュニケーションに重点を楽しく学びたい方へ
+  content: 楽しい英語コミュニケーション学習
 - lesson_type: private_lesson
-  image: private_lesson_high_five_1000.JPG
+  image: andrea_teaching_640.jpg
   alt: "Image of a high-five during a private lesson"
   link: /eikaiwa-school/lesson/private_lesson
   headline: プライベート
-  content: あなたの学習ニーズと目標に焦点を当て、一対一で英語スキルを強化します。
+  content: 一対一で英語スキルを向上させます
 - lesson_type: discussion
-  image: discussion_class.jpg
+  image: discussion.jpg
   alt: "Image of a discussion class"
   link: /eikaiwa-school/lesson/freetalk_lesson
   headline: ディスカッション
-  content: オープンなディスカッションで、自然にリスニングとスピーキングのスキルを磨きます。
+  content: 自然な会話スキル磨き
 
     
 # [
