@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 const NewsSection = ({ allPostsData }) => (
-  <div className="flex flex-col mt-10 max-w-lg md:w-3/4">
+  <div className="flex flex-col mt-10 w-full md:w-3/4">
     <ul>
       {allPostsData.slice(0, 3).map(({ slug, date, title }) => (
         <li key={slug}>

@@ -15,7 +15,6 @@ import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import LessonCourseCard from "@/components/Card/LessonCourseCard";
 import Carousel from "@/components/Card/Carousel";
 
-
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
 
@@ -94,21 +93,18 @@ export default function Home({
       <Carousel>
         <ReviewCard data={reviews} />
       </Carousel>
-      <div className="md:flex md:flex-1 justify-around">
-     
-        <div>
-        <h3 className="mt-10 text-3xl text-red-500">FAQ</h3>
-        <p className="text-lg mt-3">よくある質問</p>
+      <div className="md:flex md:flex-1 md:justify-evenly">
+        <div className="">
+          <h3 className="mt-10 text-3xl text-red-500">FAQ</h3>
+          <p className="text-lg mt-3">よくある質問</p>
         </div>
         <FAQAccordion data={faq} />
       </div>
-      <div className="md:flex md:flex-1 justify-around">
+      <div className="md:flex md:flex-1 md:justify-evenly">
         <div>
-        <h3 className="mt-10 text-3xl text-red-500">NEWS</h3>
-      <p className="text-lg mt-3">最新情報をお届けします！</p>
+          <h3 className="mt-10 text-3xl text-red-500">NEWS</h3>
+          <p className="text-lg mt-3">最新情報について</p>
         </div>
-      
-
         <NewsSection allPostsData={allPostsData} />
       </div>
       {/* <Card type="base" data="tutors" showButton={false} /> */}
