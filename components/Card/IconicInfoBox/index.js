@@ -12,7 +12,7 @@ const InfoCard = ({ data }) => {
         const CurrentIcon = icons[index];  // Get the icon using the index
 
         return (
-          <div className="bg-white rounded-lg px-6 py-8 shadow-md" key={index}>
+          <div className="bg-white max-w-lg rounded-lg px-6 py-8 shadow-md" key={index}>
             <span className="inline-flex items-center justify-center p-2 bg-gray-100 rounded-md">
               <CurrentIcon className="h-6 w-6 " />
             </span>

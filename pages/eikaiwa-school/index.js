@@ -100,7 +100,7 @@ export default function Home({
         </div>
         <FAQAccordion data={faq} />
       </div>
-      <div className="md:flex md:flex-1 md:justify-evenly">
+      <div className="">
         <div>
           <h3 className="mt-10 text-3xl text-red-500">NEWS</h3>
           <p className="text-lg mt-3">最新情報について</p>
