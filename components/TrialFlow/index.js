@@ -1,5 +1,5 @@
 // /layout/TrialFlow/index.js
-
+import { useState } from "react";
 import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 
@@ -31,22 +31,55 @@ const steps = [
 ];
 
 const TrialFlow = () => {
+  const [activeStep, setActiveStep] = useState(0);
+
+  const toggleStep = (index) => {
+    setActiveStep(activeStep === index ? null : index);
+  };
+
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className="bg-white rounded-lg shadow-lg p-6 w-96">
       <SectionHeader
         mainHeader={"体験レッスンで自分に合うかチェック！"}
         subHeader={"Join us"}
       />
       {/* TODO Create timeline UI for steps */}
       <div className="flex flex-col space-y-4">
-        {steps.map((step, index) => (
-          <div key={index} className="flex flex-col space-y-2">
-            <span className="text-lg font-bold">{step.title}</span>
-            <h4 className="text-md font-medium">{step.subtitle}</h4>
-            <p className="text-sm">{step.description}</p>
-          </div>
-        ))}
+  {steps.map((step, index) => (
+    <div
+      key={index}
+      className={`flex space-x-4 cursor-pointer`}
+      onClick={() => toggleStep(index)}
+    >
+      <div className="flex flex-col items-center">
+
+        <div
+          className={`w-8 h-8 ${
+            activeStep === index ? "bg-blue-500" : "bg-gray-300"
+          } rounded-full flex items-center justify-center text-white`}
+        >
+          {index + 1}
+        </div>
+        {index < steps.length - 1 && <div className="border-l-2 h-4 mt-2 flex-grow border-gray-300"></div>}
       </div>
+      <div className="flex flex-col space-y-2 overflow-hidden">
+        <div className="flex justify-between items-center">
+        <h4 className="text-xl font-medium">{step.subtitle}</h4>
+         
+        </div>
+      
+        {/* {activeStep === index && (
+          <p className="text-sm max-w-xl">{step.description}</p>
+        )} */}
+        <p className={`text-sm max-w-xl transition-transform transform ${
+  activeStep === index ? 'ease-in-out duration-300 transform' : 'translate-y-10 opacity-0'
+}`}>{step.description}</p>
+
+      </div>
+    </div>
+  ))}
+</div>
+
       <ul className="list-disc list-inside my-10">
         <li>
           当スクールの体験レッスンは１回
@@ -54,9 +87,7 @@ const TrialFlow = () => {
         </li>
         <li>体験レッスンはお一人様１回限りとさせていただいております。</li>
       </ul>
-      <Button
-        link="https://forms.gle/wRLWN8WiLdQLZdLQ9"
-      >
+      <Button link="https://forms.gle/wRLWN8WiLdQLZdLQ9">
         体験レッスンに申し込む
       </Button>
     </div>
