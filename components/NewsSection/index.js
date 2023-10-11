@@ -9,7 +9,7 @@ const NewsSection = ({ allPostsData }) => (
           <div className="text-xl m mb-2">
             <small>{new Date(date).toLocaleDateString()}</small>
           </div>
-          <div className="text-xl m mb-7 font-bold">
+          <div className="text-2xl m mb-7 font-bold">
             <Link href={`/eikaiwa-school/news/${slug}`}>{title}</Link>
           </div>
           <div className="border-b my-4"></div>

@@ -15,19 +15,19 @@ const FAQAccordion = ({ data }) => {
   return (
     <div className="flex flex-col mt-10 max-w-lg md:w-3/4">
       {data.map((faq, index) => (
-        <div className="border-b border-gray-200" key={index}>
+        <div className="border-b border-gray-200 mb-10" key={index}>
           <div
             className="flex justify-between items-center py-1 cursor-pointer"
             onClick={() => toggleAccordion(index)}
           >
-            <h2 className="text-lg font-bold">{faq.question}</h2>
+            <h3 className="text-2xl font-bold">{faq.question}</h3>
             <span className="text-gray-500">
               {openIndexes[index] ? "-" : "+"}
             </span>
           </div>
           {openIndexes[index] && (
             <div className="pb-4">
-              <p className="text-gray-500">{faq.answer}</p>
+              <p className="text-lg text-gray-500 mt-4">{faq.answer}</p>
             </div>
           )}
         </div>
