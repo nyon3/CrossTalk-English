@@ -1,6 +1,5 @@
 // /layout/TrialFlow/index.js
 import { useState } from "react";
-import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 
 const steps = [
@@ -38,11 +37,7 @@ const TrialFlow = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 w-96">
-      <SectionHeader
-        mainHeader={"体験レッスンで自分に合うかチェック！"}
-        subHeader={"Join us"}
-      />
+    <div className="bg-white rounded-lg shadow-lg p-6 w-full">
       {/* TODO Create timeline UI for steps */}
       <div className="flex flex-col space-y-4">
   {steps.map((step, index) => (
@@ -54,7 +49,7 @@ const TrialFlow = () => {
       <div className="flex flex-col items-center">
 
         <div
-          className={`w-8 h-8 ${
+          className={`text-2xl w-16 h-16 md:w-32 md:h-32 ${
             activeStep === index ? "bg-blue-500" : "bg-gray-300"
           } rounded-full flex items-center justify-center text-white`}
         >
@@ -62,16 +57,16 @@ const TrialFlow = () => {
         </div>
         {index < steps.length - 1 && <div className="border-l-2 h-4 mt-2 flex-grow border-gray-300"></div>}
       </div>
-      <div className="flex flex-col space-y-2 overflow-hidden">
+      <div className="flex flex-col space-y-2 md:pl-5 md:pt-5 overflow-hidden">
         <div className="flex justify-between items-center">
-        <h4 className="text-xl font-medium">{step.subtitle}</h4>
+        <h4 className="text-xl font-semibold">{step.subtitle}</h4>
          
         </div>
       
         {/* {activeStep === index && (
           <p className="text-sm max-w-xl">{step.description}</p>
         )} */}
-        <p className={`text-sm max-w-xl transition-transform transform ${
+        <p className={`text-base max-w-xl transition-transform transform ${
   activeStep === index ? 'ease-in-out duration-300 transform' : 'translate-y-10 opacity-0'
 }`}>{step.description}</p>
 

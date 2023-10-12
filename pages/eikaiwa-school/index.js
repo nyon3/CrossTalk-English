@@ -14,6 +14,7 @@ import InfoCard from "@/components/Card/IconicInfoBox";
 import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import LessonCourseCard from "@/components/Card/LessonCourseCard";
 import Carousel from "@/components/Card/Carousel";
+import TrialFlow from "@/components/TrialFlow";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -107,6 +108,11 @@ export default function Home({
         </div>
         <NewsSection allPostsData={allPostsData} />
       </div>
+      <div className="">
+        <h3 className="mt-10 text-3xl text-red-500">Flow</h3>
+      <p>体験レッスン</p>
+      </div>
+      <TrialFlow />
       {/* <Card type="base" data="tutors" showButton={false} /> */}
     </Layout>
   );
