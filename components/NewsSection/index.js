@@ -19,7 +19,7 @@ const NewsSection = ({ allPostsData }) => (
           <div className="text-xl mb-2">
             <small>{new Date(date).toLocaleDateString()}</small>
           </div>
-          <span className="inline-block bg-indigo-500 text-white text-xs px-2 py-1 rounded-full my-2">
+          <span className="inline-block bg-gray-800 text-white text-sm px-2 py-1 rounded-full my-2">
             {category}
           </span>     
           <div className="text-2xl mb-7 font-bold hover:text-rose-600 duration-150">

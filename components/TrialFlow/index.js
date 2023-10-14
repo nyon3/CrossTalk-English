@@ -48,7 +48,7 @@ const TrialFlow = () => {
           <div className="flex flex-col items-center sm:mb-4">
             <div
               className={`text-2xl w-16 h-16 md:w-32 md:h-32 ${
-                activeStep === index ? "bg-blue-500" : "bg-gray-300"
+                activeStep === index ? "bg-gray-800" : "bg-gray-300"
               } rounded-full flex items-center justify-center text-white`}
             >
               {index + 1}
@@ -75,9 +75,13 @@ const TrialFlow = () => {
         </li>
         <li>体験レッスンはお一人様１回限りとさせていただいております。</li>
       </ul>
+      <div className="bg-rose-600 text-white px-3 py-6 rounded-md shadow-md w-full text-center">
+      <h1 className="text-5xl mb-2 font-bold">TAKE THE NEXT STEP</h1>
+  <h2 className="text-sm mb-4 font-semibold">今日からあなたの英語スキルを一歩先へ！</h2>
       <Button link="https://forms.gle/wRLWN8WiLdQLZdLQ9">
         体験レッスンに申し込む
       </Button>
+      </div>
     </div>
   );
 };

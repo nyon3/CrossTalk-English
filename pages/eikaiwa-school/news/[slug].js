@@ -3,7 +3,6 @@ import Head from "next/head";
 import { getPostData, getSortedPostsData } from "@/lib/content";
 
 import Layout from "@/components/Layout/layout";
-import Button from "@/components/Button";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.slug);
@@ -19,6 +18,7 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
   }));
   return {
+
     paths,
     fallback: false,
   };
@@ -48,7 +48,6 @@ export default function BlogPost({ postData }) {
           </p>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
-        <Button link={"/eikaiwa-school"}>Go to home</Button>
       </main>
     </Layout>
   );
