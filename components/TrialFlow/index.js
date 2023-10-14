@@ -49,7 +49,7 @@ const TrialFlow = () => {
             <div
               className={`text-2xl w-16 h-16 md:w-32 md:h-32 ${
                 activeStep === index ? "bg-gray-800" : "bg-gray-300"
-              } rounded-full flex items-center justify-center text-white`}
+              } rounded-full flex items-center justify-center text-white hover:bg-gray-600 transition-colors duration-300`}
             >
               {index + 1}
             </div>
