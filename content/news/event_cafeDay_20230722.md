@@ -2,6 +2,8 @@
 title: "【イベントレポート】ワンデイ・英会話カフェ"
 author: "英会話スクールスタッフ"
 date: "2023-07-07"
+category: 'Event'
+featuredImage: study-textbook.jpg
 description: "先日開催されたワンデイ・英会話カフェのイベントレポートと、今後の予定についてご紹介します。"
 ---
 

@@ -2,6 +2,8 @@
 title: "【9月のイベント】ワンデイ・英会話カフェ"
 author: "英会話スクールスタッフ"
 date: "2023-09-08"
+category: 'Event'
+featuredImage: study-textbook.jpg
 description: "大好評の「ワンデイ・英会話カフェ」の次回開催が決定しました！詳細は下記をご覧ください。"
 ---
 

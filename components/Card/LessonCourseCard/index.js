@@ -6,9 +6,9 @@ import Link from "next/link";
 const LessonCourseCard = ({ data }) => {
     return (
         <Carousel>
-            <div className="flex flex-auto flex-col m-0 w-full">
+            <div className="flex flex-auto flex-col w-full items-center md:items-end">
                 {data.map((item) => (
-                    <div key={item.id} className="relative bg-white rounded-lg shadow-sm overflow-hidden m-4 transition-opacity duration-300 ease-in-out hover:opacity-80">
+                    <div key={item.id} className="w-5/6 relative bg-white rounded-lg shadow-sm overflow-hidden m-4 transition-opacity duration-300 ease-in-out hover:opacity-80">
                         <Link href={item.link}>
                         <div className="relative group">
                             <div className="h-96 w-full overflow-hidden">

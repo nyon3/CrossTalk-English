@@ -8,7 +8,6 @@ import { getSortedPostsData } from "@/lib/content";
 import Layout from "@/components/Layout/layout";
 import Jumbotron from "@/components/Jumbotron/jumbotron";
 import FAQAccordion from "@/components/FaqAcordion";
-import SectionHeader from "@/components/SectionHeader";
 import NewsSection from "@/components/NewsSection";
 import InfoCard from "@/components/Card/IconicInfoBox";
 import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
@@ -17,6 +16,7 @@ import Carousel from "@/components/Card/Carousel";
 import TrialFlow from "@/components/TrialFlow";
 
 export async function getStaticProps() {
+
   const allPostsData = getSortedPostsData();
 
   const jumbotronContent = yaml.load(
@@ -83,34 +83,42 @@ export default function Home({
   あなたの夢を叶えましょう！`}
     >
       <Jumbotron content={jumbotronContent} />
-      <SectionHeader
-        mainHeader="CrossTalkで英語が話せるようになる理由"
-        subHeader="REASON"
-      />
+      <div className="">
+          <h3 className="mt-10 text-6xl font-semibold text-rose-600">REASON</h3>
+          <p className="text-lg mt-3">CrossTalkで英語が話せるようになる理由</p>
+        </div>
+
       <InfoCard data={feature} />
-      <SectionHeader mainHeader="レッスンを目的から選ぶ" subHeader="LESSONS" />
+      <div className="">
+          <h3 className="mt-10 text-6xl font-semibold text-rose-600">LESSONS</h3>
+          <p className="text-lg mt-3">レッスンを目的から選ぶ</p>
+        </div>
       <LessonCourseCard data={englishCourseContent} />
-      <SectionHeader mainHeader="生徒さんの声" subHeader="REVIEW" />
+      <div className="">
+          <h3 className="mt-10 text-6xl font-semibold text-rose-600">REVIEW</h3>
+          <p className="text-lg mt-3">生徒さんの声</p>
+        </div>
+  
       <Carousel>
         <ReviewCard data={reviews} />
       </Carousel>
       <div className="md:flex md:flex-1 md:justify-evenly">
         <div className="">
-          <h3 className="mt-10 text-3xl text-red-500">FAQ</h3>
+          <h3 className="mt-10 text-6xl font-semibold text-rose-600">FAQ</h3>
           <p className="text-lg mt-3">よくある質問</p>
         </div>
         <FAQAccordion data={faq} />
       </div>
       <div className="">
         <div>
-          <h3 className="mt-10 text-3xl text-red-500">NEWS</h3>
+          <h3 className="mt-10 text-6xl font-semibold text-rose-600">NEWS</h3>
           <p className="text-lg mt-3">最新情報について</p>
         </div>
         <NewsSection allPostsData={allPostsData} />
       </div>
       <div className="">
-        <h3 className="mt-10 text-3xl text-red-500">Flow</h3>
-      <p>体験レッスン</p>
+        <h3 className="mt-10 text-6xl font-semibold text-rose-600">Flow</h3>
+      <p className="text-lg mt-3">体験レッスン</p>
       </div>
       <TrialFlow />
       {/* <Card type="base" data="tutors" showButton={false} /> */}
