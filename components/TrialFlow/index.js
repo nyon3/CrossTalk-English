@@ -11,7 +11,7 @@ const steps = [
   },
   {
     title: "Step 2",
-    subtitle: "体験レッスン開始",
+    subtitle: "体験レッスン",
     description: `まずは講師が、あなたの英語レベルを確認しながら
       実際のスタイルでレッスンを受けていただきます。`,
   },
@@ -24,7 +24,7 @@ const steps = [
   },
   {
     title: "Step 4",
-    subtitle: "ご入会のお申し込み",
+    subtitle: "お申し込み",
     description: `当日もしくは、後日ご検討のうえお申し込みいただきます。`,
   },
 ];
@@ -38,43 +38,36 @@ const TrialFlow = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 w-full">
-      {/* TODO Create timeline UI for steps */}
-      <div className="flex flex-col space-y-4">
-  {steps.map((step, index) => (
-    <div
-      key={index}
-      className={`flex space-x-4 cursor-pointer`}
-      onClick={() => toggleStep(index)}
-    >
-      <div className="flex flex-col items-center">
-
+    <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 overflow-x-auto scrollbar-hide">
+      {steps.map((step, index) => (
         <div
-          className={`text-2xl w-16 h-16 md:w-32 md:h-32 ${
-            activeStep === index ? "bg-blue-500" : "bg-gray-300"
-          } rounded-full flex items-center justify-center text-white`}
+          key={index}
+          className={`flex sm:flex-col space-x-4 sm:space-x-0 cursor-pointer relative`}
+          onClick={() => toggleStep(index)}
         >
-          {index + 1}
+          <div className="flex flex-col items-center sm:mb-4">
+            <div
+              className={`text-2xl w-16 h-16 md:w-32 md:h-32 ${
+                activeStep === index ? "bg-blue-500" : "bg-gray-300"
+              } rounded-full flex items-center justify-center text-white`}
+            >
+              {index + 1}
+            </div>
+            {index < steps.length - 1 && (
+              <div className="border-l-2 h-4 mt-2 flex-grow sm:border-l-0 sm:border-r-2 sm:w-4 sm:h-auto sm:mt-0 sm:mr-2 border-gray-300"></div>
+            )}
+          </div>
+          <div className="flex flex-col space-y-2 md:pl-5 md:pt-0 sm:pt-5 overflow-hidden">
+            <div className="flex justify-between items-center">
+              <h4 className="text-xl font-semibold">{step.subtitle}</h4>
+            </div>
+            <p className={`text-base max-w-xl transition-transform transform ${
+              activeStep === index ? 'ease-in-out duration-300 transform' : 'translate-y-10 opacity-0'
+            }`}>{step.description}</p>
+          </div>
         </div>
-        {index < steps.length - 1 && <div className="border-l-2 h-4 mt-2 flex-grow border-gray-300"></div>}
-      </div>
-      <div className="flex flex-col space-y-2 md:pl-5 md:pt-5 overflow-hidden">
-        <div className="flex justify-between items-center">
-        <h4 className="text-xl font-semibold">{step.subtitle}</h4>
-         
-        </div>
-      
-        {/* {activeStep === index && (
-          <p className="text-sm max-w-xl">{step.description}</p>
-        )} */}
-        <p className={`text-base max-w-xl transition-transform transform ${
-  activeStep === index ? 'ease-in-out duration-300 transform' : 'translate-y-10 opacity-0'
-}`}>{step.description}</p>
-
-      </div>
+      ))}
     </div>
-  ))}
-</div>
-
       <ul className="list-disc list-inside my-10">
         <li>
           当スクールの体験レッスンは１回

@@ -117,7 +117,7 @@ export default function Home({
         <NewsSection allPostsData={allPostsData} />
       </div>
       <div className="">
-        <h3 className="mt-10 text-6xl font-semibold text-rose-600">Flow</h3>
+        <h3 className="mt-10 text-6xl font-semibold text-rose-600">Trial</h3>
       <p className="text-lg mt-3">体験レッスン</p>
       </div>
       <TrialFlow />
