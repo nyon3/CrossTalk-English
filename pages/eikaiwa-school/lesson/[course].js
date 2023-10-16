@@ -2,41 +2,38 @@
 import React from "react";
 import Layout from "@/components/Layout/layout";
 import { getCourseData, getSortedCoursesData } from "@/lib/courses";
-import Image from "next/image";
-import styles from "./lesson.module.css";
 import PricingCard from "@/components/PriceComponent";
 import TrialFlow from "@/components/TrialFlow/index";
-import SectionHeader from "@/components/SectionHeader";
 import InfoCard from "@/components/Card/IconicInfoBox";
 
 // Use Tailwind CSS to style this page
 const CoursePage = ({ courseData }) => {
   // Here you can add any design logic based on the courseData
-  const { title, headline, subheadline, image, features } =
+  const { features, title } =
     courseData;
 
   return (
     <Layout>
       <main>
-        <div className={styles.wrapper}>
-          <SectionHeader mainHeader={headline} subHeader={title} />
-          <p className={styles.description}>{subheadline}</p>
-          <Image src={`/images/${image}`} alt={courseData.title}  width={500} height={500}/>
-          {/* <FeatureSection title="Features" data={features} background="#fff" /> */}
-          <SectionHeader
-            mainHeader={"このレッスンで学べること"}
-            subHeader={"Features"}
-          />
+        <div className="mt-20">
+          <h2 className="md:text-5xl text-4xl text-rose-500 font-bold mb-4">{title}</h2>
+          <div className="markdown-content" dangerouslySetInnerHTML={{ __html: courseData.contentHtml }}></div>
+
+          <div className="">
+          <h3 className="mt-10 text-6xl font-semibold text-rose-600">Features</h3>
+          <p className="text-lg mt-3">このレッスンで学べること</p>
+        </div>
           <InfoCard data={features} />
-          <div
-            style={{
-              marginTop: "3rem",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
+          <div className="">
+          <h3 className="mt-10 text-6xl font-semibold text-rose-600">Course fee</h3>
+          <p className="text-lg mt-3">レッスンは50分のレッスン x 4回/月</p>
+          <span className="mt-4 text-lg"></span>
+        </div>
             <PricingCard courseType={courseData.type} />
-          </div>
+            <div className="">
+        <h3 className="mt-10 text-6xl font-semibold text-rose-600">Trial</h3>
+      <p className="text-lg mt-3">体験レッスン</p>
+      </div>
           <TrialFlow />
           <div
             style={{
