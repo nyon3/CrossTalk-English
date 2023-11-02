@@ -14,6 +14,7 @@ import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import LessonCourseCard from "@/components/Card/LessonCourseCard";
 import Carousel from "@/components/Card/Carousel";
 import TrialFlow from "@/components/TrialFlow";
+import {GroupLesson, PrivateLesson, DiscussionClass} from "@/components/Price";
 
 export async function getStaticProps() {
 
@@ -86,7 +87,21 @@ export default function Home({
       <div className="">
           <h3 className="mt-10 text-6xl font-semibold text-rose-600">REASON</h3>
           <p className="text-lg mt-3">CrossTalkで英語が話せるようになる理由</p>
-        </div>
+        </div> 
+      
+        <div className=" flex flex-col items-center md:flex-row justify-between">
+
+  <div className="w-full md:w-1/3 p-2">
+    <PrivateLesson />
+  </div>
+  <div className="w-full md:w-1/3 p-2">
+    <GroupLesson />
+  </div>
+  <div className="w-full md:w-1/3 p-2">
+    <DiscussionClass />
+  </div>
+</div>
+
 
       <InfoCard data={feature} />
       <div className="">
