@@ -1,6 +1,15 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetClose,
+  SheetFooter,
+} from "@/components/ui/sheet"
 // Sample data for logo
 const logo = {
   root: [{ label: "CrossTalk英会話", href: "/eikaiwa-school"}],
@@ -12,6 +21,8 @@ const menuItems = {
   root: [
     // { label: "About", href: "/about" },
     { label: "体験レッスン", href: "https://forms.gle/wRLWN8WiLdQLZdLQ9"},
+    { label: "料金", href: "/eikaiwa-school/price" },
+    // { label: 'Blog', href: '/blodcast' },
   ],
   podcast: [
     // { label: "About", href: "podcast/about" },
@@ -61,16 +72,37 @@ const Navbar = () => {
           </div>
           {/* <div className="hidden md:block"> */}
             <div className="flex items-center">
+         
+
               {isRoot &&
-                menuItems.root.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className="text-gray-300 hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                 <Sheet>
+                 <SheetTrigger className="text-white">Menu</SheetTrigger>
+                 <SheetContent>
+                   <SheetHeader>
+                     <SheetTitle></SheetTitle>
+                     <SheetDescription>
+                        
+                     </SheetDescription>
+                   </SheetHeader>
+                  {
+                   menuItems.root.map((item) => (
+                     <Link
+                       key={item.label}
+                       href={item.href}
+                       className=" hover:bg-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                     >
+                       {item.label}
+                     </Link>
+                   ))
+                  }
+                   <SheetFooter>
+                 <SheetClose>
+                  Close
+                 </SheetClose>
+               </SheetFooter>
+                 </SheetContent>
+               </Sheet>
+        }
               {isPodcast &&
                 menuItems.podcast.map((item) => (
                   <Link

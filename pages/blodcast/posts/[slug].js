@@ -1,6 +1,7 @@
+
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { getPostData, getSortedPostsData } from "@/lib/news";
+import { getPostData, getSortedPostsData } from "@/lib/blog";
 
 import Layout from "@/components/Layout/layout";
 

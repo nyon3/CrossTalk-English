@@ -25,7 +25,7 @@ const PriceCard = ({ lessonType, price, description, isRecommended = false }) =>
 export const GroupLesson = () => (
     <PriceCard
         lessonType="グループレッスン"
-        price="￥9,900"
+        price="￥13,200"
         isRecommended={true}
         description="月に4回のレッスンで、各レッスンは50分間です。グループレッスンでは、同じレベルの他の学生と一緒に学び、コミュニケーションスキルを向上させることができます。また、ネイティブの講師によるフィードバックとサポートを受けながら、リアルタイムで質問をすることも可能です。"
     />
@@ -34,7 +34,7 @@ export const GroupLesson = () => (
 export const PrivateLesson = () => (
     <PriceCard
         lessonType="プライベートレッスン"
-        price="￥19,900"
+        price="22,000"
         description="月に4回のレッスンで、各レッスンは50分間です。プライベートレッスンは各生徒の目標に合わせて、講師が内容をカスタマイズします。特定の語彙や文法の課題を深く学ぶことができ、即時のフィードバックを受け取ることができます。生徒が効果的に英語スキルを高めるのに最適です。"
     />
 );
@@ -42,8 +42,7 @@ export const PrivateLesson = () => (
 export const DiscussionClass = () => (
     <PriceCard
         lessonType="ディスカッションクラス"
-        price="￥7,900"
+        price="￥13,200"
         description="月に4回のレッスンで、各レッスンは50分間です。フリートーク・クラスは、私達の新しいグループレッスンスタイルの一つで、テキストブックを用いず、ニュースや話題のイベントについて自由にディスカッションを行います。このスタイルは、生徒さんが自然な英語でのコミュニケーションを楽しむようなレッスンです。"
     />
 );
-
