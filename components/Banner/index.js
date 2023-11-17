@@ -7,7 +7,7 @@ const Banner = ({ newsData }) => {
       <div className="container mx-auto flex justify-between items-center">
         <div>
           {newsData.slice(0, 1).map(({ slug, title }) => (
-            <Link href={`/news/${slug}`} key={slug}>
+            <Link href={`eikaiwa-school/news/${slug}`} key={slug}>
               <span className="font-bold">{title}</span>
             </Link>
           ))}

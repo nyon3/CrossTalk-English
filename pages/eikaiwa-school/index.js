@@ -2,7 +2,7 @@
 import fs from "fs";
 import yaml from "js-yaml";
 import path from "path";
-import { getSortedPostsData } from "@/lib/content";
+import { getSortedPostsData } from "@/lib/news";
 
 // Components
 import Layout from "@/components/Layout/layout";
@@ -14,9 +14,10 @@ import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import LessonCourseCard from "@/components/Card/LessonCourseCard";
 import Carousel from "@/components/Card/Carousel";
 import TrialFlow from "@/components/TrialFlow";
+import Banner from "@/components/Banner";
+
 
 export async function getStaticProps() {
-
   const allPostsData = getSortedPostsData();
 
   const jumbotronContent = yaml.load(
@@ -82,23 +83,26 @@ export default function Home({
   実際の状況で使える「生きた英語」を学んで、
   あなたの夢を叶えましょう！`}
     >
+      <Banner newsData={allPostsData} />
       <Jumbotron content={jumbotronContent} />
       <div className="">
-          <h3 className="mt-10 text-6xl font-semibold text-rose-600">REASON</h3>
-          <p className="text-lg mt-3">CrossTalkで英語が話せるようになる理由</p>
-        </div>
+        <h3 className="mt-10 text-6xl font-semibold text-rose-600">REASON</h3>
+        <p className="text-lg mt-3">CrossTalkで英語が話せるようになる理由</p>
+      </div>
 
       <InfoCard data={feature} />
       <div className="">
-          <h3 className="mt-10 text-6xl font-semibold text-rose-600">LESSONS</h3>
-          <p className="text-lg mt-3">レッスンを目的から選ぶ</p>
-        </div>
+        <h3 className="mt-10 text-6xl font-semibold text-rose-600">LESSONS</h3>
+        <p className="text-lg mt-3">レッスンを目的から選ぶ</p>
+      </div>
+
       <LessonCourseCard data={englishCourseContent} />
+      
       <div className="">
-          <h3 className="mt-10 text-6xl font-semibold text-rose-600">REVIEW</h3>
-          <p className="text-lg mt-3">生徒さんの声</p>
-        </div>
-  
+        <h3 className="mt-10 text-6xl font-semibold text-rose-600">REVIEW</h3>
+        <p className="text-lg mt-3">生徒さんの声</p>
+      </div>
+
       <Carousel>
         <ReviewCard data={reviews} />
       </Carousel>
@@ -118,7 +122,7 @@ export default function Home({
       </div>
       <div className="">
         <h3 className="mt-10 text-6xl font-semibold text-rose-600">Trial</h3>
-      <p className="text-lg mt-3">体験レッスン</p>
+        <p className="text-lg mt-3">体験レッスン</p>
       </div>
       <TrialFlow />
       {/* <Card type="base" data="tutors" showButton={false} /> */}
