@@ -83,7 +83,7 @@ export default function Home({
   実際の状況で使える「生きた英語」を学んで、
   あなたの夢を叶えましょう！`}
     >
-      <Banner newsData={allPostsData} />
+      {/* <Banner newsData={allPostsData} /> */}
       <Jumbotron content={jumbotronContent} />
       <div className="">
         <h3 className="mt-10 text-6xl font-semibold text-rose-600">REASON</h3>
