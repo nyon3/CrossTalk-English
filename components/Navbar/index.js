@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sheet"
 // Sample data for logo
 const logo = {
-  root: [{ label: "CrossTalk英会話", href: "/eikaiwa-school"}],
+  root: [{ label: "CrossTalk英会話スクール", href: "/eikaiwa-school"}],
   podcast: [{ label: "CrossTalk.fm", href: "/podcast"}],
 };
 

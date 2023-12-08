@@ -14,7 +14,7 @@ import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import LessonCourseCard from "@/components/Card/LessonCourseCard";
 import Carousel from "@/components/Card/Carousel";
 import TrialFlow from "@/components/TrialFlow";
-import Banner from "@/components/Banner";
+// import Banner from "@/components/Banner";
 
 
 export async function getStaticProps() {
@@ -76,14 +76,8 @@ export default function Home({
   faq,
 }) {
   return (
-    <Layout
-      title="CROSSTALK 英会話スクール"
-      description={`岡山市北区のCrossTalk英会話スクールへようこそ！
-  テキストで基本を学ぶことはもちろん
-  実際の状況で使える「生きた英語」を学んで、
-  あなたの夢を叶えましょう！`}
-    >
-      <Banner newsData={allPostsData} />
+    <Layout>
+      {/* <Banner newsData={allPostsData} /> */}
       <Jumbotron content={jumbotronContent} />
       <div className="">
         <h3 className="mt-10 text-6xl font-semibold text-rose-600">REASON</h3>

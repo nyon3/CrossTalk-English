@@ -5,13 +5,20 @@ import {
     PrivateLesson,
     DiscussionClass,
   } from "@/components/Price";
+import { NextSeo } from "next-seo";
 
   export default function Price() {
     return (
       <Layout>
+        <NextSeo
+          title="料金"
+          description="料金についてのページです。"
+          />
+
         <div>
            <h1 className="text-4xl font-bold text-center text-gray-800">PRICE</h1>            
             <h2 className="text-3xl text-center">料金</h2>
+            
 
         </div>
         <div className=" flex flex-col items-center md:flex-row justify-between">
