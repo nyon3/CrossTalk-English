@@ -14,7 +14,7 @@ import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import LessonCourseCard from "@/components/Card/LessonCourseCard";
 import Carousel from "@/components/Card/Carousel";
 import TrialFlow from "@/components/TrialFlow";
-import Banner from "@/components/Banner";
+// import Banner from "@/components/Banner";
 
 
 export async function getStaticProps() {
