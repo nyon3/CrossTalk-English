@@ -14,7 +14,7 @@ module.exports = {
       return {
         loc: path, // The URL of the page
         changefreq: 'monthly', // Frequency of page update
-        priority: path === '/' ? 1.0 : 0.7, // Homepage gets priority 1, others get 0.7
+        priority: path === '/eikaiwa-school' ? 1.0 : 0.7, // Homepage gets priority 1, others get 0.7
         lastmod: config.autoLastmod ? new Date().toISOString() : undefined, // Use current date as the last modification date
       }
     },
