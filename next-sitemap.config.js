@@ -3,7 +3,6 @@ module.exports = {
   siteUrl: 'https://crosstalk.me/',
   generateRobotsTxt: true,
   sitemapSize: 7000,
-  outDir: './out',
   // Other configurations...
   transform: async (config, path) => {
       // You can customize how URLs are added to your sitemap here.
