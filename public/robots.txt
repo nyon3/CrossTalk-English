@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://crosstalk.me/
+
+# Sitemaps
+Sitemap: https://crosstalk.me/sitemap.xml
