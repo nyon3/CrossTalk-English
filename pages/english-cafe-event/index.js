@@ -1,7 +1,18 @@
 import Layout from "@/components/Layout/layout";
 import Image from "next/image"; // Next.jsのImageコンポーネントをインポート
+import ContentSection from "@/components/ContentSection";
+import { getSortedPostsData } from "@/lib/news";
 
-export default function CafeEvent() {
+export async function getStaticProps() {
+  const newsPostsData = getSortedPostsData("news");
+  return {
+    props: {
+      newsPostsData,
+    },
+  };
+}
+
+export default function CafeEvent({ newsPostsData }) {
   return (
     <Layout>
       <div className="container max-w-lg mx-auto px-6 py-8">
@@ -66,6 +77,11 @@ export default function CafeEvent() {
             />
           </a>
         </div>
+        <ContentSection
+          baseRoute="english-cafe-event"
+          contentType="posts"
+          postsData={newsPostsData}
+        />
       </div>
     </Layout>
   );

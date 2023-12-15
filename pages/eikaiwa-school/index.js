@@ -8,7 +8,7 @@ import { getSortedPostsData } from "@/lib/news";
 import Layout from "@/components/Layout/layout";
 import Jumbotron from "@/components/Jumbotron/jumbotron";
 import FAQAccordion from "@/components/FaqAcordion";
-import NewsSection from "@/components/NewsSection";
+import ContentSection from "@/components/ContentSection";
 import InfoCard from "@/components/Card/IconicInfoBox";
 import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import LessonCourseCard from "@/components/Card/LessonCourseCard";
@@ -16,9 +16,9 @@ import Carousel from "@/components/Card/Carousel";
 import TrialFlow from "@/components/TrialFlow";
 // import Banner from "@/components/Banner";
 
-
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  // const allPostsData = getSortedPostsData("news");
+  const newsPostsData = getSortedPostsData("blog");
 
   const jumbotronContent = yaml.load(
     fs.readFileSync(
@@ -59,7 +59,7 @@ export async function getStaticProps() {
     props: {
       feature,
       reviews,
-      allPostsData,
+      newsPostsData,
       jumbotronContent,
       englishCourseContent,
       faq,
@@ -68,12 +68,12 @@ export async function getStaticProps() {
 }
 
 export default function Home({
-  allPostsData,
   jumbotronContent,
   feature,
   englishCourseContent,
   reviews,
   faq,
+  newsPostsData,
 }) {
   return (
     <Layout>
@@ -91,7 +91,7 @@ export default function Home({
       </div>
 
       <LessonCourseCard data={englishCourseContent} />
-      
+
       <div className="">
         <h3 className="mt-10 text-6xl font-semibold text-rose-600">REVIEW</h3>
         <p className="text-lg mt-3">生徒さんの声</p>
@@ -112,7 +112,11 @@ export default function Home({
           <h3 className="mt-10 text-6xl font-semibold text-rose-600">NEWS</h3>
           <p className="text-lg mt-3">最新情報について</p>
         </div>
-        <NewsSection allPostsData={allPostsData} />
+        <ContentSection
+          baseRoute="eikaiwa-school"
+          contentType="posts"
+          postsData={newsPostsData}
+        />
       </div>
       <div className="">
         <h3 className="mt-10 text-6xl font-semibold text-rose-600">Trial</h3>
