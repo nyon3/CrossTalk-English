@@ -4,24 +4,19 @@ import { getPostData, getSortedPostsData } from "@/lib/news";
 
 import Layout from "@/components/Layout/layout";
 
-export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.slug);
-  return {
-    props: {
-      postData,
-    },
-  };
-}
-
 export async function getStaticPaths() {
-  const paths = getSortedPostsData().map((post) => ({
+  // Fetch the slugs of all news posts
+  const paths = getSortedPostsData("news").map((post) => ({
     params: { slug: post.slug },
   }));
-  return {
 
-    paths,
-    fallback: false,
-  };
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  // Fetch the data for a single news post
+  const postData = await getPostData("news", params.slug);
+  return { props: { postData } };
 }
 
 export default function BlogPost({ postData }) {
