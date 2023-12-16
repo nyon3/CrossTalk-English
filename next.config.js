@@ -8,8 +8,13 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/eikaiwa-school',
+        source: "/",
+        destination: "/eikaiwa-school",
+        permanent: true,
+      },
+      {
+        source: "/school",
+        destination: "/eikaiwa-school",
         permanent: true,
       },
     ];
