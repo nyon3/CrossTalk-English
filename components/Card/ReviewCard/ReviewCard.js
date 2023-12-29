@@ -3,26 +3,31 @@ import Image from "next/image";
 
 const ReviewCard = ({ data }) => {
   return (
-    <>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {data.map((item, index) => (
-        <div key={index} className="bg-white rounded-lg shadow-lg my-6 p-6">
-          <div className="relative w-44 h-24 mx-auto mb-4">
-            <div className="absolute top-[${item?.imagePosition?.top || 0}%] left-[${item?.imagePosition?.left || 0}%] rounded-full overflow-hidden">
-              <Image
-                src={`/images/${item?.avatar}`}
-                alt={item.alt}
-                width={100}
-                height={100}
-              />
+        <div
+          key={index}
+          className="bg-white rounded-lg shadow-lg w-full py-10 px-5"
+        >
+          <h2 className="font-bold text-2xl md:text-3xl">{item.headline}</h2>
+          <p className="text-lg text-gray-500 mt-4">{item.testimonial}</p>
+          <div className="flex items-center mt-12">
+            <Image
+              src={`/images/${item?.image}`}
+              alt="生徒のプロフィール写真"
+              width={80}
+              height={80}
+              className="rounded-full mr-3"
+            />
+
+            <div className="md:text-lg flex flex-col justify-center w-64 md:max-w-sm">
+              <h3 className="font-bold text-gray-900">{item?.lessonType}</h3>
+              <p className="text-gray-500">{item?.studentProfile}</p>
             </div>
-          </div>
-          <div className="md:max-w-sm">
-            <h3 className="text-lg font-semibold text-gray-900">{item?.name}</h3>
-            <p className=" text-sm text-gray-500 mt-2">{item?.content}</p>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

@@ -12,9 +12,8 @@ import ContentSection from "@/components/ContentSection";
 import InfoCard from "@/components/Card/IconicInfoBox";
 import ReviewCard from "@/components/Card/ReviewCard/ReviewCard";
 import LessonCourseCard from "@/components/Card/LessonCourseCard";
-import Carousel from "@/components/Card/Carousel";
 import TrialFlow from "@/components/TrialFlow";
-// import ProfileCard from "@/components/Card/ProfileCard";
+import TeamComponent from "@/components/Card/TeamComponent";
 // import Banner from "@/components/Banner";
 
 export async function getStaticProps() {
@@ -69,21 +68,27 @@ export async function getStaticProps() {
 }
 
 // Tutors data for Tomoya and Andrea
-// const profileData = [
-//   {
-//     id: 1,
-//     avatar: "tomoya.jpg",
-//     alt: "Tomoya",
-//     description: "Tomoya is a tutor...",
-//   },
-//   {
-//     id: 2,
-//     avatar: "andrea.jpg",
-//     alt: "Andrea",
-//     description: "Andrea is a tutor...",
-//   },
-//   // more profiles...
-// ];
+const profileData = [
+  {
+    id: 1,
+    image: "andrea.jpg",
+    name: "Andrea",
+    bio: "英会話講師としても20年以上の経験があり、日本人の英語上達するためのポイントを熟知しています",
+    likes: "Likes: 動物",
+    dislikes: "Dislikes: 暑い日、渋滞",
+    hobbies: "Hobbies: メルカリ",
+  },
+  {
+    id: 2,
+    image: "tomoya.jpg",
+    name: "Tomoya",
+    bio: "オーストラリアで１年間働いていました。初心者向けのプライベートレッスンレッスンを担当しています。",
+    likes: "Likes: ラーメン",
+    dislikes: "Dislikes: 虫",
+    hobbies: "Hobbies: アニメ、ゲーム",
+  },
+  // more profiles...
+];
 
 export default function Home({
   jumbotronContent,
@@ -103,23 +108,32 @@ export default function Home({
       </div>
 
       <InfoCard data={feature} />
-
-      {/* <ProfileCard data={profileData} /> */}
       <div className="">
-        <h3 className="mt-10 text-6xl font-semibol">LESSONS</h3>
-        <p className="text-lg mt-3">レッスンを目的から選ぶ</p>
+        <h3 className="mt-10 text-5xl md:text-6xl font-semibol">ABOUT US</h3>
+        <p className="text-sm md:text-lg mt-3 text-gray-500">
+          Learn more about our mission and values.
+        </p>
+      </div>
+
+      <TeamComponent tutors={profileData} />
+      <div className="">
+        <h3 className="mt-10 text-5xl md:text-6xl font-semibol">LESSONS</h3>
+        <p className="text-sm md:text-lg mt-3 text-gray-500">
+          レッスンを目的から選ぶ
+        </p>
       </div>
 
       <LessonCourseCard data={englishCourseContent} />
 
       <div className="">
-        <h3 className="mt-10 text-6xl font-semibol">REVIEW</h3>
-        <p className="text-lg mt-3">生徒さんの声</p>
+        <h3 className="mt-10 text-5xl md:text-6xl font-semibol">REVIEWS</h3>
+        <p className="text-sm md:text-lg mt-3 text-gray-500">
+          Student Testimonials: Their Learning Experiences
+        </p>
       </div>
 
-      <Carousel>
-        <ReviewCard data={reviews} />
-      </Carousel>
+      <ReviewCard data={reviews} />
+
       <div className="md:flex md:flex-1 md:justify-evenly">
         <div className="">
           <h3 className="mt-10 text-6xl font-semibol">FAQ</h3>
