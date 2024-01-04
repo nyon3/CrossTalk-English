@@ -24,10 +24,17 @@ const Jumbotron = ({ content }) => (
   <div className="pt-14 md:pt-0">
     <div className="flex flex-col items-center md:gap-10 md:flex-row pt-5 md:pt-20">
       <div className="flex-1">
-        <h1 className={inter.className + " font-bold text-5xl leading-none sm:text-6xl sm:leading-tight text-rose-600"}>
+        <h1
+          className={
+            inter.className +
+            " font-bold text-5xl leading-none sm:text-6xl sm:leading-tight text-rose-600"
+          }
+        >
           {content.title}
         </h1>
-        <p className="text-base sm:text-2xl font-bold my-3">{content.subtitle}</p>
+        <p className="text-base sm:text-2xl font-bold my-3">
+          {content.subtitle}
+        </p>
         <div className="text-md mt-10 max-w-lg items-center font-bold leading-relaxed">
           {content.description}
         </div>
@@ -36,6 +43,7 @@ const Jumbotron = ({ content }) => (
         <Image
           src={`/images/${content.src}`}
           alt={content.alt}
+          quality={50}
           width={1000}
           height={1000}
           className="md:ml-0 mt-5 md:mt-0 rounded-lg"
