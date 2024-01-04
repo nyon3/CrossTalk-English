@@ -20,8 +20,8 @@ const TeamComponent = ({ tutors }) => {
       {/* Middle and Right Columns - Tutor Profiles */}
       {tutors.map((tutor) => (
         // TODO: Add margin top to the last tutor on mobile screen size.
-        <div key={tutor.id} className="flex-1 flex flex-col px-4 pt-3">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">{tutor.name}</h3>
+        <div key={tutor.id} className="flex-1 flex flex-col pt-3">
+          <h3 className="text-3xl font-bold mb-4">{tutor.name}</h3>
           <p className="text-lg text-gray-500">{tutor.bio}</p>
           <ul className="text-sm md:text-md my-5 list-disc list-inside text-gray-600 ">
             <li>{tutor.likes}</li>
@@ -33,6 +33,7 @@ const TeamComponent = ({ tutors }) => {
               src={`/images/${tutor.image}`}
               width={500} // Adjusted for mobile
               height={500} // Adjusted for mobile
+              quality={50}
               alt={tutor.name}
               className="rounded-md"
             />

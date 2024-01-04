@@ -92,7 +92,6 @@ const profileData = [
 
 export default function Home({
   jumbotronContent,
-  feature,
   englishCourseContent,
   reviews,
   faq,
@@ -107,17 +106,17 @@ export default function Home({
         <p className="text-2xl mt-3">CrossTalkで英語が話せるようになる理由</p>
       </div>
 
-      <InfoCard data={feature} />
+      <InfoCard />
       <div className="">
         <h3 className="mt-10 text-5xl md:text-6xl font-semibol">ABOUT US</h3>
         <p className="text-sm md:text-lg mt-3 text-gray-500">
-          Learn more about our mission and values.
+          わたしたちについて
         </p>
       </div>
 
       <TeamComponent tutors={profileData} />
       <div className="">
-        <h3 className="mt-10 text-5xl md:text-6xl font-semibol">LESSONS</h3>
+        <h3 className="mt-10 text-5xl md:text-6xl font-semibol">LESSON</h3>
         <p className="text-sm md:text-lg mt-3 text-gray-500">
           レッスンを目的から選ぶ
         </p>
@@ -127,9 +126,7 @@ export default function Home({
 
       <div className="">
         <h3 className="mt-10 text-5xl md:text-6xl font-semibol">REVIEWS</h3>
-        <p className="text-sm md:text-lg mt-3 text-gray-500">
-          Student Testimonials: Their Learning Experiences
-        </p>
+        <p className="text-sm md:text-lg mt-3 text-gray-500">生徒さんの声</p>
       </div>
 
       <ReviewCard data={reviews} />

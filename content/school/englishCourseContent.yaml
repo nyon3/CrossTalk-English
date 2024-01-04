@@ -4,16 +4,16 @@
   image: discussion_class.jpg
   alt: "Image of Andrea teaching a group lesson"
   link: /eikaiwa-school/lesson/group_lesson
-  headline: グループレッスン
-  content: 楽しい英語コミュニケーション学習
-  body: テキストブックを主体に、英語でのコミュニケーションに重点を置いたレッスンを提供します。
+  headline: GROUP LESSON
+  tagline: 楽しい英語コミュニケーション
+  description: フレンドリーな雰囲気の中で、自然な形で英語を話すことができ、異なる意見や文化を学ぶこともできます。グループでのディスカッションやロールプレイを通じて、より豊かな英語表現を身につけることができます。
 - lesson_type: private_lesson
   image: andrea_teaching_640.jpg
   alt: "Image of a high-five during a private lesson"
   link: /eikaiwa-school/lesson/private_lesson
-  headline: プライベート
-  content: 一対一で英語スキルを向上させます
-  body: あなたの学習ニーズと目標に焦点を当て、一対一で英語スキルを強化します。
+  headline: PRIVATE LESSON
+  tagline: 一人一人に合わせた指導
+  description: マンツーマンでの学習なので、自分のペースでじっくりと英語を身に付けることが可能です。発音の矯正から日常会話、ビジネス英語まで、あなたの目指す目標に合わせてレッスンを進めていきます。
 # - lesson_type: discussion
 #   image: discussion.jpg
 #   alt: "Image of a discussion class"

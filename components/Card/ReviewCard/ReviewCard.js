@@ -9,7 +9,7 @@ const ReviewCard = ({ data }) => {
           key={index}
           className="bg-white rounded-lg shadow-lg w-full py-10 px-5"
         >
-          <h2 className="font-bold text-2xl md:text-3xl">{item.headline}</h2>
+          <h2 className="font-bold text-2xl">{item.headline}</h2>
           <p className="text-lg text-gray-500 mt-4">{item.testimonial}</p>
           <div className="flex items-center mt-12">
             <Image
